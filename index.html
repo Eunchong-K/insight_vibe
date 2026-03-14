@@ -11,6 +11,9 @@
     <meta name="theme-color" content="#6366f1">
 </head>
 <body>
+    <!-- 스파클 컨테이너 -->
+    <div id="sparkleContainer" class="sparkle-container"></div>
+
     <div class="app-container">
         <header class="app-header">
             <h1><i class="fas fa-graduation-cap"></i> 단어 학습 플래시 카드</h1>
@@ -25,47 +28,104 @@
         </header>
 
         <main class="main-content">
-            <!-- 시작 화면 -->
+
+            <!-- ① 시작 화면 -->
             <div id="startScreen" class="screen active">
                 <div class="welcome-card">
                     <i class="fas fa-book-open welcome-icon"></i>
                     <h2>단어 학습을 시작해볼까요?</h2>
-                    <p>효과적인 단어 학습으로 어휘력을 향상시켜 보세요. 한 번에 10개의 단어를 학습합니다.</p>
+                    <p>효과적인 단어 학습으로 어휘력을 향상시켜 보세요!</p>
+
+                    <!-- 레벨 선택 -->
+                    <div class="setting-group">
+                        <label class="setting-label"><i class="fas fa-layer-group"></i> 레벨 선택</label>
+                        <div class="level-btns">
+                            <button class="level-btn active" data-level="all">전체</button>
+                            <button class="level-btn" data-level="초급">초급</button>
+                            <button class="level-btn" data-level="중급">중급</button>
+                            <button class="level-btn" data-level="고급">고급</button>
+                        </div>
+                    </div>
+
+                    <!-- 카테고리 선택 -->
+                    <div class="setting-group">
+                        <label class="setting-label"><i class="fas fa-tags"></i> 카테고리 선택</label>
+                        <div class="category-filter">
+                            <button class="cat-btn active" data-cat="all">전체 (A-Z)</button>
+                        </div>
+                        <div id="categoryGrid" class="category-grid">
+                            <!-- A-Z 버튼 동적 생성 -->
+                        </div>
+                    </div>
+
+                    <!-- 단어 수 설정 -->
+                    <div class="setting-group">
+                        <label class="setting-label">
+                            <i class="fas fa-list-ol"></i> 학습 단어 수:
+                            <span id="wordCountDisplay" class="count-display">10</span>개
+                        </label>
+                        <input type="range" id="wordCountSlider" class="word-slider"
+                               min="5" max="50" value="10" step="5">
+                        <div class="slider-labels">
+                            <span>5</span><span>10</span><span>20</span><span>30</span><span>40</span><span>50</span>
+                        </div>
+                    </div>
+
+                    <!-- 필터된 단어 수 표시 -->
+                    <div id="availableInfo" class="available-info">
+                        <i class="fas fa-info-circle"></i>
+                        선택한 조건의 단어: <strong id="availableCount">0</strong>개
+                    </div>
+
                     <button id="startBtn" class="btn btn-primary btn-large">
                         <i class="fas fa-play"></i> 학습 시작
                     </button>
                 </div>
             </div>
 
-            <!-- 학습 화면 -->
+            <!-- ② 학습 화면 -->
             <div id="studyScreen" class="screen">
+                <!-- 진행 바 -->
                 <div class="progress-container">
                     <div class="progress-info">
                         <span id="currentWord">1</span> / <span id="totalWords">10</span>
+                        <span class="score-badge">점수: <span id="liveScore">0</span></span>
                     </div>
                     <div class="progress-bar">
                         <div id="progressFill" class="progress-fill"></div>
                     </div>
                 </div>
 
+                <!-- 플래시카드 (단어만 표시, 뜻 숨김) -->
                 <div class="flashcard-container">
                     <div id="flashcard" class="flashcard">
                         <div class="card-front">
                             <h2 id="wordText" class="word-text"></h2>
                             <p id="wordType" class="word-type"></p>
-                            <!-- 의미는 JavaScript로 동적으로 추가됩니다 -->
+                            <div id="wordLevel" class="word-level-badge"></div>
                         </div>
-                        <!-- 카드 뒷면은 더 이상 필요 없음 -->
                     </div>
                 </div>
 
+                <!-- 카운트다운 타이머 -->
+                <div id="countdownArea" class="countdown-area hidden">
+                    <div class="countdown-label">다음 단어까지</div>
+                    <div class="countdown-ring-wrap">
+                        <svg class="countdown-ring" viewBox="0 0 44 44">
+                            <circle class="ring-bg" cx="22" cy="22" r="18"/>
+                            <circle id="ringProgress" class="ring-prog" cx="22" cy="22" r="18"/>
+                        </svg>
+                        <span id="countdownNum" class="countdown-num">3</span>
+                    </div>
+                </div>
+
+                <!-- 4지선다 -->
                 <div id="quizSection" class="quiz-section">
-                    <h3 class="quiz-title">정답을 선택하세요:</h3>
-                    <div id="quizOptions" class="quiz-options">
-                        <!-- 4지선다 옵션이 여기에 동적으로 생성됩니다 -->
-                    </div>
+                    <h3 class="quiz-title">이 단어의 뜻은?</h3>
+                    <div id="quizOptions" class="quiz-options"></div>
                 </div>
 
+                <!-- 다음 버튼 -->
                 <div class="study-controls">
                     <button id="nextBtn" class="btn btn-primary" disabled>
                         <i class="fas fa-arrow-right"></i> 다음 단어
@@ -73,18 +133,22 @@
                 </div>
             </div>
 
-            <!-- 결과 화면 -->
+            <!-- ③ 결과 화면 -->
             <div id="resultScreen" class="screen">
                 <div class="result-card">
                     <i id="resultIcon" class="result-icon"></i>
                     <h2 id="resultTitle">학습 완료!</h2>
                     <div class="score-display">
                         <span id="scoreText" class="score-text"></span>
-                        <span class="score-total">/ 10</span>
+                        <span class="score-total">/ <span id="scoreTotalNum">10</span></span>
                     </div>
+                    <div id="resultMessage" class="result-message"></div>
                     <div class="result-actions">
+                        <button id="reviewWrongBtn" class="btn btn-warning" style="display:none;">
+                            <i class="fas fa-exclamation-circle"></i> 틀린 단어 재학습
+                        </button>
                         <button id="reviewBtn" class="btn btn-secondary">
-                            <i class="fas fa-redo"></i> 다시 보기
+                            <i class="fas fa-redo"></i> 같은 단어 다시
                         </button>
                         <button id="newSessionBtn" class="btn btn-primary">
                             <i class="fas fa-play"></i> 새로운 학습
@@ -93,22 +157,26 @@
                 </div>
             </div>
 
-            <!-- 학습 기록 화면 -->
+            <!-- ④ 학습 기록 화면 -->
             <div id="historyScreen" class="screen">
                 <div class="history-header">
                     <h2><i class="fas fa-history"></i> 학습 기록</h2>
-                    <button id="closeHistoryBtn" class="btn btn-secondary">
-                        <i class="fas fa-times"></i> 닫기
-                    </button>
+                    <div class="history-header-actions">
+                        <button id="clearHistoryBtn" class="btn btn-danger-sm">
+                            <i class="fas fa-trash"></i> 전체 삭제
+                        </button>
+                        <button id="closeHistoryBtn" class="btn btn-secondary">
+                            <i class="fas fa-times"></i> 닫기
+                        </button>
+                    </div>
                 </div>
-                <div id="historyList" class="history-list">
-                    <!-- 학습 기록이 여기에 표시됩니다 -->
-                </div>
+                <div id="historyList" class="history-list"></div>
             </div>
+
         </main>
 
         <footer class="app-footer">
-            <p>&copy; 2024 단어 학습 플래시 카드</p>
+            <p>&copy; 2025 단어 학습 플래시 카드 &nbsp;|&nbsp; 총 <span id="footerWordCount">0</span>개 단어</p>
         </footer>
     </div>
 
