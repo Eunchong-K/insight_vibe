@@ -1,419 +1,643 @@
+'use strict';
+
 class FlashcardApp {
     constructor() {
-        this.words = [];
-        this.currentWords = [];
-        this.currentIndex = 0;
-        this.score = 0;
-        this.userAnswers = [];
-        this.hasAnswered = false;
-        this.autoProgressTimer = null;
-        
-        this.initializeElements();
-        this.bindEvents();
-        this.loadWords();
+        // ── 데이터 상태 ──────────────────────────────
+        this.words        = [];          // 전체 단어 원본
+        this.filteredWords = [];         // 필터 적용 단어
+        this.currentWords  = [];         // 현재 세션 단어
+        this.currentIndex  = 0;
+        this.score         = 0;
+        this.wrongWords    = [];         // 틀린 단어 목록
+        this.userAnswers   = [];
+        this.hasAnswered   = false;
+        this.isWrongReview = false;      // 틀린 단어 재학습 모드
+
+        // ── 필터 상태 ─────────────────────────────────
+        this.selectedLevel    = 'all';
+        this.selectedCategory = 'all';
+        this.wordCount        = 10;
+
+        // ── 타이머 ───────────────────────────────────
+        this.autoProgressTimer  = null;
+        this.countdownInterval  = null;
+        this.countdownRemaining = 3;
+
+        // ── Web Audio ────────────────────────────────
+        this.audioCtx = null;
+
+        this._initElements();
+        this._bindEvents();
+        this._loadWords();
     }
 
-    initializeElements() {
-        // 스크린 요소
-        this.screens = {
-            start: document.getElementById('startScreen'),
-            study: document.getElementById('studyScreen'),
-            result: document.getElementById('resultScreen'),
-            history: document.getElementById('historyScreen')
-        };
+    // ════════════════════════════════════════════════
+    //  초기화
+    // ════════════════════════════════════════════════
+    _initElements() {
+        this.el = {
+            // 스크린
+            startScreen:   document.getElementById('startScreen'),
+            studyScreen:   document.getElementById('studyScreen'),
+            resultScreen:  document.getElementById('resultScreen'),
+            historyScreen: document.getElementById('historyScreen'),
 
-        // 버튼 요소
-        this.buttons = {
-            start: document.getElementById('startBtn'),
-            startNew: document.getElementById('startNewBtn'),
-            scoreHistory: document.getElementById('scoreHistoryBtn'),
-            next: document.getElementById('nextBtn'),
-            review: document.getElementById('reviewBtn'),
-            newSession: document.getElementById('newSessionBtn'),
-            closeHistory: document.getElementById('closeHistoryBtn')
-        };
+            // 설정 UI
+            wordCountSlider:  document.getElementById('wordCountSlider'),
+            wordCountDisplay: document.getElementById('wordCountDisplay'),
+            availableCount:   document.getElementById('availableCount'),
+            categoryGrid:     document.getElementById('categoryGrid'),
 
-        // 학습 관련 요소
-        this.studyElements = {
-            currentWord: document.getElementById('currentWord'),
-            totalWords: document.getElementById('totalWords'),
-            progressFill: document.getElementById('progressFill'),
-            wordText: document.getElementById('wordText'),
-            wordType: document.getElementById('wordType'),
-            wordMeaning: document.getElementById('wordMeaning'),
-            quizSection: document.getElementById('quizSection'),
-            quizOptions: document.getElementById('quizOptions')
-        };
+            // 학습 화면
+            currentWord:   document.getElementById('currentWord'),
+            totalWords:    document.getElementById('totalWords'),
+            progressFill:  document.getElementById('progressFill'),
+            liveScore:     document.getElementById('liveScore'),
+            wordText:      document.getElementById('wordText'),
+            wordType:      document.getElementById('wordType'),
+            wordLevel:     document.getElementById('wordLevel'),
+            quizOptions:   document.getElementById('quizOptions'),
+            nextBtn:       document.getElementById('nextBtn'),
 
-        // 결과 관련 요소
-        this.resultElements = {
-            icon: document.getElementById('resultIcon'),
-            title: document.getElementById('resultTitle'),
-            scoreText: document.getElementById('scoreText')
-        };
+            // 카운트다운
+            countdownArea: document.getElementById('countdownArea'),
+            countdownNum:  document.getElementById('countdownNum'),
+            ringProgress:  document.getElementById('ringProgress'),
 
-        // 기록 관련 요소
-        this.historyElements = {
-            list: document.getElementById('historyList')
+            // 결과 화면
+            resultIcon:      document.getElementById('resultIcon'),
+            resultTitle:     document.getElementById('resultTitle'),
+            scoreText:       document.getElementById('scoreText'),
+            scoreTotalNum:   document.getElementById('scoreTotalNum'),
+            resultMessage:   document.getElementById('resultMessage'),
+            reviewWrongBtn:  document.getElementById('reviewWrongBtn'),
+
+            // 기록 화면
+            historyList:     document.getElementById('historyList'),
+
+            // 푸터
+            footerWordCount: document.getElementById('footerWordCount'),
         };
     }
 
-    bindEvents() {
-        this.buttons.start.addEventListener('click', () => this.startNewSession());
-        this.buttons.startNew.addEventListener('click', () => this.startNewSession());
-        this.buttons.scoreHistory.addEventListener('click', () => this.showHistory());
-        this.buttons.next.addEventListener('click', () => this.nextWord());
-        this.buttons.review.addEventListener('click', () => this.reviewSession());
-        this.buttons.newSession.addEventListener('click', () => this.startNewSession());
-        this.buttons.closeHistory.addEventListener('click', () => this.hideHistory());
+    _bindEvents() {
+        // 헤더 버튼
+        document.getElementById('startNewBtn')
+            .addEventListener('click', () => this._goToStart());
+        document.getElementById('scoreHistoryBtn')
+            .addEventListener('click', () => this._showHistory());
+
+        // 시작 화면 – 레벨
+        document.querySelectorAll('.level-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                document.querySelectorAll('.level-btn').forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                this.selectedLevel = btn.dataset.level;
+                this._applyFilter();
+            });
+        });
+
+        // 시작 화면 – 전체 카테고리 버튼
+        document.querySelector('.cat-btn[data-cat="all"]')
+            .addEventListener('click', (e) => {
+                document.querySelectorAll('.cat-btn, .cat-letter-btn')
+                    .forEach(b => b.classList.remove('active'));
+                e.currentTarget.classList.add('active');
+                this.selectedCategory = 'all';
+                this._applyFilter();
+            });
+
+        // 단어 수 슬라이더
+        this.el.wordCountSlider.addEventListener('input', () => {
+            this.wordCount = parseInt(this.el.wordCountSlider.value);
+            this.el.wordCountDisplay.textContent = this.wordCount;
+            this._applyFilter();
+        });
+
+        // 시작 버튼
+        document.getElementById('startBtn')
+            .addEventListener('click', () => this._startSession(this.filteredWords));
+
+        // 학습 화면
+        this.el.nextBtn.addEventListener('click', () => this._nextWord());
+
+        // 결과 화면
+        this.el.reviewWrongBtn.addEventListener('click', () => this._startWrongReview());
+        document.getElementById('reviewBtn')
+            .addEventListener('click', () => this._reviewSession());
+        document.getElementById('newSessionBtn')
+            .addEventListener('click', () => this._goToStart());
+
+        // 기록 화면
+        document.getElementById('closeHistoryBtn')
+            .addEventListener('click', () => this._closeHistory());
+        document.getElementById('clearHistoryBtn')
+            .addEventListener('click', () => this._clearHistory());
     }
 
-    async loadWords() {
+    // ════════════════════════════════════════════════
+    //  데이터 로드
+    // ════════════════════════════════════════════════
+    async _loadWords() {
         try {
-            console.log('단어 데이터 로드 중...');
-            const response = await fetch('data/words.json');
-            if (!response.ok) {
-                throw new Error(`HTTP error! status: ${response.status}`);
-            }
-            this.words = await response.json();
-            console.log('단어 데이터 로드 완료:', this.words.length, '개 단어');
-            
-            // DOM 로드 확인 후 UI 업데이트
-            if (document.readyState === 'loading') {
-                document.addEventListener('DOMContentLoaded', () => {
-                    this.updateUI();
-                });
-            } else {
-                this.updateUI();
-            }
-        } catch (error) {
-            console.error('단어 데이터 로드 실패:', error);
-            this.showError('단어 데이터를 불러오는데 실패했습니다. 파일 경로를 확인해주세요.');
+            const res = await fetch('data/words.json');
+            if (!res.ok) throw new Error(`HTTP ${res.status}`);
+            this.words = await res.json();
+
+            this._buildCategoryButtons();
+            this._applyFilter();
+            if (this.el.footerWordCount)
+                this.el.footerWordCount.textContent = this.words.length;
+        } catch (err) {
+            console.error('단어 로드 실패:', err);
+            alert('단어 데이터를 불러오는 데 실패했습니다.\ndata/words.json 경로를 확인해주세요.');
         }
     }
 
-    updateUI() {
-        // UI가 준비되었음을 표시
-        if (this.words.length > 0) {
-            console.log('UI 업데이트 완료');
+    _buildCategoryButtons() {
+        const cats = [...new Set(this.words.map(w => w.category))].sort();
+        const grid = this.el.categoryGrid;
+        grid.innerHTML = '';
+        cats.forEach(cat => {
+            const btn = document.createElement('button');
+            btn.className = 'cat-letter-btn';
+            btn.dataset.cat = cat;
+            btn.textContent = cat;
+            btn.addEventListener('click', () => {
+                document.querySelectorAll('.cat-btn, .cat-letter-btn')
+                    .forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                this.selectedCategory = cat;
+                this._applyFilter();
+            });
+            grid.appendChild(btn);
+        });
+    }
+
+    _applyFilter() {
+        let pool = [...this.words];
+        if (this.selectedLevel !== 'all')
+            pool = pool.filter(w => w.level === this.selectedLevel);
+        if (this.selectedCategory !== 'all')
+            pool = pool.filter(w => w.category === this.selectedCategory);
+
+        this.filteredWords = pool;
+        if (this.el.availableCount)
+            this.el.availableCount.textContent = pool.length;
+
+        // 슬라이더 max 업데이트
+        const maxCount = Math.min(pool.length, 50);
+        this.el.wordCountSlider.max = maxCount || 50;
+        if (this.wordCount > maxCount && maxCount > 0) {
+            this.wordCount = maxCount;
+            this.el.wordCountSlider.value = maxCount;
+            this.el.wordCountDisplay.textContent = maxCount;
         }
     }
 
-    startNewSession() {
-        if (this.words.length < 10) {
-            this.showError('학습할 단어가 충분하지 않습니다. 최소 10개 단어가 필요합니다.');
+    // ════════════════════════════════════════════════
+    //  화면 전환
+    // ════════════════════════════════════════════════
+    _showScreen(name) {
+        ['startScreen','studyScreen','resultScreen','historyScreen'].forEach(id => {
+            const el = document.getElementById(id);
+            if (el) el.classList.remove('active');
+        });
+        const target = document.getElementById(name);
+        if (target) target.classList.add('active');
+    }
+
+    _goToStart() {
+        this._clearTimers();
+        this._showScreen('startScreen');
+    }
+
+    // ════════════════════════════════════════════════
+    //  세션 시작
+    // ════════════════════════════════════════════════
+    _startSession(pool) {
+        if (pool.length < 4) {
+            alert('선택한 조건에 해당하는 단어가 너무 적습니다.\n(최소 4개 필요)\n다른 조건을 선택해주세요.');
             return;
         }
+        const count = Math.min(this.wordCount, pool.length);
+        this.currentWords  = this._shuffle([...pool]).slice(0, count);
+        this.currentIndex  = 0;
+        this.score         = 0;
+        this.wrongWords    = [];
+        this.userAnswers   = [];
+        this.hasAnswered   = false;
 
-        console.log('새 학습 세션 시작');
-        
-        // 랜덤으로 10개 단어 선택 (겹치지 않도록)
-        this.currentWords = this.shuffleArray([...this.words]).slice(0, 10);
-        this.currentIndex = 0;
-        this.score = 0;
-        this.userAnswers = [];
+        this._showScreen('studyScreen');
+        this._updateProgress();
+        this._displayWord();
+    }
+
+    _startWrongReview() {
+        if (!this.wrongWords.length) return;
+        this.isWrongReview = true;
+        this._startSession(this.wrongWords);
+        this.isWrongReview = false;
+    }
+
+    _reviewSession() {
+        this._startSession(this.currentWords);
+    }
+
+    // ════════════════════════════════════════════════
+    //  단어 표시
+    // ════════════════════════════════════════════════
+    _displayWord() {
+        this._clearTimers();
+
+        const w = this.currentWords[this.currentIndex];
+
+        // 카드: 단어 + 품사 + 레벨만 표시 (뜻 숨김)
+        this.el.wordText.textContent = w.word;
+        this.el.wordType.textContent = w.type;
+        this.el.wordLevel.textContent = w.level;
+        this.el.wordLevel.className =
+            'word-level-badge level-' + this._levelClass(w.level);
+
+        // 퀴즈 생성
+        this._generateQuiz(w);
+
+        // 버튼 초기화
+        this.el.nextBtn.disabled = true;
+        this.el.nextBtn.innerHTML = '<i class="fas fa-arrow-right"></i> 다음 단어';
         this.hasAnswered = false;
 
-        this.showScreen('study');
-        this.updateProgress();
-        this.displayCurrentWord();
+        // 카운트다운 숨김
+        this.el.countdownArea.classList.add('hidden');
     }
 
-    shuffleArray(array) {
-        const shuffled = [...array];
-        for (let i = shuffled.length - 1; i > 0; i--) {
-            const j = Math.floor(Math.random() * (i + 1));
-            [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
-        }
-        return shuffled;
+    _levelClass(level) {
+        const map = { '초급': 'easy', '중급': 'medium', '고급': 'hard' };
+        return map[level] || 'easy';
     }
 
-    displayCurrentWord() {
-        const currentWord = this.currentWords[this.currentIndex];
-        
-        console.log('현재 단어:', currentWord);
-        
-        // 단어와 의미를 처음부터 모두 표시 (플래시카드 앞면에)
-        this.studyElements.wordText.textContent = currentWord.word;
-        this.studyElements.wordType.textContent = currentWord.type;
-        
-        // 의미를 카드 앞면에도 표시 (처음부터 보이게)
-        const meaningElement = document.createElement('div');
-        meaningElement.className = 'word-meaning';
-        meaningElement.textContent = currentWord.meaning;
-        meaningElement.style.marginTop = '20px';
-        meaningElement.style.fontSize = '1.6rem';
-        meaningElement.style.color = '#4b5563';
-        meaningElement.style.textAlign = 'center';
-        meaningElement.style.lineHeight = '1.6';
-        meaningElement.style.fontWeight = '500';
-        
-        // 기존 의미 요소가 있다면 제거하고 새로 추가
-        const existingMeaning = document.querySelector('.card-front .word-meaning');
-        if (existingMeaning) {
-            existingMeaning.remove();
-        }
-        document.querySelector('.card-front').appendChild(meaningElement);
-        
-        // 퀴즈 옵션 생성 (다른 단어의 의미 포함)
-        this.generateQuizOptions(currentWord);
-        
-        // 버튼 상태 초기화
-        this.buttons.next.disabled = true;
-        this.hasAnswered = false;
-        
-        // 퀴즈 섹션 표시
-        this.studyElements.quizSection.style.display = 'block';
-        
-        // 화면을 상단으로 스크롤
-        setTimeout(() => {
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        }, 100);
-    }
+    // ════════════════════════════════════════════════
+    //  퀴즈 옵션 생성
+    // ════════════════════════════════════════════════
+    _generateQuiz(currentWord) {
+        const container = this.el.quizOptions;
+        container.innerHTML = '';
 
-    generateQuizOptions(currentWord) {
-        this.studyElements.quizOptions.innerHTML = '';
-        
-        // 현재 단어의 정답 포함하여 4개 옵션 만들기
+        // 정답 포함 4개 옵션 구성
         const options = [currentWord.meaning];
-        
-        // 다른 단어에서 잘못된 답 가져오기 (랜덤하게 3개 선택)
-        const otherWords = this.words.filter(word => word.word !== currentWord.word);
-        const shuffledOtherWords = this.shuffleArray([...otherWords]);
-        
-        // 3개의 잘못된 답 추가 (중복되지 않게)
-        let addedCount = 0;
-        for (let i = 0; i < shuffledOtherWords.length && addedCount < 3; i++) {
-            // 이미 추가된 의미와 중복되지 않는지 확인
-            if (!options.includes(shuffledOtherWords[i].meaning)) {
-                options.push(shuffledOtherWords[i].meaning);
-                addedCount++;
-            }
+        const others  = this._shuffle(
+            this.words.filter(w => w.word !== currentWord.word)
+        );
+
+        for (const w of others) {
+            if (options.length >= 4) break;
+            if (!options.includes(w.meaning)) options.push(w.meaning);
         }
-        
-        // 만약 충분한 다른 의미가 없다면 기본값 추가
+
+        // 혹시 부족하면 기본값 채우기
+        const fallbacks = ['매우 작은','거의 없는','아주 드문','특별한','일반적인','평범한'];
+        let fi = 0;
         while (options.length < 4) {
-            const defaultOptions = ['매우 작은', '거의 없는', '아주 드문', '특별한'];
-            const randomDefault = defaultOptions[Math.floor(Math.random() * defaultOptions.length)];
-            if (!options.includes(randomDefault)) {
-                options.push(randomDefault);
-            }
+            if (!options.includes(fallbacks[fi])) options.push(fallbacks[fi]);
+            fi++;
         }
-        
-        // 옵션들을 섞기
-        const shuffledOptions = this.shuffleArray(options);
-        
-        shuffledOptions.forEach((option, index) => {
-            const optionElement = document.createElement('button');
-            optionElement.className = 'quiz-option';
-            optionElement.textContent = option;
-            optionElement.addEventListener('click', (e) => {
-                e.preventDefault();
-                this.selectAnswer(option, currentWord.meaning);
-            });
-            this.studyElements.quizOptions.appendChild(optionElement);
+
+        this._shuffle(options).forEach(opt => {
+            const btn = document.createElement('button');
+            btn.className = 'quiz-option';
+            btn.textContent = opt;
+            btn.addEventListener('click', () =>
+                this._selectAnswer(opt, currentWord.meaning)
+            );
+            container.appendChild(btn);
         });
     }
 
-    selectAnswer(selectedOption, correctAnswer) {
+    // ════════════════════════════════════════════════
+    //  답 선택
+    // ════════════════════════════════════════════════
+    _selectAnswer(selected, correct) {
         if (this.hasAnswered) return;
-        
-        console.log('답변 선택:', selectedOption, '정답:', correctAnswer);
-        
         this.hasAnswered = true;
-        const options = this.studyElements.quizOptions.querySelectorAll('.quiz-option');
-        
-        options.forEach(option => {
-            option.disabled = true;
-            if (option.textContent === correctAnswer) {
-                option.classList.add('correct');
-            } else if (option.textContent === selectedOption && selectedOption !== correctAnswer) {
-                option.classList.add('incorrect');
-            }
+
+        const isCorrect = selected === correct;
+        const buttons   = this.el.quizOptions.querySelectorAll('.quiz-option');
+
+        buttons.forEach(btn => {
+            btn.disabled = true;
+            if (btn.textContent === correct)     btn.classList.add('correct');
+            else if (btn.textContent === selected) btn.classList.add('incorrect');
         });
 
-        const isCorrect = selectedOption === correctAnswer;
         if (isCorrect) {
             this.score++;
-            console.log('정답! 현재 점수:', this.score);
+            this._playCorrectSound();
+            this._launchSparkles();
+        } else {
+            this._playWrongSound();
+            // 틀린 단어 저장 (중복 방지)
+            const w = this.currentWords[this.currentIndex];
+            if (!this.wrongWords.find(x => x.word === w.word))
+                this.wrongWords.push(w);
         }
 
+        this.el.liveScore.textContent = this.score;
+
         this.userAnswers.push({
-            word: this.currentWords[this.currentIndex].word,
-            selectedAnswer: selectedOption,
-            correctAnswer: correctAnswer,
-            isCorrect: isCorrect
+            word:      this.currentWords[this.currentIndex].word,
+            selected,
+            correct,
+            isCorrect
         });
 
         // 다음 버튼 활성화
-        this.buttons.next.disabled = false;
-        this.buttons.next.textContent = '다음 단어로';
-        this.buttons.next.innerHTML = '<i class="fas fa-arrow-right"></i> 다음 단어로';
+        this.el.nextBtn.disabled = false;
 
-        // 3초 후 자동으로 다음 단어로 진행
-        this.autoProgressTimer = setTimeout(() => {
-            this.nextWord();
-        }, 3000);
-
-        // 화면을 하단으로 스크롤하여 다음 버튼이 보이도록 함
-        setTimeout(() => {
-            const controlsElement = document.querySelector('.study-controls');
-            if (controlsElement) {
-                controlsElement.scrollIntoView({ behavior: 'smooth', block: 'center' });
-            }
-        }, 500);
+        // 3초 카운트다운 자동 진행
+        this._startCountdown();
     }
 
-    nextWord() {
-        // 자동 진행 타이머 정리
-        if (this.autoProgressTimer) {
-            clearTimeout(this.autoProgressTimer);
-            this.autoProgressTimer = null;
-        }
+    // ════════════════════════════════════════════════
+    //  카운트다운
+    // ════════════════════════════════════════════════
+    _startCountdown() {
+        this.countdownRemaining = 3;
+        this.el.countdownArea.classList.remove('hidden');
+        this.el.countdownNum.textContent = this.countdownRemaining;
+        this._updateRing(this.countdownRemaining, 3);
 
+        this.countdownInterval = setInterval(() => {
+            this.countdownRemaining--;
+            this.el.countdownNum.textContent = this.countdownRemaining;
+            this._updateRing(this.countdownRemaining, 3);
+
+            if (this.countdownRemaining <= 0) {
+                clearInterval(this.countdownInterval);
+                this.countdownInterval = null;
+                this._nextWord();
+            }
+        }, 1000);
+    }
+
+    _updateRing(remaining, total) {
+        const circle = this.el.ringProgress;
+        if (!circle) return;
+        const r          = 18;
+        const circumf    = 2 * Math.PI * r;
+        const fraction   = remaining / total;
+        circle.style.strokeDasharray  = `${circumf}`;
+        circle.style.strokeDashoffset = `${circumf * (1 - fraction)}`;
+    }
+
+    // ════════════════════════════════════════════════
+    //  다음 단어 / 결과
+    // ════════════════════════════════════════════════
+    _nextWord() {
+        this._clearTimers();
+        this.el.countdownArea.classList.add('hidden');
         this.currentIndex++;
-        
+
         if (this.currentIndex >= this.currentWords.length) {
-            this.showResult();
+            this._showResult();
         } else {
-            this.updateProgress();
-            this.displayCurrentWord();
+            this._updateProgress();
+            this._displayWord();
         }
     }
 
-    updateProgress() {
-        const progress = ((this.currentIndex) / this.currentWords.length) * 100;
-        if (this.studyElements.progressFill) {
-            this.studyElements.progressFill.style.width = `${progress}%`;
-        }
-        if (this.studyElements.currentWord) {
-            this.studyElements.currentWord.textContent = this.currentIndex + 1;
-        }
-        if (this.studyElements.totalWords) {
-            this.studyElements.totalWords.textContent = this.currentWords.length;
-        }
+    _updateProgress() {
+        const pct = (this.currentIndex / this.currentWords.length) * 100;
+        this.el.progressFill.style.width    = `${pct}%`;
+        this.el.currentWord.textContent     = this.currentIndex + 1;
+        this.el.totalWords.textContent      = this.currentWords.length;
+        this.el.liveScore.textContent       = this.score;
     }
 
-    showResult() {
-        this.saveScore();
-        this.showScreen('result');
-        
-        const percentage = (this.score / this.currentWords.length) * 100;
-        
-        if (this.resultElements.scoreText) {
-            this.resultElements.scoreText.textContent = this.score;
-        }
-        
-        if (percentage >= 80) {
-            this.resultElements.icon.className = 'result-icon fas fa-trophy success';
-            this.resultElements.title.textContent = '훌륭합니다!';
-        } else if (percentage >= 60) {
-            this.resultElements.icon.className = 'result-icon fas fa-thumbs-up improvement';
-            this.resultElements.title.textContent = '잘 하셨습니다!';
+    // ════════════════════════════════════════════════
+    //  결과 화면
+    // ════════════════════════════════════════════════
+    _showResult() {
+        this._saveScore();
+        this._showScreen('resultScreen');
+
+        const total = this.currentWords.length;
+        const pct   = (this.score / total) * 100;
+
+        this.el.scoreText.textContent    = this.score;
+        this.el.scoreTotalNum.textContent = total;
+
+        if (pct === 100) {
+            this.el.resultIcon.className = 'result-icon fas fa-trophy success';
+            this.el.resultTitle.textContent = '완벽합니다! 🎉';
+            this.el.resultMessage.textContent = '모든 단어를 맞히셨어요!';
+        } else if (pct >= 80) {
+            this.el.resultIcon.className = 'result-icon fas fa-star success';
+            this.el.resultTitle.textContent = '훌륭합니다!';
+            this.el.resultMessage.textContent = '거의 다 맞혔어요. 조금만 더 노력하면 완벽!';
+        } else if (pct >= 60) {
+            this.el.resultIcon.className = 'result-icon fas fa-thumbs-up improvement';
+            this.el.resultTitle.textContent = '잘 하셨습니다!';
+            this.el.resultMessage.textContent = '꾸준히 학습하면 금방 향상될 거예요!';
         } else {
-            this.resultElements.icon.className = 'result-icon fas fa-heart improvement';
-            this.resultElements.title.textContent = '더 노력해봅시다!';
+            this.el.resultIcon.className = 'result-icon fas fa-heart improvement';
+            this.el.resultTitle.textContent = '더 노력해봅시다!';
+            this.el.resultMessage.textContent = '틀린 단어를 다시 학습해보세요.';
         }
-        
-        console.log('학습 완료! 점수:', this.score, '/', this.currentWords.length);
+
+        // 틀린 단어 재학습 버튼
+        if (this.wrongWords.length > 0) {
+            this.el.reviewWrongBtn.style.display = 'inline-flex';
+            this.el.reviewWrongBtn.innerHTML =
+                `<i class="fas fa-exclamation-circle"></i> 틀린 단어 재학습 (${this.wrongWords.length}개)`;
+        } else {
+            this.el.reviewWrongBtn.style.display = 'none';
+        }
     }
 
-    saveScore() {
+    // ════════════════════════════════════════════════
+    //  점수 저장
+    // ════════════════════════════════════════════════
+    _saveScore() {
         try {
             const scores = JSON.parse(localStorage.getItem('flashcardScores') || '[]');
-            const newScore = {
-                date: new Date().toLocaleDateString('ko-KR'),
-                time: new Date().toLocaleTimeString('ko-KR', { hour: '2-digit', minute: '2-digit' }),
-                score: this.score,
-                total: this.currentWords.length,
+            scores.push({
+                date:      new Date().toLocaleDateString('ko-KR'),
+                time:      new Date().toLocaleTimeString('ko-KR', { hour: '2-digit', minute: '2-digit' }),
+                score:     this.score,
+                total:     this.currentWords.length,
+                level:     this.selectedLevel,
+                category:  this.selectedCategory,
                 timestamp: Date.now()
-            };
-            
-            scores.push(newScore);
-            // 최근 50개 기록만 유지
-            if (scores.length > 50) {
-                scores.shift();
-            }
-            
+            });
+            if (scores.length > 50) scores.shift();
             localStorage.setItem('flashcardScores', JSON.stringify(scores));
-            console.log('점수 저장 완료');
-        } catch (error) {
-            console.error('점수 저장 실패:', error);
+        } catch (e) {
+            console.warn('점수 저장 실패:', e);
         }
     }
 
-    showHistory() {
-        this.loadHistory();
-        this.showScreen('history');
+    // ════════════════════════════════════════════════
+    //  학습 기록
+    // ════════════════════════════════════════════════
+    _showHistory() {
+        this._renderHistory();
+        this._showScreen('historyScreen');
     }
 
-    hideHistory() {
-        this.showScreen('start');
+    _closeHistory() {
+        this._showScreen('startScreen');
     }
 
-    loadHistory() {
+    _renderHistory() {
         try {
             const scores = JSON.parse(localStorage.getItem('flashcardScores') || '[]');
-            
-            if (scores.length === 0) {
-                this.historyElements.list.innerHTML = '<div class="no-history">아직 학습 기록이 없습니다.</div>';
+
+            if (!scores.length) {
+                this.el.historyList.innerHTML =
+                    '<div class="no-history"><i class="fas fa-inbox"></i><p>아직 학습 기록이 없습니다.</p></div>';
                 return;
             }
 
-            // 최신순으로 정렬
             scores.sort((a, b) => b.timestamp - a.timestamp);
+            this.el.historyList.innerHTML = '';
 
-            this.historyElements.list.innerHTML = '';
-            scores.forEach(score => {
-                const historyItem = document.createElement('div');
-                historyItem.className = 'history-item';
-                historyItem.innerHTML = `
-                    <div>
-                        <div class="history-date">${score.date} ${score.time}</div>
+            scores.forEach(s => {
+                const pct  = Math.round((s.score / s.total) * 100);
+                const cls  = pct >= 80 ? 'grade-high' : pct >= 60 ? 'grade-mid' : 'grade-low';
+                const cat  = s.category && s.category !== 'all' ? `[${s.category}]` : '';
+                const lv   = s.level   && s.level   !== 'all' ? s.level : '전체';
+                const item = document.createElement('div');
+                item.className = 'history-item';
+                item.innerHTML = `
+                    <div class="history-info">
+                        <div class="history-date">${s.date} ${s.time}</div>
+                        <div class="history-meta">${lv} ${cat}</div>
                     </div>
-                    <div class="history-score">${score.score}/${score.total}</div>
-                `;
-                this.historyElements.list.appendChild(historyItem);
+                    <div class="history-score ${cls}">${s.score}/${s.total}
+                        <span class="history-pct">${pct}%</span>
+                    </div>`;
+                this.el.historyList.appendChild(item);
             });
-        } catch (error) {
-            console.error('기록 로드 실패:', error);
-            this.historyElements.list.innerHTML = '<div class="no-history">기록을 불러오는데 실패했습니다.</div>';
+        } catch (e) {
+            this.el.historyList.innerHTML =
+                '<div class="no-history">기록을 불러오는 데 실패했습니다.</div>';
         }
     }
 
-    reviewSession() {
-        // 현재 세션 다시 보기
-        this.currentIndex = 0;
-        this.score = 0;
-        this.userAnswers = [];
-        this.hasAnswered = false;
-
-        this.showScreen('study');
-        this.updateProgress();
-        this.displayCurrentWord();
+    _clearHistory() {
+        if (!confirm('모든 학습 기록을 삭제할까요?')) return;
+        localStorage.removeItem('flashcardScores');
+        this._renderHistory();
     }
 
-    showScreen(screenName) {
-        Object.values(this.screens).forEach(screen => {
-            if (screen) {
-                screen.classList.remove('active');
-            }
+    // ════════════════════════════════════════════════
+    //  유틸리티
+    // ════════════════════════════════════════════════
+    _shuffle(arr) {
+        const a = [...arr];
+        for (let i = a.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [a[i], a[j]] = [a[j], a[i]];
+        }
+        return a;
+    }
+
+    _clearTimers() {
+        if (this.autoProgressTimer)  { clearTimeout(this.autoProgressTimer);   this.autoProgressTimer  = null; }
+        if (this.countdownInterval)  { clearInterval(this.countdownInterval);   this.countdownInterval  = null; }
+    }
+
+    // ════════════════════════════════════════════════
+    //  Web Audio – 효과음
+    // ════════════════════════════════════════════════
+    _getAudioCtx() {
+        if (!this.audioCtx) {
+            try {
+                this.audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+            } catch (e) { return null; }
+        }
+        return this.audioCtx;
+    }
+
+    _playCorrectSound() {
+        const ctx = this._getAudioCtx();
+        if (!ctx) return;
+
+        // 상승 화음 (C5 → E5 → G5)
+        [[523, 0], [659, 0.1], [784, 0.2]].forEach(([freq, delay]) => {
+            const osc  = ctx.createOscillator();
+            const gain = ctx.createGain();
+            osc.connect(gain);
+            gain.connect(ctx.destination);
+            osc.type = 'sine';
+            osc.frequency.setValueAtTime(freq, ctx.currentTime + delay);
+            gain.gain.setValueAtTime(0.25, ctx.currentTime + delay);
+            gain.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + delay + 0.4);
+            osc.start(ctx.currentTime + delay);
+            osc.stop(ctx.currentTime + delay + 0.4);
         });
-        if (this.screens[screenName]) {
-            this.screens[screenName].classList.add('active');
-        }
-        console.log('화면 전환:', screenName);
     }
 
-    showError(message) {
-        console.error('오류:', message);
-        alert(message);
+    _playWrongSound() {
+        const ctx = this._getAudioCtx();
+        if (!ctx) return;
+
+        const osc  = ctx.createOscillator();
+        const gain = ctx.createGain();
+        osc.connect(gain);
+        gain.connect(ctx.destination);
+        osc.type = 'sawtooth';
+        osc.frequency.setValueAtTime(220, ctx.currentTime);
+        osc.frequency.exponentialRampToValueAtTime(110, ctx.currentTime + 0.3);
+        gain.gain.setValueAtTime(0.2, ctx.currentTime);
+        gain.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + 0.35);
+        osc.start(ctx.currentTime);
+        osc.stop(ctx.currentTime + 0.35);
+    }
+
+    // ════════════════════════════════════════════════
+    //  스파클 효과
+    // ════════════════════════════════════════════════
+    _launchSparkles() {
+        const container = document.getElementById('sparkleContainer');
+        if (!container) return;
+
+        const colors = ['#f59e0b','#6366f1','#10b981','#ec4899','#f97316','#06b6d4'];
+        const shapes = ['✦','★','✸','✿','◆','●'];
+        const count  = 28;
+
+        for (let i = 0; i < count; i++) {
+            const el = document.createElement('div');
+            el.className = 'sparkle';
+
+            // 화면 중앙 기준 랜덤 위치에서 출발
+            const startX = 30 + Math.random() * 40;   // vw %
+            const startY = 30 + Math.random() * 40;   // vh %
+
+            const angle  = (Math.random() * 360);
+            const dist   = 80 + Math.random() * 180;  // px
+            const dx     = Math.cos((angle * Math.PI) / 180) * dist;
+            const dy     = Math.sin((angle * Math.PI) / 180) * dist;
+            const size   = 12 + Math.random() * 20;
+            const dur    = 600 + Math.random() * 700;
+
+            el.textContent = shapes[Math.floor(Math.random() * shapes.length)];
+            el.style.cssText = `
+                left: ${startX}vw;
+                top:  ${startY}vh;
+                font-size: ${size}px;
+                color: ${colors[Math.floor(Math.random() * colors.length)]};
+                --dx: ${dx}px;
+                --dy: ${dy}px;
+                animation: sparkleFly ${dur}ms ease-out forwards;
+            `;
+            container.appendChild(el);
+            setTimeout(() => el.remove(), dur + 50);
+        }
     }
 }
 
-// 앱 초기화
+// ── 앱 부트 ──────────────────────────────────────
 document.addEventListener('DOMContentLoaded', () => {
-    console.log('DOM 로드 완료, 앱 초기화 시작');
-    const app = new FlashcardApp();
-    console.log('앱 초기화 완료');
+    window._app = new FlashcardApp();
 });
