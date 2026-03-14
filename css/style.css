@@ -1,0 +1,883 @@
+/* 기본 스타일 초기화 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #6366f1;
+    --primary-dark: #4f46e5;
+    --secondary-color: #8b5cf6;
+    --accent-color: #06b6d4;
+    --success-color: #10b981;
+    --error-color: #ef4444;
+    --warning-color: #f59e0b;
+    --background-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    --card-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    --card-shadow-hover: 0 20px 40px rgba(0, 0, 0, 0.15);
+    --border-radius: 16px;
+    --border-radius-lg: 24px;
+    --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --mobile-padding: 12px;
+    --mobile-card-padding: 16px;
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    background: var(--background-gradient);
+    min-height: 100vh;
+    color: #1f2937;
+    line-height: 1.6;
+    font-size: 16px;
+    overflow-x: hidden;
+    overflow-y: auto; /* 스크롤 가능하도록 변경 */
+    position: relative; /* fixed에서 relative로 변경 */
+    width: 100%;
+    height: auto; /* auto로 변경 */
+    min-height: 100vh; /* 최소 높이 유지 */
+}
+
+/* 앱 컨테이너 */
+.app-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    min-height: 100vh; /* height에서 min-height로 변경 */
+    display: flex;
+    flex-direction: column;
+    overflow: visible; /* hidden에서 visible로 변경 */
+}
+
+/* 헤더 */
+.app-header {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(20px);
+    border-radius: var(--border-radius-lg);
+    padding: 24px 32px;
+    margin-bottom: 32px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: var(--card-shadow);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: var(--transition);
+}
+
+.app-header:hover {
+    box-shadow: var(--card-shadow-hover);
+    transform: translateY(-2px);
+}
+
+.app-header h1 {
+    color: var(--primary-color);
+    font-size: 1.8rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.app-header h1 i {
+    font-size: 2rem;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.header-buttons {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+/* 버튼 스타일 */
+.btn {
+    padding: 12px 24px;
+    border: none;
+    border-radius: var(--border-radius);
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition);
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.95rem;
+    text-decoration: none;
+    position: relative;
+    overflow: hidden;
+}
+
+.btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    transition: left 0.5s;
+}
+
+.btn:hover::before {
+    left: 100%;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+    color: white;
+    box-shadow: 0 4px 15px rgba(99, 102, 241, 0.3);
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(99, 102, 241, 0.4);
+}
+
+.btn-secondary {
+    background: rgba(255, 255, 255, 0.9);
+    color: #4b5563;
+    border: 2px solid #e5e7eb;
+    backdrop-filter: blur(10px);
+}
+
+.btn-secondary:hover {
+    background: white;
+    border-color: var(--primary-color);
+    color: var(--primary-color);
+    transform: translateY(-2px);
+}
+
+.btn-large {
+    padding: 16px 32px;
+    font-size: 1.1rem;
+}
+
+.btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    transform: none !important;
+}
+
+/* 메인 콘텐츠 */
+.main-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+/* 스크린 관리 */
+.screen {
+    display: none;
+    animation: fadeInUp 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.screen.active {
+    display: block;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* 시작 화면 */
+.welcome-card {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(20px);
+    border-radius: var(--border-radius-lg);
+    padding: 60px 40px;
+    text-align: center;
+    max-width: 500px;
+    margin: 40px auto;
+    box-shadow: var(--card-shadow);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: var(--transition);
+}
+
+.welcome-card:hover {
+    box-shadow: var(--card-shadow-hover);
+    transform: translateY(-5px);
+}
+
+.welcome-icon {
+    font-size: 4rem;
+    margin-bottom: 24px;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.welcome-card h2 {
+    color: #1f2937;
+    font-size: 2.2rem;
+    margin-bottom: 16px;
+    font-weight: 700;
+}
+
+.welcome-card p {
+    color: #6b7280;
+    font-size: 1.2rem;
+    margin-bottom: 32px;
+}
+
+/* 진행 바 */
+.progress-container {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(20px);
+    border-radius: var(--border-radius);
+    padding: 24px;
+    margin-bottom: 32px;
+    box-shadow: var(--card-shadow);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.progress-info {
+    text-align: center;
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-bottom: 16px;
+}
+
+.progress-bar {
+    background: #e5e7eb;
+    height: 12px;
+    border-radius: 6px;
+    overflow: hidden;
+    position: relative;
+}
+
+.progress-fill {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    height: 100%;
+    border-radius: 6px;
+    transition: width 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+    width: 0%;
+    position: relative;
+}
+
+.progress-fill::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    animation: shimmer 2s infinite;
+}
+
+@keyframes shimmer {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
+}
+
+/* 플래시카드 - 의미를 처음부터 표시하도록 수정 */
+.flashcard-container {
+    perspective: 1200px;
+    margin-bottom: 32px;
+    display: flex;
+    justify-content: center;
+}
+
+.flashcard {
+    width: 100%;
+    max-width: 500px;
+    height: 320px;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+    cursor: pointer;
+}
+
+/* 카드 앞면에 의미를 표시하기 위한 컨테이너 수정 */
+.card-front {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(20px);
+    border-radius: var(--border-radius-lg);
+    padding: 40px 32px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: var(--card-shadow);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    backface-visibility: hidden;
+    transition: var(--transition);
+}
+
+.card-front:hover {
+    box-shadow: var(--card-shadow-hover);
+    transform: translateY(-2px);
+}
+
+/* 카드 뒷면은 숨김 처리 (더 이상 필요 없음) */
+.card-back {
+    display: none;
+}
+
+.word-text {
+    font-size: 2.8rem;
+    font-weight: 800;
+    color: #1f2937;
+    margin-bottom: 12px;
+    text-align: center;
+    line-height: 1.2;
+}
+
+.word-type {
+    font-size: 1.2rem;
+    color: #6b7280;
+    font-weight: 500;
+    background: rgba(99, 102, 241, 0.1);
+    padding: 6px 16px;
+    border-radius: 20px;
+}
+
+.meaning-title {
+    font-size: 1.4rem;
+    color: var(--primary-color);
+    margin-bottom: 16px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.word-meaning {
+    font-size: 1.8rem;
+    color: #1f2937;
+    text-align: center;
+    line-height: 1.6;
+    font-weight: 500;
+}
+
+/* 퀴즈 섹션 */
+.quiz-section {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(20px);
+    border-radius: var(--border-radius-lg);
+    padding: 32px;
+    margin-bottom: 100px; /* 하단 컨트롤을 위한 공간 증가 */
+    box-shadow: var(--card-shadow);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.quiz-title {
+    font-size: 1.4rem;
+    color: #1f2937;
+    margin-bottom: 24px;
+    text-align: center;
+    font-weight: 600;
+}
+
+.quiz-options {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 16px;
+}
+
+.quiz-option {
+    padding: 20px 24px;
+    border: 2px solid #e5e7eb;
+    border-radius: var(--border-radius);
+    background: white;
+    cursor: pointer;
+    transition: var(--transition);
+    font-weight: 500;
+    text-align: center;
+    font-size: 1.05rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.quiz-option:hover {
+    border-color: var(--primary-color);
+    background: rgba(99, 102, 241, 0.05);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(99, 102, 241, 0.2);
+}
+
+.quiz-option.correct {
+    background: linear-gradient(135deg, #10b981, #059669);
+    border-color: #059669;
+    color: white;
+    font-weight: 600;
+    animation: correctAnswer 0.6s ease;
+}
+
+.quiz-option.incorrect {
+    background: linear-gradient(135deg, #ef4444, #dc2626);
+    border-color: #dc2626;
+    color: white;
+    font-weight: 600;
+    animation: incorrectAnswer 0.6s ease;
+}
+
+.quiz-option:disabled {
+    cursor: not-allowed;
+    opacity: 0.8;
+}
+
+@keyframes correctAnswer {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+@keyframes incorrectAnswer {
+    0% { transform: scale(1) rotate(0deg); }
+    25% { transform: scale(1.02) rotate(-2deg); }
+    75% { transform: scale(1.02) rotate(2deg); }
+    100% { transform: scale(1) rotate(0deg); }
+}
+
+/* 학습 컨트롤 */
+.study-controls {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    margin-bottom: 32px;
+    flex-wrap: wrap;
+    position: sticky; /* sticky로 변경 */
+    bottom: 20px; /* 하단에 고정 */
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    padding: 16px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--card-shadow);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    z-index: 5;
+}
+
+/* 결과 화면 */
+.result-card {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(20px);
+    border-radius: var(--border-radius-lg);
+    padding: 60px 40px;
+    text-align: center;
+    max-width: 500px;
+    margin: 40px auto;
+    box-shadow: var(--card-shadow);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: var(--transition);
+}
+
+.result-card:hover {
+    box-shadow: var(--card-shadow-hover);
+    transform: translateY(-5px);
+}
+
+.result-icon {
+    font-size: 5rem;
+    margin-bottom: 24px;
+    background: linear-gradient(135deg, var(--success-color), #059669);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: bounce 1s ease infinite;
+}
+
+.result-icon.improvement {
+    background: linear-gradient(135deg, var(--warning-color), #d97706);
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+#resultTitle {
+    color: #1f2937;
+    font-size: 2.2rem;
+    margin-bottom: 24px;
+    font-weight: 700;
+}
+
+.score-display {
+    margin-bottom: 32px;
+}
+
+.score-text {
+    font-size: 3.5rem;
+    font-weight: 800;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.score-total {
+    font-size: 2rem;
+    color: #6b7280;
+}
+
+.result-actions {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+/* 학습 기록 */
+.history-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 32px;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(20px);
+    border-radius: var(--border-radius-lg);
+    padding: 24px 32px;
+    box-shadow: var(--card-shadow);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.history-header h2 {
+    color: #1f2937;
+    font-size: 1.8rem;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-weight: 700;
+}
+
+.history-list {
+    display: grid;
+    gap: 16px;
+}
+
+.history-item {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(20px);
+    border-radius: var(--border-radius);
+    padding: 24px;
+    box-shadow: var(--card-shadow);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: var(--transition);
+}
+
+.history-item:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--card-shadow-hover);
+}
+
+.history-date {
+    font-weight: 600;
+    color: #374151;
+    font-size: 1.1rem;
+}
+
+.history-score {
+    font-size: 1.4rem;
+    font-weight: 800;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.no-history {
+    text-align: center;
+    color: #6b7280;
+    font-size: 1.3rem;
+    padding: 60px 20px;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(20px);
+    border-radius: var(--border-radius-lg);
+    box-shadow: var(--card-shadow);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* 푸터 */
+.app-footer {
+    text-align: center;
+    padding: 24px;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 1rem;
+    margin-top: 40px;
+}
+
+/* 반응형 디자인 - 모바일 우선 접근법 */
+@media (max-width: 768px) {
+    .app-container {
+        padding: var(--mobile-padding);
+        min-height: 100vh; /* height에서 min-height로 변경 */
+        overflow: visible; /* hidden에서 visible로 변경 */
+    }
+    
+    .app-header {
+        flex-direction: column;
+        gap: 16px;
+        padding: 16px 20px;
+        margin-bottom: 16px;
+        border-radius: 12px;
+        position: sticky;
+        top: 0;
+        z-index: 10;
+    }
+    
+    .app-header h1 {
+        font-size: 1.4rem;
+        text-align: center;
+    }
+    
+    .header-buttons {
+        flex-direction: column;
+        width: 100%;
+        gap: 8px;
+    }
+    
+    .btn {
+        width: 100%;
+        justify-content: center;
+        padding: 10px 16px;
+        font-size: 0.9rem;
+    }
+    
+    .welcome-card,
+    .result-card {
+        padding: 24px 16px;
+        margin: 10px 5px;
+        border-radius: 16px;
+    }
+    
+    .welcome-card h2,
+    #resultTitle {
+        font-size: 1.6rem;
+    }
+    
+    .welcome-card p {
+        font-size: 1rem;
+    }
+    
+    .word-text {
+        font-size: 1.8rem;
+    }
+    
+    .word-type {
+        font-size: 1rem;
+        padding: 4px 12px;
+    }
+    
+    .flashcard {
+        height: 220px;
+        max-width: 100%;
+    }
+    
+    .card-front {
+        padding: 24px 16px;
+        border-radius: 16px;
+    }
+    
+    /* 카드 안의 의미 텍스트 크기 조정 */
+    .card-front .word-meaning {
+        font-size: 1.2rem !important;
+        margin-top: 15px !important;
+    }
+    
+    .meaning-title {
+        font-size: 1.2rem;
+        margin-bottom: 12px;
+    }
+    
+    .word-meaning {
+        font-size: 1.4rem;
+    }
+    
+    .quiz-section {
+        padding: 20px 16px;
+        margin-bottom: 16px;
+        border-radius: 16px;
+    }
+    
+    .quiz-title {
+        font-size: 1.2rem;
+        margin-bottom: 16px;
+    }
+    
+    .quiz-options {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+    
+    .quiz-option {
+        padding: 16px 12px;
+        font-size: 0.95rem;
+    }
+    
+    .study-controls {
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+        margin-bottom: 16px;
+    }
+    
+    .result-actions {
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+    }
+    
+    .history-header {
+        flex-direction: column;
+        gap: 12px;
+        text-align: center;
+        padding: 16px 20px;
+        border-radius: 16px;
+    }
+    
+    .history-header h2 {
+        font-size: 1.4rem;
+    }
+    
+    .history-item {
+        flex-direction: column;
+        gap: 8px;
+        text-align: center;
+        padding: 16px;
+    }
+    
+    .progress-container {
+        padding: 16px;
+        margin-bottom: 16px;
+        border-radius: 12px;
+    }
+    
+    .progress-info {
+        font-size: 1.1rem;
+        margin-bottom: 8px;
+    }
+    
+    .app-footer {
+        padding: 16px;
+        font-size: 0.85rem;
+        margin-top: auto;
+    }
+    
+    /* 모바일에서 스크롤 허용 - 자연스러운 스크롤 활성화 */
+    body {
+        overflow-y: auto; /* 스크롤 가능하도록 변경 */
+        position: relative; /* relative로 변경 */
+        height: auto; /* auto로 변경 */
+        min-height: 100vh; /* 최소 높이 유지 */
+        overscroll-behavior: auto; /* 기본값으로 변경 */
+    }
+    
+    .main-content {
+        flex: 1;
+        overflow-y: visible; /* visible로 변경 */
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: auto;
+        -ms-overflow-style: auto;
+        overscroll-behavior: auto; /* 기본값으로 변경 */
+        padding-bottom: 100px; /* 하단 버튼 공간 확보 */
+    }
+    
+    .main-content::-webkit-scrollbar {
+        display: block; /* 스크롤바 표시 */
+        width: 6px;
+    }
+    
+    .main-content::-webkit-scrollbar-thumb {
+        background: rgba(99, 102, 241, 0.3);
+        border-radius: 3px;
+    }
+    
+    /* iOS Safari용 추가 설정 */
+    .app-container {
+        -webkit-overflow-scrolling: touch;
+        overscroll-behavior: auto; /* 기본값으로 변경 */
+        height: auto; /* auto로 변경 */
+        min-height: 100vh; /* 최소 높이 유지 */
+        padding-bottom: 20px; /* 하단 여백 추가 */
+    }
+}
+
+@media (max-width: 480px) {
+    .app-header h1 {
+        font-size: 1.4rem;
+    }
+    
+    .welcome-card h2,
+    #resultTitle {
+        font-size: 1.8rem;
+    }
+    
+    .word-text {
+        font-size: 1.8rem;
+    }
+    
+    .score-text {
+        font-size: 3rem;
+    }
+    
+    .welcome-card,
+    .result-card {
+        padding: 32px 20px;
+    }
+}
+
+/* 애니메이션 */
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.history-item {
+    animation: slideIn 0.4s ease-out;
+}
+
+/* 로딩 상태 */
+.loading {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    border: 3px solid #f3f4f6;
+    border-top: 3px solid var(--primary-color);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* 추가 모던한 요소 */
+.glass-effect {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: var(--border-radius);
+}
+
+.text-gradient {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
