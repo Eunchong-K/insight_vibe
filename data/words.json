@@ -1,665 +1,5028 @@
 [
-  {"word":"abandon","type":"동사","meaning":"버리다, 포기하다","category":"A","level":"중급"},
-  {"word":"abundant","type":"형용사","meaning":"풍부한, 많은","category":"A","level":"중급"},
-  {"word":"accomplish","type":"동사","meaning":"성취하다, 완수하다","category":"A","level":"중급"},
-  {"word":"accurate","type":"형용사","meaning":"정확한, 정밀한","category":"A","level":"초급"},
-  {"word":"adapt","type":"동사","meaning":"적응하다, 조정하다","category":"A","level":"중급"},
-  {"word":"adequate","type":"형용사","meaning":"충분한, 적절한","category":"A","level":"중급"},
-  {"word":"affect","type":"동사","meaning":"영향을 미치다","category":"A","level":"초급"},
-  {"word":"afford","type":"동사","meaning":"여유가 되다, 감당하다","category":"A","level":"초급"},
-  {"word":"aggressive","type":"형용사","meaning":"공격적인, 적극적인","category":"A","level":"중급"},
-  {"word":"analyze","type":"동사","meaning":"분석하다, 검토하다","category":"A","level":"중급"},
-  {"word":"approach","type":"동사","meaning":"접근하다, 다가가다","category":"A","level":"초급"},
-  {"word":"argue","type":"동사","meaning":"주장하다, 논쟁하다","category":"A","level":"초급"},
-  {"word":"arise","type":"동사","meaning":"일어나다, 발생하다","category":"A","level":"중급"},
-  {"word":"aspect","type":"명사","meaning":"측면, 관점","category":"A","level":"중급"},
-  {"word":"assemble","type":"동사","meaning":"조립하다, 모으다","category":"A","level":"중급"},
-  {"word":"assign","type":"동사","meaning":"배정하다, 할당하다","category":"A","level":"중급"},
-  {"word":"assist","type":"동사","meaning":"돕다, 도움을 주다","category":"A","level":"초급"},
-  {"word":"assume","type":"동사","meaning":"가정하다, 추정하다","category":"A","level":"중급"},
-  {"word":"attach","type":"동사","meaning":"붙이다, 첨부하다","category":"A","level":"초급"},
-  {"word":"attempt","type":"동사","meaning":"시도하다, 노력하다","category":"A","level":"초급"},
-  {"word":"attitude","type":"명사","meaning":"태도, 자세","category":"A","level":"초급"},
-  {"word":"attract","type":"동사","meaning":"끌다, 매력적이다","category":"A","level":"초급"},
-  {"word":"authority","type":"명사","meaning":"권위, 당국","category":"A","level":"중급"},
-  {"word":"aware","type":"형용사","meaning":"알고 있는, 인식하는","category":"A","level":"초급"},
-  {"word":"awkward","type":"형용사","meaning":"어색한, 불편한","category":"A","level":"중급"},
-
-  {"word":"balance","type":"명사","meaning":"균형, 잔액","category":"B","level":"초급"},
-  {"word":"barrier","type":"명사","meaning":"장벽, 방해물","category":"B","level":"중급"},
-  {"word":"benefit","type":"명사","meaning":"이익, 혜택","category":"B","level":"초급"},
-  {"word":"bold","type":"형용사","meaning":"대담한, 용감한","category":"B","level":"초급"},
-  {"word":"boost","type":"동사","meaning":"증가시키다, 향상시키다","category":"B","level":"중급"},
-  {"word":"brief","type":"형용사","meaning":"짧은, 간략한","category":"B","level":"초급"},
-  {"word":"brilliant","type":"형용사","meaning":"뛰어난, 훌륭한","category":"B","level":"중급"},
-  {"word":"burden","type":"명사","meaning":"짐, 부담","category":"B","level":"중급"},
-  {"word":"capable","type":"형용사","meaning":"능력 있는, 유능한","category":"C","level":"중급"},
-  {"word":"capture","type":"동사","meaning":"포착하다, 사로잡다","category":"C","level":"중급"},
-  {"word":"cautious","type":"형용사","meaning":"조심스러운, 신중한","category":"C","level":"중급"},
-  {"word":"challenge","type":"명사","meaning":"도전, 과제","category":"C","level":"초급"},
-  {"word":"clarify","type":"동사","meaning":"명확히 하다, 설명하다","category":"C","level":"중급"},
-  {"word":"collaborate","type":"동사","meaning":"협력하다, 공동 작업하다","category":"C","level":"고급"},
-  {"word":"commit","type":"동사","meaning":"전념하다, 약속하다","category":"C","level":"중급"},
-  {"word":"compare","type":"동사","meaning":"비교하다","category":"C","level":"초급"},
-  {"word":"complex","type":"형용사","meaning":"복잡한","category":"C","level":"초급"},
-  {"word":"concept","type":"명사","meaning":"개념, 생각","category":"C","level":"중급"},
-  {"word":"concern","type":"명사","meaning":"걱정, 관심사","category":"C","level":"초급"},
-  {"word":"confident","type":"형용사","meaning":"자신 있는, 확신하는","category":"C","level":"초급"},
-  {"word":"conflict","type":"명사","meaning":"갈등, 충돌","category":"C","level":"중급"},
-  {"word":"consider","type":"동사","meaning":"고려하다, 생각하다","category":"C","level":"초급"},
-  {"word":"consistent","type":"형용사","meaning":"일관된, 꾸준한","category":"C","level":"중급"},
-  {"word":"contribute","type":"동사","meaning":"기여하다, 공헌하다","category":"C","level":"중급"},
-  {"word":"convince","type":"동사","meaning":"설득하다, 납득시키다","category":"C","level":"중급"},
-  {"word":"cope","type":"동사","meaning":"대처하다, 극복하다","category":"C","level":"중급"},
-  {"word":"creative","type":"형용사","meaning":"창의적인, 독창적인","category":"C","level":"초급"},
-  {"word":"crucial","type":"형용사","meaning":"중요한, 결정적인","category":"C","level":"중급"},
-
-  {"word":"debate","type":"명사","meaning":"토론, 논쟁","category":"D","level":"중급"},
-  {"word":"decline","type":"동사","meaning":"감소하다, 거절하다","category":"D","level":"중급"},
-  {"word":"define","type":"동사","meaning":"정의하다, 규정하다","category":"D","level":"초급"},
-  {"word":"delay","type":"동사","meaning":"지연하다, 미루다","category":"D","level":"초급"},
-  {"word":"demonstrate","type":"동사","meaning":"보여주다, 증명하다","category":"D","level":"중급"},
-  {"word":"deny","type":"동사","meaning":"부정하다, 거부하다","category":"D","level":"초급"},
-  {"word":"depend","type":"동사","meaning":"의존하다, 달려있다","category":"D","level":"초급"},
-  {"word":"describe","type":"동사","meaning":"묘사하다, 설명하다","category":"D","level":"초급"},
-  {"word":"determine","type":"동사","meaning":"결정하다, 결심하다","category":"D","level":"중급"},
-  {"word":"develop","type":"동사","meaning":"개발하다, 발전시키다","category":"D","level":"초급"},
-  {"word":"diverse","type":"형용사","meaning":"다양한, 다채로운","category":"D","level":"중급"},
-  {"word":"dominate","type":"동사","meaning":"지배하다, 우세하다","category":"D","level":"고급"},
-  {"word":"dramatic","type":"형용사","meaning":"극적인, 인상적인","category":"D","level":"중급"},
-
-  {"word":"effective","type":"형용사","meaning":"효과적인","category":"E","level":"초급"},
-  {"word":"efficient","type":"형용사","meaning":"효율적인","category":"E","level":"중급"},
-  {"word":"eliminate","type":"동사","meaning":"제거하다, 없애다","category":"E","level":"중급"},
-  {"word":"emerge","type":"동사","meaning":"나타나다, 등장하다","category":"E","level":"중급"},
-  {"word":"emphasize","type":"동사","meaning":"강조하다","category":"E","level":"중급"},
-  {"word":"encourage","type":"동사","meaning":"격려하다, 장려하다","category":"E","level":"초급"},
-  {"word":"enhance","type":"동사","meaning":"향상시키다, 강화하다","category":"E","level":"중급"},
-  {"word":"establish","type":"동사","meaning":"설립하다, 확립하다","category":"E","level":"중급"},
-  {"word":"evaluate","type":"동사","meaning":"평가하다, 가치를 매기다","category":"E","level":"중급"},
-  {"word":"examine","type":"동사","meaning":"조사하다, 검사하다","category":"E","level":"초급"},
-  {"word":"expand","type":"동사","meaning":"확장하다, 펼치다","category":"E","level":"중급"},
-  {"word":"explore","type":"동사","meaning":"탐험하다, 탐구하다","category":"E","level":"초급"},
-  {"word":"extensive","type":"형용사","meaning":"광범위한, 폭넓은","category":"E","level":"고급"},
-
-  {"word":"facilitate","type":"동사","meaning":"용이하게 하다, 촉진하다","category":"F","level":"고급"},
-  {"word":"factor","type":"명사","meaning":"요인, 요소","category":"F","level":"초급"},
-  {"word":"flexible","type":"형용사","meaning":"유연한, 융통성 있는","category":"F","level":"중급"},
-  {"word":"focus","type":"동사","meaning":"집중하다, 초점을 맞추다","category":"F","level":"초급"},
-  {"word":"force","type":"동사","meaning":"강요하다, 강제하다","category":"F","level":"초급"},
-  {"word":"formulate","type":"동사","meaning":"공식화하다, 만들어내다","category":"F","level":"고급"},
-  {"word":"foundation","type":"명사","meaning":"기반, 토대","category":"F","level":"중급"},
-  {"word":"frequent","type":"형용사","meaning":"빈번한, 자주 있는","category":"F","level":"초급"},
-  {"word":"frustrate","type":"동사","meaning":"좌절시키다, 방해하다","category":"F","level":"중급"},
-  {"word":"fulfill","type":"동사","meaning":"이행하다, 충족시키다","category":"F","level":"중급"},
-  {"word":"fundamental","type":"형용사","meaning":"근본적인, 핵심적인","category":"F","level":"고급"},
-
-  {"word":"generate","type":"동사","meaning":"발생시키다, 만들어내다","category":"G","level":"중급"},
-  {"word":"global","type":"형용사","meaning":"전 세계적인, 지구의","category":"G","level":"초급"},
-  {"word":"gradual","type":"형용사","meaning":"점진적인, 서서히","category":"G","level":"중급"},
-  {"word":"grant","type":"동사","meaning":"허가하다, 부여하다","category":"G","level":"중급"},
-  {"word":"guarantee","type":"동사","meaning":"보장하다, 확약하다","category":"G","level":"중급"},
-  {"word":"guide","type":"동사","meaning":"안내하다, 이끌다","category":"G","level":"초급"},
-
-  {"word":"handle","type":"동사","meaning":"다루다, 처리하다","category":"H","level":"초급"},
-  {"word":"highlight","type":"동사","meaning":"강조하다, 두드러지게 하다","category":"H","level":"중급"},
-  {"word":"hypothesis","type":"명사","meaning":"가설, 추측","category":"H","level":"고급"},
-
-  {"word":"identify","type":"동사","meaning":"식별하다, 확인하다","category":"I","level":"중급"},
-  {"word":"ignore","type":"동사","meaning":"무시하다, 외면하다","category":"I","level":"초급"},
-  {"word":"impact","type":"명사","meaning":"영향, 충격","category":"I","level":"초급"},
-  {"word":"implement","type":"동사","meaning":"실행하다, 시행하다","category":"I","level":"중급"},
-  {"word":"improve","type":"동사","meaning":"개선하다, 향상시키다","category":"I","level":"초급"},
-  {"word":"include","type":"동사","meaning":"포함하다","category":"I","level":"초급"},
-  {"word":"indicate","type":"동사","meaning":"나타내다, 가리키다","category":"I","level":"중급"},
-  {"word":"influence","type":"동사","meaning":"영향을 미치다","category":"I","level":"초급"},
-  {"word":"innovative","type":"형용사","meaning":"혁신적인, 창의적인","category":"I","level":"고급"},
-  {"word":"integrate","type":"동사","meaning":"통합하다, 합치다","category":"I","level":"고급"},
-  {"word":"interpret","type":"동사","meaning":"해석하다, 통역하다","category":"I","level":"중급"},
-  {"word":"investigate","type":"동사","meaning":"조사하다, 연구하다","category":"I","level":"중급"},
-
-  {"word":"justify","type":"동사","meaning":"정당화하다, 증명하다","category":"J","level":"고급"},
-
-  {"word":"maintain","type":"동사","meaning":"유지하다, 관리하다","category":"M","level":"중급"},
-  {"word":"manage","type":"동사","meaning":"관리하다, 해내다","category":"M","level":"초급"},
-  {"word":"maximize","type":"동사","meaning":"최대화하다","category":"M","level":"중급"},
-  {"word":"minimize","type":"동사","meaning":"최소화하다","category":"M","level":"중급"},
-  {"word":"monitor","type":"동사","meaning":"모니터링하다, 감시하다","category":"M","level":"중급"},
-  {"word":"motivate","type":"동사","meaning":"동기를 부여하다","category":"M","level":"중급"},
-
-  {"word":"negotiate","type":"동사","meaning":"협상하다, 교섭하다","category":"N","level":"고급"},
-  {"word":"neutral","type":"형용사","meaning":"중립적인, 중성의","category":"N","level":"중급"},
-  {"word":"notable","type":"형용사","meaning":"주목할 만한, 뛰어난","category":"N","level":"고급"},
-
-  {"word":"observe","type":"동사","meaning":"관찰하다, 지켜보다","category":"O","level":"초급"},
-  {"word":"obtain","type":"동사","meaning":"얻다, 획득하다","category":"O","level":"중급"},
-  {"word":"overcome","type":"동사","meaning":"극복하다, 이겨내다","category":"O","level":"중급"},
-  {"word":"overwhelm","type":"동사","meaning":"압도하다, 짓누르다","category":"O","level":"고급"},
-
-  {"word":"participate","type":"동사","meaning":"참여하다, 참가하다","category":"P","level":"중급"},
-  {"word":"perceive","type":"동사","meaning":"인식하다, 지각하다","category":"P","level":"고급"},
-  {"word":"perform","type":"동사","meaning":"수행하다, 공연하다","category":"P","level":"초급"},
-  {"word":"persist","type":"동사","meaning":"지속하다, 고집하다","category":"P","level":"고급"},
-  {"word":"potential","type":"형용사","meaning":"잠재적인, 가능성 있는","category":"P","level":"중급"},
-  {"word":"predict","type":"동사","meaning":"예측하다, 예언하다","category":"P","level":"초급"},
-  {"word":"prevent","type":"동사","meaning":"막다, 예방하다","category":"P","level":"초급"},
-  {"word":"prioritize","type":"동사","meaning":"우선순위를 두다","category":"P","level":"고급"},
-  {"word":"process","type":"동사","meaning":"처리하다, 가공하다","category":"P","level":"초급"},
-  {"word":"promote","type":"동사","meaning":"촉진하다, 홍보하다","category":"P","level":"중급"},
-  {"word":"propose","type":"동사","meaning":"제안하다, 계획하다","category":"P","level":"중급"},
-  {"word":"pursue","type":"동사","meaning":"추구하다, 쫓다","category":"P","level":"중급"},
-
-  {"word":"recognize","type":"동사","meaning":"인식하다, 알아보다","category":"R","level":"초급"},
-  {"word":"reduce","type":"동사","meaning":"줄이다, 감소시키다","category":"R","level":"초급"},
-  {"word":"reflect","type":"동사","meaning":"반영하다, 반성하다","category":"R","level":"중급"},
-  {"word":"reinforce","type":"동사","meaning":"강화하다, 보강하다","category":"R","level":"고급"},
-  {"word":"relevant","type":"형용사","meaning":"관련된, 적절한","category":"R","level":"중급"},
-  {"word":"reliable","type":"형용사","meaning":"믿을 수 있는, 신뢰할 수 있는","category":"R","level":"중급"},
-  {"word":"resolve","type":"동사","meaning":"해결하다, 결심하다","category":"R","level":"중급"},
-  {"word":"respond","type":"동사","meaning":"응답하다, 반응하다","category":"R","level":"초급"},
-  {"word":"restrict","type":"동사","meaning":"제한하다, 규제하다","category":"R","level":"중급"},
-  {"word":"reveal","type":"동사","meaning":"드러내다, 밝히다","category":"R","level":"중급"},
-
-  {"word":"significant","type":"형용사","meaning":"중요한, 의미 있는","category":"S","level":"중급"},
-  {"word":"solve","type":"동사","meaning":"해결하다, 풀다","category":"S","level":"초급"},
-  {"word":"specify","type":"동사","meaning":"명시하다, 구체적으로 말하다","category":"S","level":"고급"},
-  {"word":"stimulate","type":"동사","meaning":"자극하다, 촉진하다","category":"S","level":"고급"},
-  {"word":"strategy","type":"명사","meaning":"전략, 계획","category":"S","level":"중급"},
-  {"word":"strengthen","type":"동사","meaning":"강화하다, 강하게 하다","category":"S","level":"중급"},
-  {"word":"structure","type":"명사","meaning":"구조, 체계","category":"S","level":"초급"},
-  {"word":"succeed","type":"동사","meaning":"성공하다, 이어받다","category":"S","level":"초급"},
-  {"word":"sufficient","type":"형용사","meaning":"충분한, 족한","category":"S","level":"중급"},
-  {"word":"suitable","type":"형용사","meaning":"적합한, 어울리는","category":"S","level":"중급"},
-  {"word":"support","type":"동사","meaning":"지원하다, 지지하다","category":"S","level":"초급"},
-  {"word":"sustain","type":"동사","meaning":"지속시키다, 유지하다","category":"S","level":"고급"},
-
-  {"word":"tackle","type":"동사","meaning":"다루다, 해결하다","category":"T","level":"중급"},
-  {"word":"tendency","type":"명사","meaning":"경향, 성향","category":"T","level":"중급"},
-  {"word":"transform","type":"동사","meaning":"변환하다, 바꾸다","category":"T","level":"중급"},
-  {"word":"transition","type":"명사","meaning":"전환, 변화","category":"T","level":"고급"},
-  {"word":"trigger","type":"동사","meaning":"유발하다, 촉발시키다","category":"T","level":"고급"},
-
-  {"word":"undermine","type":"동사","meaning":"약화시키다, 무너뜨리다","category":"U","level":"고급"},
-  {"word":"utilize","type":"동사","meaning":"활용하다, 이용하다","category":"U","level":"중급"},
-
-  {"word":"validate","type":"동사","meaning":"검증하다, 유효화하다","category":"V","level":"고급"},
-  {"word":"various","type":"형용사","meaning":"다양한, 여러 가지의","category":"V","level":"초급"},
-  {"word":"vital","type":"형용사","meaning":"중요한, 필수적인","category":"V","level":"중급"},
-  {"word":"vulnerable","type":"형용사","meaning":"취약한, 상처받기 쉬운","category":"V","level":"고급"},
-
-  {"word":"withdraw","type":"동사","meaning":"철수하다, 인출하다","category":"W","level":"중급"},
-  {"word":"worthwhile","type":"형용사","meaning":"가치 있는, 보람 있는","category":"W","level":"고급"},
-
-  {"word":"abolish","type":"동사","meaning":"폐지하다, 없애다","category":"A","level":"고급"},
-  {"word":"abstract","type":"형용사","meaning":"추상적인, 관념적인","category":"A","level":"고급"},
-  {"word":"accelerate","type":"동사","meaning":"가속하다, 빠르게 하다","category":"A","level":"고급"},
-  {"word":"accommodate","type":"동사","meaning":"수용하다, 적응하다","category":"A","level":"고급"},
-  {"word":"acknowledge","type":"동사","meaning":"인정하다, 감사하다","category":"A","level":"고급"},
-  {"word":"accumulate","type":"동사","meaning":"축적하다, 모으다","category":"A","level":"고급"},
-  {"word":"anticipate","type":"동사","meaning":"예상하다, 기대하다","category":"A","level":"고급"},
-  {"word":"appreciate","type":"동사","meaning":"감사하다, 가치를 알다","category":"A","level":"중급"},
-  {"word":"articulate","type":"동사","meaning":"명확히 표현하다","category":"A","level":"고급"},
-  {"word":"assert","type":"동사","meaning":"주장하다, 단언하다","category":"A","level":"고급"},
-  {"word":"allocate","type":"동사","meaning":"할당하다, 배분하다","category":"A","level":"고급"},
-  {"word":"alleviate","type":"동사","meaning":"완화하다, 경감하다","category":"A","level":"고급"},
-  {"word":"ambiguous","type":"형용사","meaning":"모호한, 불분명한","category":"A","level":"고급"},
-  {"word":"ambitious","type":"형용사","meaning":"야망 있는, 큰 뜻을 품은","category":"A","level":"중급"},
-
-  {"word":"benchmark","type":"명사","meaning":"기준, 벤치마크","category":"B","level":"고급"},
-  {"word":"bias","type":"명사","meaning":"편견, 편향","category":"B","level":"고급"},
-  {"word":"broad","type":"형용사","meaning":"넓은, 광범위한","category":"B","level":"초급"},
-  {"word":"budget","type":"명사","meaning":"예산, 예산안","category":"B","level":"초급"},
-  {"word":"bureaucracy","type":"명사","meaning":"관료제, 행정 절차","category":"B","level":"고급"},
-
-  {"word":"calculate","type":"동사","meaning":"계산하다, 추산하다","category":"C","level":"초급"},
-  {"word":"campaign","type":"명사","meaning":"캠페인, 운동","category":"C","level":"중급"},
-  {"word":"capacity","type":"명사","meaning":"수용력, 능력","category":"C","level":"중급"},
-  {"word":"circumstance","type":"명사","meaning":"상황, 환경","category":"C","level":"고급"},
-  {"word":"cognitive","type":"형용사","meaning":"인지의, 인식의","category":"C","level":"고급"},
-  {"word":"coherent","type":"형용사","meaning":"일관성 있는, 논리적인","category":"C","level":"고급"},
-  {"word":"comprehensive","type":"형용사","meaning":"포괄적인, 광범위한","category":"C","level":"고급"},
-  {"word":"compromise","type":"동사","meaning":"타협하다, 손상시키다","category":"C","level":"중급"},
-  {"word":"consequence","type":"명사","meaning":"결과, 영향","category":"C","level":"중급"},
-  {"word":"construct","type":"동사","meaning":"건설하다, 구성하다","category":"C","level":"중급"},
-  {"word":"context","type":"명사","meaning":"맥락, 상황","category":"C","level":"중급"},
-  {"word":"controversial","type":"형용사","meaning":"논란이 많은, 논쟁적인","category":"C","level":"고급"},
-  {"word":"convey","type":"동사","meaning":"전달하다, 나르다","category":"C","level":"고급"},
-  {"word":"coordinate","type":"동사","meaning":"조율하다, 조정하다","category":"C","level":"고급"},
-  {"word":"correlate","type":"동사","meaning":"상관관계가 있다","category":"C","level":"고급"},
-  {"word":"criteria","type":"명사","meaning":"기준, 척도","category":"C","level":"고급"},
-
-  {"word":"dedicate","type":"동사","meaning":"헌신하다, 전념하다","category":"D","level":"중급"},
-  {"word":"deliberate","type":"형용사","meaning":"의도적인, 신중한","category":"D","level":"고급"},
-  {"word":"differentiate","type":"동사","meaning":"구별하다, 차별화하다","category":"D","level":"고급"},
-  {"word":"dilemma","type":"명사","meaning":"딜레마, 진퇴양난","category":"D","level":"고급"},
-  {"word":"diminish","type":"동사","meaning":"줄어들다, 약화시키다","category":"D","level":"고급"},
-  {"word":"discipline","type":"명사","meaning":"규율, 훈련","category":"D","level":"중급"},
-  {"word":"disrupt","type":"동사","meaning":"방해하다, 혼란시키다","category":"D","level":"고급"},
-  {"word":"distribute","type":"동사","meaning":"배포하다, 분배하다","category":"D","level":"중급"},
-  {"word":"document","type":"동사","meaning":"기록하다, 문서화하다","category":"D","level":"초급"},
-  {"word":"dynamic","type":"형용사","meaning":"역동적인, 동적인","category":"D","level":"중급"},
-
-  {"word":"elaborate","type":"동사","meaning":"자세히 설명하다, 정교하게 하다","category":"E","level":"고급"},
-  {"word":"enable","type":"동사","meaning":"가능하게 하다, 활성화하다","category":"E","level":"초급"},
-  {"word":"enforce","type":"동사","meaning":"시행하다, 강요하다","category":"E","level":"고급"},
-  {"word":"ensure","type":"동사","meaning":"보장하다, 확실히 하다","category":"E","level":"중급"},
-  {"word":"environment","type":"명사","meaning":"환경","category":"E","level":"초급"},
-  {"word":"evident","type":"형용사","meaning":"분명한, 명백한","category":"E","level":"중급"},
-  {"word":"evolve","type":"동사","meaning":"진화하다, 발전하다","category":"E","level":"중급"},
-  {"word":"exceed","type":"동사","meaning":"초과하다, 능가하다","category":"E","level":"중급"},
-  {"word":"execute","type":"동사","meaning":"실행하다, 처형하다","category":"E","level":"중급"},
-  {"word":"explicit","type":"형용사","meaning":"명시적인, 분명한","category":"E","level":"고급"},
-
-  {"word":"familiar","type":"형용사","meaning":"친숙한, 잘 아는","category":"F","level":"초급"},
-  {"word":"feasible","type":"형용사","meaning":"실현 가능한, 실용적인","category":"F","level":"고급"},
-  {"word":"feedback","type":"명사","meaning":"피드백, 반응","category":"F","level":"초급"},
-  {"word":"foster","type":"동사","meaning":"육성하다, 촉진하다","category":"F","level":"고급"},
-  {"word":"fragile","type":"형용사","meaning":"취약한, 깨지기 쉬운","category":"F","level":"중급"},
-  {"word":"framework","type":"명사","meaning":"틀, 구조","category":"F","level":"중급"},
-  {"word":"function","type":"동사","meaning":"기능하다, 작동하다","category":"F","level":"초급"},
-
-  {"word":"gap","type":"명사","meaning":"차이, 격차","category":"G","level":"초급"},
-  {"word":"genuine","type":"형용사","meaning":"진짜의, 진심 어린","category":"G","level":"중급"},
-  {"word":"governance","type":"명사","meaning":"거버넌스, 통치","category":"G","level":"고급"},
-
-  {"word":"harmful","type":"형용사","meaning":"해로운, 유해한","category":"H","level":"초급"},
-  {"word":"hesitate","type":"동사","meaning":"망설이다, 주저하다","category":"H","level":"중급"},
-  {"word":"hierarchy","type":"명사","meaning":"계층, 위계질서","category":"H","level":"고급"},
-  {"word":"horizon","type":"명사","meaning":"지평선, 가능성의 범위","category":"H","level":"중급"},
-
-  {"word":"ideal","type":"형용사","meaning":"이상적인, 완벽한","category":"I","level":"초급"},
-  {"word":"illustrate","type":"동사","meaning":"설명하다, 보여주다","category":"I","level":"중급"},
-  {"word":"implicit","type":"형용사","meaning":"암묵적인, 내포된","category":"I","level":"고급"},
-  {"word":"impose","type":"동사","meaning":"부과하다, 강요하다","category":"I","level":"고급"},
-  {"word":"initial","type":"형용사","meaning":"초기의, 처음의","category":"I","level":"초급"},
-  {"word":"initiative","type":"명사","meaning":"주도권, 계획","category":"I","level":"고급"},
-  {"word":"insight","type":"명사","meaning":"통찰력, 깨달음","category":"I","level":"고급"},
-  {"word":"interact","type":"동사","meaning":"상호작용하다","category":"I","level":"중급"},
-  {"word":"involve","type":"동사","meaning":"포함하다, 관여시키다","category":"I","level":"초급"},
-
-  {"word":"label","type":"동사","meaning":"분류하다, 이름표를 붙이다","category":"L","level":"초급"},
-  {"word":"launch","type":"동사","meaning":"출시하다, 시작하다","category":"L","level":"중급"},
-  {"word":"leverage","type":"동사","meaning":"활용하다, 지렛대로 이용하다","category":"L","level":"고급"},
-  {"word":"logic","type":"명사","meaning":"논리, 이치","category":"L","level":"초급"},
-
-  {"word":"mechanism","type":"명사","meaning":"메커니즘, 방법","category":"M","level":"고급"},
-  {"word":"methodology","type":"명사","meaning":"방법론","category":"M","level":"고급"},
-  {"word":"mutual","type":"형용사","meaning":"상호의, 공통의","category":"M","level":"중급"},
-
-  {"word":"navigate","type":"동사","meaning":"항해하다, 탐색하다","category":"N","level":"중급"},
-  {"word":"norm","type":"명사","meaning":"표준, 규범","category":"N","level":"중급"},
-  {"word":"notion","type":"명사","meaning":"개념, 생각","category":"N","level":"고급"},
-
-  {"word":"objective","type":"명사","meaning":"목표, 목적","category":"O","level":"중급"},
-  {"word":"optimize","type":"동사","meaning":"최적화하다","category":"O","level":"고급"},
-  {"word":"outcome","type":"명사","meaning":"결과, 성과","category":"O","level":"중급"},
-
-  {"word":"paradigm","type":"명사","meaning":"패러다임, 방식","category":"P","level":"고급"},
-  {"word":"parameter","type":"명사","meaning":"매개변수, 기준","category":"P","level":"고급"},
-  {"word":"pattern","type":"명사","meaning":"패턴, 규칙","category":"P","level":"초급"},
-  {"word":"perspective","type":"명사","meaning":"관점, 시각","category":"P","level":"중급"},
-  {"word":"phenomenon","type":"명사","meaning":"현상","category":"P","level":"고급"},
-  {"word":"policy","type":"명사","meaning":"정책, 방침","category":"P","level":"중급"},
-  {"word":"precise","type":"형용사","meaning":"정확한, 명확한","category":"P","level":"중급"},
-  {"word":"preliminary","type":"형용사","meaning":"예비적인, 준비 단계의","category":"P","level":"고급"},
-  {"word":"principle","type":"명사","meaning":"원칙, 원리","category":"P","level":"중급"},
-  {"word":"proactive","type":"형용사","meaning":"적극적인, 선제적인","category":"P","level":"고급"},
-  {"word":"problem","type":"명사","meaning":"문제, 과제","category":"P","level":"초급"},
-  {"word":"proficient","type":"형용사","meaning":"능숙한, 숙달된","category":"P","level":"고급"},
-  {"word":"progress","type":"명사","meaning":"진전, 발전","category":"P","level":"초급"},
-
-  {"word":"qualitative","type":"형용사","meaning":"질적인, 정성적인","category":"Q","level":"고급"},
-  {"word":"quantify","type":"동사","meaning":"수량화하다, 측정하다","category":"Q","level":"고급"},
-
-  {"word":"rationale","type":"명사","meaning":"근거, 이유","category":"R","level":"고급"},
-  {"word":"refine","type":"동사","meaning":"정제하다, 다듬다","category":"R","level":"고급"},
-  {"word":"regulate","type":"동사","meaning":"규제하다, 조절하다","category":"R","level":"중급"},
-  {"word":"reinvent","type":"동사","meaning":"재발명하다, 완전히 바꾸다","category":"R","level":"고급"},
-  {"word":"replication","type":"명사","meaning":"복제, 반복","category":"R","level":"고급"},
-  {"word":"resilience","type":"명사","meaning":"회복력, 탄력성","category":"R","level":"고급"},
-  {"word":"resource","type":"명사","meaning":"자원, 재원","category":"R","level":"초급"},
-  {"word":"retain","type":"동사","meaning":"유지하다, 기억하다","category":"R","level":"중급"},
-  {"word":"robust","type":"형용사","meaning":"강건한, 견고한","category":"R","level":"고급"},
-
-  {"word":"scale","type":"동사","meaning":"확장하다, 규모를 조정하다","category":"S","level":"중급"},
-  {"word":"scenario","type":"명사","meaning":"시나리오, 상황","category":"S","level":"중급"},
-  {"word":"scope","type":"명사","meaning":"범위, 규모","category":"S","level":"중급"},
-  {"word":"scrutinize","type":"동사","meaning":"면밀히 조사하다","category":"S","level":"고급"},
-  {"word":"sequence","type":"명사","meaning":"순서, 연속","category":"S","level":"중급"},
-  {"word":"simulate","type":"동사","meaning":"시뮬레이션하다, 모방하다","category":"S","level":"고급"},
-  {"word":"skeptical","type":"형용사","meaning":"회의적인, 의심하는","category":"S","level":"고급"},
-  {"word":"sophisticated","type":"형용사","meaning":"정교한, 세련된","category":"S","level":"고급"},
-  {"word":"stabilize","type":"동사","meaning":"안정시키다","category":"S","level":"고급"},
-  {"word":"standard","type":"명사","meaning":"기준, 표준","category":"S","level":"초급"},
-  {"word":"subordinate","type":"형용사","meaning":"부하의, 종속적인","category":"S","level":"고급"},
-  {"word":"subtle","type":"형용사","meaning":"미묘한, 섬세한","category":"S","level":"고급"},
-  {"word":"systematic","type":"형용사","meaning":"체계적인, 조직적인","category":"S","level":"고급"},
-
-  {"word":"threshold","type":"명사","meaning":"임계값, 문턱","category":"T","level":"고급"},
-  {"word":"transparent","type":"형용사","meaning":"투명한, 명확한","category":"T","level":"중급"},
-  {"word":"trend","type":"명사","meaning":"추세, 유행","category":"T","level":"초급"},
-
-  {"word":"unify","type":"동사","meaning":"통일하다, 통합하다","category":"U","level":"중급"},
-  {"word":"unique","type":"형용사","meaning":"독특한, 유일한","category":"U","level":"초급"},
-  {"word":"update","type":"동사","meaning":"업데이트하다, 갱신하다","category":"U","level":"초급"},
-
-  {"word":"verify","type":"동사","meaning":"검증하다, 확인하다","category":"V","level":"중급"},
-  {"word":"visible","type":"형용사","meaning":"눈에 보이는, 가시적인","category":"V","level":"초급"},
-
-  {"word":"widespread","type":"형용사","meaning":"널리 퍼진, 광범위한","category":"W","level":"중급"},
-
-  {"word":"yield","type":"동사","meaning":"산출하다, 양보하다","category":"Y","level":"고급"},
-
-  {"word":"absolute","type":"형용사","meaning":"절대적인, 완전한","category":"A","level":"중급"},
-  {"word":"absorb","type":"동사","meaning":"흡수하다, 이해하다","category":"A","level":"중급"},
-  {"word":"alert","type":"형용사","meaning":"경계하는, 주의 깊은","category":"A","level":"초급"},
-  {"word":"align","type":"동사","meaning":"정렬하다, 일치시키다","category":"A","level":"중급"},
-  {"word":"alter","type":"동사","meaning":"변경하다, 바꾸다","category":"A","level":"중급"},
-  {"word":"amend","type":"동사","meaning":"수정하다, 개정하다","category":"A","level":"고급"},
-  {"word":"amplify","type":"동사","meaning":"증폭하다, 확대하다","category":"A","level":"고급"},
-  {"word":"apply","type":"동사","meaning":"적용하다, 지원하다","category":"A","level":"초급"},
-  {"word":"assess","type":"동사","meaning":"평가하다, 사정하다","category":"A","level":"중급"},
-  {"word":"attribute","type":"동사","meaning":"귀속시키다, 탓으로 돌리다","category":"A","level":"고급"},
-
-  {"word":"behave","type":"동사","meaning":"행동하다","category":"B","level":"초급"},
-  {"word":"believe","type":"동사","meaning":"믿다, 생각하다","category":"B","level":"초급"},
-  {"word":"blame","type":"동사","meaning":"비난하다, 탓하다","category":"B","level":"초급"},
-  {"word":"blend","type":"동사","meaning":"혼합하다, 섞다","category":"B","level":"초급"},
-  {"word":"block","type":"동사","meaning":"막다, 차단하다","category":"B","level":"초급"},
-  {"word":"build","type":"동사","meaning":"짓다, 형성하다","category":"B","level":"초급"},
-
-  {"word":"caution","type":"명사","meaning":"주의, 경고","category":"C","level":"중급"},
-  {"word":"center","type":"동사","meaning":"집중하다, 중심에 두다","category":"C","level":"초급"},
-  {"word":"certain","type":"형용사","meaning":"확실한, 특정한","category":"C","level":"초급"},
-  {"word":"change","type":"동사","meaning":"변하다, 바꾸다","category":"C","level":"초급"},
-  {"word":"charge","type":"동사","meaning":"부과하다, 청구하다","category":"C","level":"초급"},
-  {"word":"choose","type":"동사","meaning":"선택하다","category":"C","level":"초급"},
-  {"word":"cite","type":"동사","meaning":"인용하다, 언급하다","category":"C","level":"중급"},
-  {"word":"classify","type":"동사","meaning":"분류하다","category":"C","level":"중급"},
-  {"word":"clear","type":"형용사","meaning":"명확한, 맑은","category":"C","level":"초급"},
-  {"word":"collect","type":"동사","meaning":"수집하다, 모으다","category":"C","level":"초급"},
-  {"word":"combine","type":"동사","meaning":"결합하다, 합치다","category":"C","level":"초급"},
-  {"word":"communicate","type":"동사","meaning":"의사소통하다","category":"C","level":"초급"},
-  {"word":"complete","type":"동사","meaning":"완료하다, 완성하다","category":"C","level":"초급"},
-  {"word":"confirm","type":"동사","meaning":"확인하다, 확증하다","category":"C","level":"초급"},
-  {"word":"control","type":"동사","meaning":"통제하다, 조절하다","category":"C","level":"초급"},
-  {"word":"correct","type":"동사","meaning":"수정하다, 바로잡다","category":"C","level":"초급"},
-  {"word":"create","type":"동사","meaning":"창조하다, 만들다","category":"C","level":"초급"},
-  {"word":"criticize","type":"동사","meaning":"비판하다, 비평하다","category":"C","level":"중급"},
-  {"word":"customize","type":"동사","meaning":"맞춤화하다, 개인화하다","category":"C","level":"중급"},
-
-  {"word":"damage","type":"동사","meaning":"손상시키다, 해치다","category":"D","level":"초급"},
-  {"word":"deal","type":"동사","meaning":"다루다, 거래하다","category":"D","level":"초급"},
-  {"word":"decide","type":"동사","meaning":"결정하다","category":"D","level":"초급"},
-  {"word":"declare","type":"동사","meaning":"선언하다, 공표하다","category":"D","level":"중급"},
-  {"word":"deliver","type":"동사","meaning":"전달하다, 배달하다","category":"D","level":"초급"},
-  {"word":"demand","type":"동사","meaning":"요구하다, 수요","category":"D","level":"초급"},
-  {"word":"design","type":"동사","meaning":"설계하다, 디자인하다","category":"D","level":"초급"},
-  {"word":"detect","type":"동사","meaning":"감지하다, 발견하다","category":"D","level":"중급"},
-  {"word":"devise","type":"동사","meaning":"고안하다, 계획하다","category":"D","level":"고급"},
-  {"word":"direct","type":"동사","meaning":"지시하다, 이끌다","category":"D","level":"초급"},
-  {"word":"discover","type":"동사","meaning":"발견하다","category":"D","level":"초급"},
-  {"word":"discuss","type":"동사","meaning":"논의하다, 토론하다","category":"D","level":"초급"},
-  {"word":"distinct","type":"형용사","meaning":"뚜렷한, 별개의","category":"D","level":"중급"},
-  {"word":"diverse","type":"형용사","meaning":"다양한, 서로 다른","category":"D","level":"중급"},
-  {"word":"divide","type":"동사","meaning":"나누다, 분리하다","category":"D","level":"초급"},
-
-  {"word":"earn","type":"동사","meaning":"벌다, 획득하다","category":"E","level":"초급"},
-  {"word":"edit","type":"동사","meaning":"편집하다, 수정하다","category":"E","level":"초급"},
-  {"word":"educate","type":"동사","meaning":"교육하다, 가르치다","category":"E","level":"초급"},
-  {"word":"employ","type":"동사","meaning":"고용하다, 활용하다","category":"E","level":"중급"},
-  {"word":"engage","type":"동사","meaning":"참여하다, 종사하다","category":"E","level":"중급"},
-  {"word":"enrich","type":"동사","meaning":"풍요롭게 하다, 향상시키다","category":"E","level":"중급"},
-  {"word":"enter","type":"동사","meaning":"들어가다, 입력하다","category":"E","level":"초급"},
-  {"word":"equal","type":"형용사","meaning":"평등한, 같은","category":"E","level":"초급"},
-  {"word":"explain","type":"동사","meaning":"설명하다","category":"E","level":"초급"},
-  {"word":"express","type":"동사","meaning":"표현하다","category":"E","level":"초급"},
-  {"word":"extend","type":"동사","meaning":"연장하다, 확장하다","category":"E","level":"초급"},
-
-  {"word":"fail","type":"동사","meaning":"실패하다","category":"F","level":"초급"},
-  {"word":"figure","type":"동사","meaning":"생각하다, 계산하다","category":"F","level":"초급"},
-  {"word":"find","type":"동사","meaning":"찾다, 발견하다","category":"F","level":"초급"},
-  {"word":"follow","type":"동사","meaning":"따라가다, 따르다","category":"F","level":"초급"},
-  {"word":"frame","type":"동사","meaning":"틀을 짜다, 표현하다","category":"F","level":"중급"},
-  {"word":"free","type":"동사","meaning":"해방시키다, 자유롭게 하다","category":"F","level":"초급"},
-
-  {"word":"gain","type":"동사","meaning":"얻다, 증가하다","category":"G","level":"초급"},
-  {"word":"give","type":"동사","meaning":"주다, 제공하다","category":"G","level":"초급"},
-  {"word":"grow","type":"동사","meaning":"성장하다, 키우다","category":"G","level":"초급"},
-
-  {"word":"help","type":"동사","meaning":"돕다, 도움이 되다","category":"H","level":"초급"},
-  {"word":"hold","type":"동사","meaning":"잡다, 개최하다","category":"H","level":"초급"},
-
-  {"word":"increase","type":"동사","meaning":"증가하다, 늘리다","category":"I","level":"초급"},
-  {"word":"influence","type":"명사","meaning":"영향력","category":"I","level":"초급"},
-  {"word":"inform","type":"동사","meaning":"알리다, 통보하다","category":"I","level":"초급"},
-
-  {"word":"join","type":"동사","meaning":"합류하다, 가입하다","category":"J","level":"초급"},
-  {"word":"judge","type":"동사","meaning":"판단하다, 심판하다","category":"J","level":"초급"},
-
-  {"word":"keep","type":"동사","meaning":"유지하다, 계속하다","category":"K","level":"초급"},
-  {"word":"know","type":"동사","meaning":"알다, 알고 있다","category":"K","level":"초급"},
-
-  {"word":"lead","type":"동사","meaning":"이끌다, 선도하다","category":"L","level":"초급"},
-  {"word":"learn","type":"동사","meaning":"배우다, 습득하다","category":"L","level":"초급"},
-  {"word":"limit","type":"동사","meaning":"제한하다, 한정하다","category":"L","level":"초급"},
-  {"word":"link","type":"동사","meaning":"연결하다, 연관시키다","category":"L","level":"초급"},
-  {"word":"listen","type":"동사","meaning":"듣다, 귀를 기울이다","category":"L","level":"초급"},
-
-  {"word":"make","type":"동사","meaning":"만들다, 하다","category":"M","level":"초급"},
-  {"word":"measure","type":"동사","meaning":"측정하다, 재다","category":"M","level":"초급"},
-  {"word":"meet","type":"동사","meaning":"만나다, 충족하다","category":"M","level":"초급"},
-  {"word":"mention","type":"동사","meaning":"언급하다","category":"M","level":"초급"},
-  {"word":"model","type":"동사","meaning":"모델링하다, 본보기가 되다","category":"M","level":"초급"},
-  {"word":"modify","type":"동사","meaning":"수정하다, 변경하다","category":"M","level":"중급"},
-  {"word":"move","type":"동사","meaning":"이동하다, 감동시키다","category":"M","level":"초급"},
-
-  {"word":"need","type":"동사","meaning":"필요하다","category":"N","level":"초급"},
-  {"word":"note","type":"동사","meaning":"주목하다, 메모하다","category":"N","level":"초급"},
-
-  {"word":"open","type":"동사","meaning":"열다, 개방하다","category":"O","level":"초급"},
-  {"word":"organize","type":"동사","meaning":"정리하다, 조직하다","category":"O","level":"초급"},
-
-  {"word":"plan","type":"동사","meaning":"계획하다","category":"P","level":"초급"},
-  {"word":"point","type":"동사","meaning":"가리키다, 지적하다","category":"P","level":"초급"},
-  {"word":"prepare","type":"동사","meaning":"준비하다","category":"P","level":"초급"},
-  {"word":"present","type":"동사","meaning":"발표하다, 제시하다","category":"P","level":"초급"},
-  {"word":"produce","type":"동사","meaning":"생산하다, 만들다","category":"P","level":"초급"},
-  {"word":"prove","type":"동사","meaning":"증명하다, 입증하다","category":"P","level":"초급"},
-  {"word":"provide","type":"동사","meaning":"제공하다","category":"P","level":"초급"},
-  {"word":"push","type":"동사","meaning":"밀다, 추진하다","category":"P","level":"초급"},
-
-  {"word":"question","type":"동사","meaning":"질문하다, 의문을 제기하다","category":"Q","level":"초급"},
-
-  {"word":"raise","type":"동사","meaning":"올리다, 제기하다","category":"R","level":"초급"},
-  {"word":"reach","type":"동사","meaning":"도달하다, 닿다","category":"R","level":"초급"},
-  {"word":"read","type":"동사","meaning":"읽다, 해석하다","category":"R","level":"초급"},
-  {"word":"realize","type":"동사","meaning":"깨닫다, 실현하다","category":"R","level":"초급"},
-  {"word":"receive","type":"동사","meaning":"받다, 수신하다","category":"R","level":"초급"},
-  {"word":"recommend","type":"동사","meaning":"추천하다, 권고하다","category":"R","level":"초급"},
-  {"word":"record","type":"동사","meaning":"기록하다, 녹음하다","category":"R","level":"초급"},
-  {"word":"relate","type":"동사","meaning":"관련시키다, 이야기하다","category":"R","level":"초급"},
-  {"word":"remain","type":"동사","meaning":"남아있다, 유지하다","category":"R","level":"초급"},
-  {"word":"remove","type":"동사","meaning":"제거하다, 삭제하다","category":"R","level":"초급"},
-  {"word":"report","type":"동사","meaning":"보고하다, 알리다","category":"R","level":"초급"},
-  {"word":"require","type":"동사","meaning":"요구하다, 필요로 하다","category":"R","level":"초급"},
-  {"word":"research","type":"동사","meaning":"연구하다, 조사하다","category":"R","level":"초급"},
-  {"word":"result","type":"동사","meaning":"결과가 나타나다","category":"R","level":"초급"},
-  {"word":"review","type":"동사","meaning":"검토하다, 평가하다","category":"R","level":"초급"},
-  {"word":"run","type":"동사","meaning":"운영하다, 달리다","category":"R","level":"초급"},
-
-  {"word":"save","type":"동사","meaning":"저장하다, 구하다","category":"S","level":"초급"},
-  {"word":"say","type":"동사","meaning":"말하다","category":"S","level":"초급"},
-  {"word":"search","type":"동사","meaning":"검색하다, 찾다","category":"S","level":"초급"},
-  {"word":"select","type":"동사","meaning":"선택하다","category":"S","level":"초급"},
-  {"word":"send","type":"동사","meaning":"보내다, 전송하다","category":"S","level":"초급"},
-  {"word":"set","type":"동사","meaning":"설정하다, 놓다","category":"S","level":"초급"},
-  {"word":"share","type":"동사","meaning":"공유하다, 나누다","category":"S","level":"초급"},
-  {"word":"show","type":"동사","meaning":"보여주다, 나타내다","category":"S","level":"초급"},
-  {"word":"start","type":"동사","meaning":"시작하다","category":"S","level":"초급"},
-  {"word":"state","type":"동사","meaning":"진술하다, 말하다","category":"S","level":"초급"},
-  {"word":"study","type":"동사","meaning":"공부하다, 연구하다","category":"S","level":"초급"},
-  {"word":"submit","type":"동사","meaning":"제출하다, 따르다","category":"S","level":"초급"},
-  {"word":"suggest","type":"동사","meaning":"제안하다, 암시하다","category":"S","level":"초급"},
-  {"word":"summarize","type":"동사","meaning":"요약하다","category":"S","level":"초급"},
-
-  {"word":"take","type":"동사","meaning":"취하다, 가져가다","category":"T","level":"초급"},
-  {"word":"teach","type":"동사","meaning":"가르치다","category":"T","level":"초급"},
-  {"word":"test","type":"동사","meaning":"시험하다, 검사하다","category":"T","level":"초급"},
-  {"word":"think","type":"동사","meaning":"생각하다","category":"T","level":"초급"},
-  {"word":"track","type":"동사","meaning":"추적하다, 기록하다","category":"T","level":"초급"},
-  {"word":"try","type":"동사","meaning":"시도하다, 노력하다","category":"T","level":"초급"},
-  {"word":"turn","type":"동사","meaning":"돌다, 전환하다","category":"T","level":"초급"},
-
-  {"word":"understand","type":"동사","meaning":"이해하다","category":"U","level":"초급"},
-  {"word":"use","type":"동사","meaning":"사용하다, 이용하다","category":"U","level":"초급"},
-
-  {"word":"value","type":"동사","meaning":"가치를 두다, 평가하다","category":"V","level":"초급"},
-
-  {"word":"want","type":"동사","meaning":"원하다, 필요로 하다","category":"W","level":"초급"},
-  {"word":"work","type":"동사","meaning":"일하다, 작동하다","category":"W","level":"초급"},
-  {"word":"write","type":"동사","meaning":"쓰다, 작성하다","category":"W","level":"초급"},
-
-  {"word":"abnormal","type":"형용사","meaning":"비정상적인","category":"A","level":"중급"},
-  {"word":"absence","type":"명사","meaning":"부재, 결석","category":"A","level":"중급"},
-  {"word":"accessible","type":"형용사","meaning":"접근 가능한","category":"A","level":"중급"},
-  {"word":"accountable","type":"형용사","meaning":"책임이 있는","category":"A","level":"고급"},
-  {"word":"achievement","type":"명사","meaning":"성취, 업적","category":"A","level":"중급"},
-  {"word":"activation","type":"명사","meaning":"활성화","category":"A","level":"고급"},
-  {"word":"adamant","type":"형용사","meaning":"완고한, 단호한","category":"A","level":"고급"},
-  {"word":"adjacent","type":"형용사","meaning":"인접한, 가까운","category":"A","level":"고급"},
-  {"word":"advocate","type":"동사","meaning":"지지하다, 옹호하다","category":"A","level":"고급"},
-  {"word":"aesthetic","type":"형용사","meaning":"미적인, 심미적인","category":"A","level":"고급"},
-  {"word":"aggregate","type":"동사","meaning":"집계하다, 모으다","category":"A","level":"고급"},
-  {"word":"agile","type":"형용사","meaning":"민첩한, 기민한","category":"A","level":"고급"},
-  {"word":"anomaly","type":"명사","meaning":"이상, 예외","category":"A","level":"고급"},
-  {"word":"apparatus","type":"명사","meaning":"기구, 장치","category":"A","level":"고급"},
-  {"word":"arbitrary","type":"형용사","meaning":"임의적인, 독단적인","category":"A","level":"고급"},
-  {"word":"archive","type":"동사","meaning":"보관하다, 기록하다","category":"A","level":"중급"},
-  {"word":"arouse","type":"동사","meaning":"불러일으키다, 자극하다","category":"A","level":"고급"},
-  {"word":"artificial","type":"형용사","meaning":"인공적인, 인위적인","category":"A","level":"중급"},
-  {"word":"aspire","type":"동사","meaning":"열망하다, 갈망하다","category":"A","level":"고급"},
-  {"word":"authentic","type":"형용사","meaning":"진정한, 진짜의","category":"A","level":"고급"},
-  {"word":"automate","type":"동사","meaning":"자동화하다","category":"A","level":"중급"},
-
-  {"word":"baseline","type":"명사","meaning":"기준선, 기초","category":"B","level":"고급"},
-  {"word":"boundary","type":"명사","meaning":"경계, 한계","category":"B","level":"중급"},
-  {"word":"breakthrough","type":"명사","meaning":"돌파구, 획기적 진전","category":"B","level":"고급"},
-  {"word":"category","type":"명사","meaning":"범주, 종류","category":"C","level":"초급"},
-  {"word":"coherence","type":"명사","meaning":"일관성, 논리적 연결","category":"C","level":"고급"},
-  {"word":"collaboration","type":"명사","meaning":"협력, 공동 작업","category":"C","level":"중급"},
-  {"word":"community","type":"명사","meaning":"공동체, 지역사회","category":"C","level":"초급"},
-  {"word":"compatible","type":"형용사","meaning":"호환되는, 양립 가능한","category":"C","level":"고급"},
-  {"word":"competent","type":"형용사","meaning":"유능한, 능력 있는","category":"C","level":"중급"},
-  {"word":"competitive","type":"형용사","meaning":"경쟁적인","category":"C","level":"중급"},
-  {"word":"complementary","type":"형용사","meaning":"보완적인","category":"C","level":"고급"},
-  {"word":"concrete","type":"형용사","meaning":"구체적인, 실질적인","category":"C","level":"중급"},
-  {"word":"conditional","type":"형용사","meaning":"조건부의","category":"C","level":"고급"},
-  {"word":"configuration","type":"명사","meaning":"구성, 설정","category":"C","level":"고급"},
-  {"word":"consensus","type":"명사","meaning":"합의, 의견 일치","category":"C","level":"고급"},
-  {"word":"constant","type":"형용사","meaning":"일정한, 변함없는","category":"C","level":"초급"},
-  {"word":"constraint","type":"명사","meaning":"제약, 한계","category":"C","level":"고급"},
-  {"word":"continuity","type":"명사","meaning":"연속성, 지속성","category":"C","level":"고급"},
-
-  {"word":"data","type":"명사","meaning":"데이터, 자료","category":"D","level":"초급"},
-  {"word":"decisive","type":"형용사","meaning":"결단력 있는, 결정적인","category":"D","level":"중급"},
-  {"word":"default","type":"명사","meaning":"기본값, 채무 불이행","category":"D","level":"중급"},
-  {"word":"dependent","type":"형용사","meaning":"의존하는, 종속적인","category":"D","level":"중급"},
-  {"word":"depict","type":"동사","meaning":"묘사하다, 그리다","category":"D","level":"고급"},
-  {"word":"derive","type":"동사","meaning":"도출하다, 파생하다","category":"D","level":"고급"},
-  {"word":"desirable","type":"형용사","meaning":"바람직한","category":"D","level":"중급"},
-  {"word":"deviation","type":"명사","meaning":"편차, 일탈","category":"D","level":"고급"},
-  {"word":"digital","type":"형용사","meaning":"디지털의","category":"D","level":"초급"},
-  {"word":"dimension","type":"명사","meaning":"차원, 측면","category":"D","level":"중급"},
-  {"word":"disproportionate","type":"형용사","meaning":"불균형한","category":"D","level":"고급"},
-
-  {"word":"efficiency","type":"명사","meaning":"효율, 능률","category":"E","level":"중급"},
-  {"word":"empirical","type":"형용사","meaning":"경험적인, 실증적인","category":"E","level":"고급"},
-  {"word":"entity","type":"명사","meaning":"실체, 개체","category":"E","level":"고급"},
-  {"word":"ethical","type":"형용사","meaning":"윤리적인","category":"E","level":"고급"},
-  {"word":"exceptional","type":"형용사","meaning":"예외적인, 탁월한","category":"E","level":"중급"},
-  {"word":"exclusive","type":"형용사","meaning":"독점적인, 배타적인","category":"E","level":"중급"},
-
-  {"word":"finite","type":"형용사","meaning":"유한한, 한정된","category":"F","level":"고급"},
-  {"word":"formal","type":"형용사","meaning":"공식적인, 형식적인","category":"F","level":"중급"},
-  {"word":"formula","type":"명사","meaning":"공식, 방법","category":"F","level":"중급"},
-
-  {"word":"hierarchical","type":"형용사","meaning":"계층적인","category":"H","level":"고급"},
-  {"word":"hypothesis","type":"명사","meaning":"가설, 가정","category":"H","level":"고급"},
-
-  {"word":"implication","type":"명사","meaning":"함의, 영향","category":"I","level":"고급"},
-  {"word":"incentive","type":"명사","meaning":"동기, 인센티브","category":"I","level":"고급"},
-  {"word":"inconsistency","type":"명사","meaning":"불일치, 모순","category":"I","level":"고급"},
-  {"word":"independent","type":"형용사","meaning":"독립적인","category":"I","level":"초급"},
-  {"word":"indispensable","type":"형용사","meaning":"필수적인, 없어서는 안 될","category":"I","level":"고급"},
-  {"word":"infer","type":"동사","meaning":"추론하다, 유추하다","category":"I","level":"고급"},
-  {"word":"inherent","type":"형용사","meaning":"본래의, 고유한","category":"I","level":"고급"},
-  {"word":"instinct","type":"명사","meaning":"본능, 직감","category":"I","level":"중급"},
-  {"word":"insufficient","type":"형용사","meaning":"불충분한","category":"I","level":"중급"},
-  {"word":"integrity","type":"명사","meaning":"완전성, 무결성","category":"I","level":"고급"},
-  {"word":"interactive","type":"형용사","meaning":"대화형의, 상호작용의","category":"I","level":"중급"},
-
-  {"word":"knowledge","type":"명사","meaning":"지식, 앎","category":"K","level":"초급"},
-
-  {"word":"latent","type":"형용사","meaning":"잠재적인, 숨어있는","category":"L","level":"고급"},
-  {"word":"linear","type":"형용사","meaning":"선형의, 직선의","category":"L","level":"고급"},
-  {"word":"literal","type":"형용사","meaning":"문자 그대로의","category":"L","level":"중급"},
-
-  {"word":"marginal","type":"형용사","meaning":"한계의, 주변적인","category":"M","level":"고급"},
-  {"word":"metric","type":"명사","meaning":"측정 기준, 지표","category":"M","level":"고급"},
-  {"word":"milestone","type":"명사","meaning":"이정표, 중요한 사건","category":"M","level":"중급"},
-
-  {"word":"negligible","type":"형용사","meaning":"무시할 수 있는","category":"N","level":"고급"},
-  {"word":"network","type":"명사","meaning":"네트워크, 연결망","category":"N","level":"초급"},
-
-  {"word":"operational","type":"형용사","meaning":"운영의, 작동의","category":"O","level":"고급"},
-  {"word":"output","type":"명사","meaning":"출력, 결과물","category":"O","level":"초급"},
-
-  {"word":"parallel","type":"형용사","meaning":"평행한, 동시의","category":"P","level":"중급"},
-  {"word":"perception","type":"명사","meaning":"인식, 지각","category":"P","level":"고급"},
-  {"word":"persistent","type":"형용사","meaning":"지속적인, 끈질긴","category":"P","level":"고급"},
-  {"word":"phase","type":"명사","meaning":"단계, 국면","category":"P","level":"중급"},
-  {"word":"practical","type":"형용사","meaning":"실용적인, 실제적인","category":"P","level":"초급"},
-  {"word":"precision","type":"명사","meaning":"정밀도, 정확성","category":"P","level":"고급"},
-  {"word":"primary","type":"형용사","meaning":"주요한, 기본적인","category":"P","level":"초급"},
-  {"word":"priority","type":"명사","meaning":"우선순위","category":"P","level":"중급"},
-  {"word":"productive","type":"형용사","meaning":"생산적인","category":"P","level":"중급"},
-  {"word":"profound","type":"형용사","meaning":"심오한, 깊은","category":"P","level":"고급"},
-  {"word":"prominent","type":"형용사","meaning":"두드러진, 저명한","category":"P","level":"고급"},
-  {"word":"proportion","type":"명사","meaning":"비율, 균형","category":"P","level":"중급"},
-
-  {"word":"ratio","type":"명사","meaning":"비율","category":"R","level":"중급"},
-  {"word":"realistic","type":"형용사","meaning":"현실적인","category":"R","level":"중급"},
-  {"word":"recursive","type":"형용사","meaning":"재귀적인","category":"R","level":"고급"},
-  {"word":"redundant","type":"형용사","meaning":"중복된, 불필요한","category":"R","level":"고급"},
-  {"word":"reference","type":"명사","meaning":"참조, 참고","category":"R","level":"초급"},
-  {"word":"requirement","type":"명사","meaning":"요구사항, 필요조건","category":"R","level":"중급"},
-  {"word":"rigorous","type":"형용사","meaning":"엄격한, 철저한","category":"R","level":"고급"},
-
-  {"word":"scalable","type":"형용사","meaning":"확장 가능한","category":"S","level":"고급"},
-  {"word":"sensitive","type":"형용사","meaning":"민감한","category":"S","level":"초급"},
-  {"word":"sequential","type":"형용사","meaning":"순차적인","category":"S","level":"고급"},
-  {"word":"stable","type":"형용사","meaning":"안정적인","category":"S","level":"초급"},
-  {"word":"static","type":"형용사","meaning":"정적인, 변화 없는","category":"S","level":"중급"},
-  {"word":"structured","type":"형용사","meaning":"구조화된","category":"S","level":"중급"},
-
-  {"word":"tangible","type":"형용사","meaning":"유형의, 실질적인","category":"T","level":"고급"},
-  {"word":"technical","type":"형용사","meaning":"기술적인","category":"T","level":"초급"},
-  {"word":"temporal","type":"형용사","meaning":"시간적인, 일시적인","category":"T","level":"고급"},
-  {"word":"terminate","type":"동사","meaning":"종료하다, 끝내다","category":"T","level":"중급"},
-  {"word":"theoretical","type":"형용사","meaning":"이론적인","category":"T","level":"고급"},
-  {"word":"tolerance","type":"명사","meaning":"관용, 허용 범위","category":"T","level":"고급"},
-
-  {"word":"uncertainty","type":"명사","meaning":"불확실성","category":"U","level":"중급"},
-  {"word":"uniform","type":"형용사","meaning":"균일한, 통일된","category":"U","level":"중급"},
-  {"word":"universal","type":"형용사","meaning":"보편적인, 일반적인","category":"U","level":"중급"},
-  {"word":"unstable","type":"형용사","meaning":"불안정한","category":"U","level":"중급"},
-
-  {"word":"variable","type":"명사","meaning":"변수, 변량","category":"V","level":"중급"},
-  {"word":"version","type":"명사","meaning":"버전, 판","category":"V","level":"초급"},
-
-  {"word":"weakness","type":"명사","meaning":"약점, 단점","category":"W","level":"초급"},
-  {"word":"workflow","type":"명사","meaning":"작업 흐름, 워크플로우","category":"W","level":"중급"},
-
-  {"word":"zone","type":"명사","meaning":"구역, 영역","category":"Z","level":"초급"}
+  {
+    "word": "abandon",
+    "type": "동사",
+    "meaning": "버리다, 포기하다",
+    "category": "A",
+    "level": "중급"
+  },
+  {
+    "word": "abundant",
+    "type": "형용사",
+    "meaning": "풍부한, 많은",
+    "category": "A",
+    "level": "중급"
+  },
+  {
+    "word": "accomplish",
+    "type": "동사",
+    "meaning": "성취하다, 완수하다",
+    "category": "A",
+    "level": "중급"
+  },
+  {
+    "word": "accurate",
+    "type": "형용사",
+    "meaning": "정확한, 정밀한",
+    "category": "A",
+    "level": "초급"
+  },
+  {
+    "word": "adapt",
+    "type": "동사",
+    "meaning": "적응하다, 조정하다",
+    "category": "A",
+    "level": "중급"
+  },
+  {
+    "word": "adequate",
+    "type": "형용사",
+    "meaning": "충분한, 적절한",
+    "category": "A",
+    "level": "중급"
+  },
+  {
+    "word": "affect",
+    "type": "동사",
+    "meaning": "영향을 미치다",
+    "category": "A",
+    "level": "초급"
+  },
+  {
+    "word": "afford",
+    "type": "동사",
+    "meaning": "여유가 되다, 감당하다",
+    "category": "A",
+    "level": "초급"
+  },
+  {
+    "word": "aggressive",
+    "type": "형용사",
+    "meaning": "공격적인, 적극적인",
+    "category": "A",
+    "level": "중급"
+  },
+  {
+    "word": "analyze",
+    "type": "동사",
+    "meaning": "분석하다, 검토하다",
+    "category": "A",
+    "level": "중급"
+  },
+  {
+    "word": "approach",
+    "type": "동사",
+    "meaning": "접근하다, 다가가다",
+    "category": "A",
+    "level": "초급"
+  },
+  {
+    "word": "argue",
+    "type": "동사",
+    "meaning": "주장하다, 논쟁하다",
+    "category": "A",
+    "level": "초급"
+  },
+  {
+    "word": "arise",
+    "type": "동사",
+    "meaning": "일어나다, 발생하다",
+    "category": "A",
+    "level": "중급"
+  },
+  {
+    "word": "aspect",
+    "type": "명사",
+    "meaning": "측면, 관점",
+    "category": "A",
+    "level": "중급"
+  },
+  {
+    "word": "assemble",
+    "type": "동사",
+    "meaning": "조립하다, 모으다",
+    "category": "A",
+    "level": "중급"
+  },
+  {
+    "word": "assign",
+    "type": "동사",
+    "meaning": "배정하다, 할당하다",
+    "category": "A",
+    "level": "중급"
+  },
+  {
+    "word": "assist",
+    "type": "동사",
+    "meaning": "돕다, 도움을 주다",
+    "category": "A",
+    "level": "초급"
+  },
+  {
+    "word": "assume",
+    "type": "동사",
+    "meaning": "가정하다, 추정하다",
+    "category": "A",
+    "level": "중급"
+  },
+  {
+    "word": "attach",
+    "type": "동사",
+    "meaning": "붙이다, 첨부하다",
+    "category": "A",
+    "level": "초급"
+  },
+  {
+    "word": "attempt",
+    "type": "동사",
+    "meaning": "시도하다, 노력하다",
+    "category": "A",
+    "level": "초급"
+  },
+  {
+    "word": "attitude",
+    "type": "명사",
+    "meaning": "태도, 자세",
+    "category": "A",
+    "level": "초급"
+  },
+  {
+    "word": "attract",
+    "type": "동사",
+    "meaning": "끌다, 매력적이다",
+    "category": "A",
+    "level": "초급"
+  },
+  {
+    "word": "authority",
+    "type": "명사",
+    "meaning": "권위, 당국",
+    "category": "A",
+    "level": "중급"
+  },
+  {
+    "word": "aware",
+    "type": "형용사",
+    "meaning": "알고 있는, 인식하는",
+    "category": "A",
+    "level": "초급"
+  },
+  {
+    "word": "awkward",
+    "type": "형용사",
+    "meaning": "어색한, 불편한",
+    "category": "A",
+    "level": "중급"
+  },
+  {
+    "word": "balance",
+    "type": "명사",
+    "meaning": "균형, 잔액",
+    "category": "B",
+    "level": "초급"
+  },
+  {
+    "word": "barrier",
+    "type": "명사",
+    "meaning": "장벽, 방해물",
+    "category": "B",
+    "level": "중급"
+  },
+  {
+    "word": "benefit",
+    "type": "명사",
+    "meaning": "이익, 혜택",
+    "category": "B",
+    "level": "초급"
+  },
+  {
+    "word": "bold",
+    "type": "형용사",
+    "meaning": "대담한, 용감한",
+    "category": "B",
+    "level": "초급"
+  },
+  {
+    "word": "boost",
+    "type": "동사",
+    "meaning": "증가시키다, 향상시키다",
+    "category": "B",
+    "level": "중급"
+  },
+  {
+    "word": "brief",
+    "type": "형용사",
+    "meaning": "짧은, 간략한",
+    "category": "B",
+    "level": "초급"
+  },
+  {
+    "word": "brilliant",
+    "type": "형용사",
+    "meaning": "뛰어난, 훌륭한",
+    "category": "B",
+    "level": "중급"
+  },
+  {
+    "word": "burden",
+    "type": "명사",
+    "meaning": "짐, 부담",
+    "category": "B",
+    "level": "중급"
+  },
+  {
+    "word": "capable",
+    "type": "형용사",
+    "meaning": "능력 있는, 유능한",
+    "category": "C",
+    "level": "중급"
+  },
+  {
+    "word": "capture",
+    "type": "동사",
+    "meaning": "포착하다, 사로잡다",
+    "category": "C",
+    "level": "중급"
+  },
+  {
+    "word": "cautious",
+    "type": "형용사",
+    "meaning": "조심스러운, 신중한",
+    "category": "C",
+    "level": "중급"
+  },
+  {
+    "word": "challenge",
+    "type": "명사",
+    "meaning": "도전, 과제",
+    "category": "C",
+    "level": "초급"
+  },
+  {
+    "word": "clarify",
+    "type": "동사",
+    "meaning": "명확히 하다, 설명하다",
+    "category": "C",
+    "level": "중급"
+  },
+  {
+    "word": "collaborate",
+    "type": "동사",
+    "meaning": "협력하다, 공동 작업하다",
+    "category": "C",
+    "level": "고급"
+  },
+  {
+    "word": "commit",
+    "type": "동사",
+    "meaning": "전념하다, 약속하다",
+    "category": "C",
+    "level": "중급"
+  },
+  {
+    "word": "compare",
+    "type": "동사",
+    "meaning": "비교하다",
+    "category": "C",
+    "level": "초급"
+  },
+  {
+    "word": "complex",
+    "type": "형용사",
+    "meaning": "복잡한",
+    "category": "C",
+    "level": "초급"
+  },
+  {
+    "word": "concept",
+    "type": "명사",
+    "meaning": "개념, 생각",
+    "category": "C",
+    "level": "중급"
+  },
+  {
+    "word": "concern",
+    "type": "명사",
+    "meaning": "걱정, 관심사",
+    "category": "C",
+    "level": "초급"
+  },
+  {
+    "word": "confident",
+    "type": "형용사",
+    "meaning": "자신 있는, 확신하는",
+    "category": "C",
+    "level": "초급"
+  },
+  {
+    "word": "conflict",
+    "type": "명사",
+    "meaning": "갈등, 충돌",
+    "category": "C",
+    "level": "중급"
+  },
+  {
+    "word": "consider",
+    "type": "동사",
+    "meaning": "고려하다, 생각하다",
+    "category": "C",
+    "level": "초급"
+  },
+  {
+    "word": "consistent",
+    "type": "형용사",
+    "meaning": "일관된, 꾸준한",
+    "category": "C",
+    "level": "중급"
+  },
+  {
+    "word": "contribute",
+    "type": "동사",
+    "meaning": "기여하다, 공헌하다",
+    "category": "C",
+    "level": "중급"
+  },
+  {
+    "word": "convince",
+    "type": "동사",
+    "meaning": "설득하다, 납득시키다",
+    "category": "C",
+    "level": "중급"
+  },
+  {
+    "word": "cope",
+    "type": "동사",
+    "meaning": "대처하다, 극복하다",
+    "category": "C",
+    "level": "중급"
+  },
+  {
+    "word": "creative",
+    "type": "형용사",
+    "meaning": "창의적인, 독창적인",
+    "category": "C",
+    "level": "초급"
+  },
+  {
+    "word": "crucial",
+    "type": "형용사",
+    "meaning": "중요한, 결정적인",
+    "category": "C",
+    "level": "중급"
+  },
+  {
+    "word": "debate",
+    "type": "명사",
+    "meaning": "토론, 논쟁",
+    "category": "D",
+    "level": "중급"
+  },
+  {
+    "word": "decline",
+    "type": "동사",
+    "meaning": "감소하다, 거절하다",
+    "category": "D",
+    "level": "중급"
+  },
+  {
+    "word": "define",
+    "type": "동사",
+    "meaning": "정의하다, 규정하다",
+    "category": "D",
+    "level": "초급"
+  },
+  {
+    "word": "delay",
+    "type": "동사",
+    "meaning": "지연하다, 미루다",
+    "category": "D",
+    "level": "초급"
+  },
+  {
+    "word": "demonstrate",
+    "type": "동사",
+    "meaning": "보여주다, 증명하다",
+    "category": "D",
+    "level": "중급"
+  },
+  {
+    "word": "deny",
+    "type": "동사",
+    "meaning": "부정하다, 거부하다",
+    "category": "D",
+    "level": "초급"
+  },
+  {
+    "word": "depend",
+    "type": "동사",
+    "meaning": "의존하다, 달려있다",
+    "category": "D",
+    "level": "초급"
+  },
+  {
+    "word": "describe",
+    "type": "동사",
+    "meaning": "묘사하다, 설명하다",
+    "category": "D",
+    "level": "초급"
+  },
+  {
+    "word": "determine",
+    "type": "동사",
+    "meaning": "결정하다, 결심하다",
+    "category": "D",
+    "level": "중급"
+  },
+  {
+    "word": "develop",
+    "type": "동사",
+    "meaning": "개발하다, 발전시키다",
+    "category": "D",
+    "level": "초급"
+  },
+  {
+    "word": "diverse",
+    "type": "형용사",
+    "meaning": "다양한, 다채로운",
+    "category": "D",
+    "level": "중급"
+  },
+  {
+    "word": "dominate",
+    "type": "동사",
+    "meaning": "지배하다, 우세하다",
+    "category": "D",
+    "level": "고급"
+  },
+  {
+    "word": "dramatic",
+    "type": "형용사",
+    "meaning": "극적인, 인상적인",
+    "category": "D",
+    "level": "중급"
+  },
+  {
+    "word": "effective",
+    "type": "형용사",
+    "meaning": "효과적인",
+    "category": "E",
+    "level": "초급"
+  },
+  {
+    "word": "efficient",
+    "type": "형용사",
+    "meaning": "효율적인",
+    "category": "E",
+    "level": "중급"
+  },
+  {
+    "word": "eliminate",
+    "type": "동사",
+    "meaning": "제거하다, 없애다",
+    "category": "E",
+    "level": "중급"
+  },
+  {
+    "word": "emerge",
+    "type": "동사",
+    "meaning": "나타나다, 등장하다",
+    "category": "E",
+    "level": "중급"
+  },
+  {
+    "word": "emphasize",
+    "type": "동사",
+    "meaning": "강조하다",
+    "category": "E",
+    "level": "중급"
+  },
+  {
+    "word": "encourage",
+    "type": "동사",
+    "meaning": "격려하다, 장려하다",
+    "category": "E",
+    "level": "초급"
+  },
+  {
+    "word": "enhance",
+    "type": "동사",
+    "meaning": "향상시키다, 강화하다",
+    "category": "E",
+    "level": "중급"
+  },
+  {
+    "word": "establish",
+    "type": "동사",
+    "meaning": "설립하다, 확립하다",
+    "category": "E",
+    "level": "중급"
+  },
+  {
+    "word": "evaluate",
+    "type": "동사",
+    "meaning": "평가하다, 가치를 매기다",
+    "category": "E",
+    "level": "중급"
+  },
+  {
+    "word": "examine",
+    "type": "동사",
+    "meaning": "조사하다, 검사하다",
+    "category": "E",
+    "level": "초급"
+  },
+  {
+    "word": "expand",
+    "type": "동사",
+    "meaning": "확장하다, 펼치다",
+    "category": "E",
+    "level": "중급"
+  },
+  {
+    "word": "explore",
+    "type": "동사",
+    "meaning": "탐험하다, 탐구하다",
+    "category": "E",
+    "level": "초급"
+  },
+  {
+    "word": "extensive",
+    "type": "형용사",
+    "meaning": "광범위한, 폭넓은",
+    "category": "E",
+    "level": "고급"
+  },
+  {
+    "word": "facilitate",
+    "type": "동사",
+    "meaning": "용이하게 하다, 촉진하다",
+    "category": "F",
+    "level": "고급"
+  },
+  {
+    "word": "factor",
+    "type": "명사",
+    "meaning": "요인, 요소",
+    "category": "F",
+    "level": "초급"
+  },
+  {
+    "word": "flexible",
+    "type": "형용사",
+    "meaning": "유연한, 융통성 있는",
+    "category": "F",
+    "level": "중급"
+  },
+  {
+    "word": "focus",
+    "type": "동사",
+    "meaning": "집중하다, 초점을 맞추다",
+    "category": "F",
+    "level": "초급"
+  },
+  {
+    "word": "force",
+    "type": "동사",
+    "meaning": "강요하다, 강제하다",
+    "category": "F",
+    "level": "초급"
+  },
+  {
+    "word": "formulate",
+    "type": "동사",
+    "meaning": "공식화하다, 만들어내다",
+    "category": "F",
+    "level": "고급"
+  },
+  {
+    "word": "foundation",
+    "type": "명사",
+    "meaning": "기반, 토대",
+    "category": "F",
+    "level": "중급"
+  },
+  {
+    "word": "frequent",
+    "type": "형용사",
+    "meaning": "빈번한, 자주 있는",
+    "category": "F",
+    "level": "초급"
+  },
+  {
+    "word": "frustrate",
+    "type": "동사",
+    "meaning": "좌절시키다, 방해하다",
+    "category": "F",
+    "level": "중급"
+  },
+  {
+    "word": "fulfill",
+    "type": "동사",
+    "meaning": "이행하다, 충족시키다",
+    "category": "F",
+    "level": "중급"
+  },
+  {
+    "word": "fundamental",
+    "type": "형용사",
+    "meaning": "근본적인, 핵심적인",
+    "category": "F",
+    "level": "고급"
+  },
+  {
+    "word": "generate",
+    "type": "동사",
+    "meaning": "발생시키다, 만들어내다",
+    "category": "G",
+    "level": "중급"
+  },
+  {
+    "word": "global",
+    "type": "형용사",
+    "meaning": "전 세계적인, 지구의",
+    "category": "G",
+    "level": "초급"
+  },
+  {
+    "word": "gradual",
+    "type": "형용사",
+    "meaning": "점진적인, 서서히",
+    "category": "G",
+    "level": "중급"
+  },
+  {
+    "word": "grant",
+    "type": "동사",
+    "meaning": "허가하다, 부여하다",
+    "category": "G",
+    "level": "중급"
+  },
+  {
+    "word": "guarantee",
+    "type": "동사",
+    "meaning": "보장하다, 확약하다",
+    "category": "G",
+    "level": "중급"
+  },
+  {
+    "word": "guide",
+    "type": "동사",
+    "meaning": "안내하다, 이끌다",
+    "category": "G",
+    "level": "초급"
+  },
+  {
+    "word": "handle",
+    "type": "동사",
+    "meaning": "다루다, 처리하다",
+    "category": "H",
+    "level": "초급"
+  },
+  {
+    "word": "highlight",
+    "type": "동사",
+    "meaning": "강조하다, 두드러지게 하다",
+    "category": "H",
+    "level": "중급"
+  },
+  {
+    "word": "hypothesis",
+    "type": "명사",
+    "meaning": "가설, 추측",
+    "category": "H",
+    "level": "고급"
+  },
+  {
+    "word": "identify",
+    "type": "동사",
+    "meaning": "식별하다, 확인하다",
+    "category": "I",
+    "level": "중급"
+  },
+  {
+    "word": "ignore",
+    "type": "동사",
+    "meaning": "무시하다, 외면하다",
+    "category": "I",
+    "level": "초급"
+  },
+  {
+    "word": "impact",
+    "type": "명사",
+    "meaning": "영향, 충격",
+    "category": "I",
+    "level": "초급"
+  },
+  {
+    "word": "implement",
+    "type": "동사",
+    "meaning": "실행하다, 시행하다",
+    "category": "I",
+    "level": "중급"
+  },
+  {
+    "word": "improve",
+    "type": "동사",
+    "meaning": "개선하다, 향상시키다",
+    "category": "I",
+    "level": "초급"
+  },
+  {
+    "word": "include",
+    "type": "동사",
+    "meaning": "포함하다",
+    "category": "I",
+    "level": "초급"
+  },
+  {
+    "word": "indicate",
+    "type": "동사",
+    "meaning": "나타내다, 가리키다",
+    "category": "I",
+    "level": "중급"
+  },
+  {
+    "word": "influence",
+    "type": "동사",
+    "meaning": "영향을 미치다",
+    "category": "I",
+    "level": "초급"
+  },
+  {
+    "word": "innovative",
+    "type": "형용사",
+    "meaning": "혁신적인, 창의적인",
+    "category": "I",
+    "level": "고급"
+  },
+  {
+    "word": "integrate",
+    "type": "동사",
+    "meaning": "통합하다, 합치다",
+    "category": "I",
+    "level": "고급"
+  },
+  {
+    "word": "interpret",
+    "type": "동사",
+    "meaning": "해석하다, 통역하다",
+    "category": "I",
+    "level": "중급"
+  },
+  {
+    "word": "investigate",
+    "type": "동사",
+    "meaning": "조사하다, 연구하다",
+    "category": "I",
+    "level": "중급"
+  },
+  {
+    "word": "justify",
+    "type": "동사",
+    "meaning": "정당화하다, 증명하다",
+    "category": "J",
+    "level": "고급"
+  },
+  {
+    "word": "maintain",
+    "type": "동사",
+    "meaning": "유지하다, 관리하다",
+    "category": "M",
+    "level": "중급"
+  },
+  {
+    "word": "manage",
+    "type": "동사",
+    "meaning": "관리하다, 해내다",
+    "category": "M",
+    "level": "초급"
+  },
+  {
+    "word": "maximize",
+    "type": "동사",
+    "meaning": "최대화하다",
+    "category": "M",
+    "level": "중급"
+  },
+  {
+    "word": "minimize",
+    "type": "동사",
+    "meaning": "최소화하다",
+    "category": "M",
+    "level": "중급"
+  },
+  {
+    "word": "monitor",
+    "type": "동사",
+    "meaning": "모니터링하다, 감시하다",
+    "category": "M",
+    "level": "중급"
+  },
+  {
+    "word": "motivate",
+    "type": "동사",
+    "meaning": "동기를 부여하다",
+    "category": "M",
+    "level": "중급"
+  },
+  {
+    "word": "negotiate",
+    "type": "동사",
+    "meaning": "협상하다, 교섭하다",
+    "category": "N",
+    "level": "고급"
+  },
+  {
+    "word": "neutral",
+    "type": "형용사",
+    "meaning": "중립적인, 중성의",
+    "category": "N",
+    "level": "중급"
+  },
+  {
+    "word": "notable",
+    "type": "형용사",
+    "meaning": "주목할 만한, 뛰어난",
+    "category": "N",
+    "level": "고급"
+  },
+  {
+    "word": "observe",
+    "type": "동사",
+    "meaning": "관찰하다, 지켜보다",
+    "category": "O",
+    "level": "초급"
+  },
+  {
+    "word": "obtain",
+    "type": "동사",
+    "meaning": "얻다, 획득하다",
+    "category": "O",
+    "level": "중급"
+  },
+  {
+    "word": "overcome",
+    "type": "동사",
+    "meaning": "극복하다, 이겨내다",
+    "category": "O",
+    "level": "중급"
+  },
+  {
+    "word": "overwhelm",
+    "type": "동사",
+    "meaning": "압도하다, 짓누르다",
+    "category": "O",
+    "level": "고급"
+  },
+  {
+    "word": "participate",
+    "type": "동사",
+    "meaning": "참여하다, 참가하다",
+    "category": "P",
+    "level": "중급"
+  },
+  {
+    "word": "perceive",
+    "type": "동사",
+    "meaning": "인식하다, 지각하다",
+    "category": "P",
+    "level": "고급"
+  },
+  {
+    "word": "perform",
+    "type": "동사",
+    "meaning": "수행하다, 공연하다",
+    "category": "P",
+    "level": "초급"
+  },
+  {
+    "word": "persist",
+    "type": "동사",
+    "meaning": "지속하다, 고집하다",
+    "category": "P",
+    "level": "고급"
+  },
+  {
+    "word": "potential",
+    "type": "형용사",
+    "meaning": "잠재적인, 가능성 있는",
+    "category": "P",
+    "level": "중급"
+  },
+  {
+    "word": "predict",
+    "type": "동사",
+    "meaning": "예측하다, 예언하다",
+    "category": "P",
+    "level": "초급"
+  },
+  {
+    "word": "prevent",
+    "type": "동사",
+    "meaning": "막다, 예방하다",
+    "category": "P",
+    "level": "초급"
+  },
+  {
+    "word": "prioritize",
+    "type": "동사",
+    "meaning": "우선순위를 두다",
+    "category": "P",
+    "level": "고급"
+  },
+  {
+    "word": "process",
+    "type": "동사",
+    "meaning": "처리하다, 가공하다",
+    "category": "P",
+    "level": "초급"
+  },
+  {
+    "word": "promote",
+    "type": "동사",
+    "meaning": "촉진하다, 홍보하다",
+    "category": "P",
+    "level": "중급"
+  },
+  {
+    "word": "propose",
+    "type": "동사",
+    "meaning": "제안하다, 계획하다",
+    "category": "P",
+    "level": "중급"
+  },
+  {
+    "word": "pursue",
+    "type": "동사",
+    "meaning": "추구하다, 쫓다",
+    "category": "P",
+    "level": "중급"
+  },
+  {
+    "word": "recognize",
+    "type": "동사",
+    "meaning": "인식하다, 알아보다",
+    "category": "R",
+    "level": "초급"
+  },
+  {
+    "word": "reduce",
+    "type": "동사",
+    "meaning": "줄이다, 감소시키다",
+    "category": "R",
+    "level": "초급"
+  },
+  {
+    "word": "reflect",
+    "type": "동사",
+    "meaning": "반영하다, 반성하다",
+    "category": "R",
+    "level": "중급"
+  },
+  {
+    "word": "reinforce",
+    "type": "동사",
+    "meaning": "강화하다, 보강하다",
+    "category": "R",
+    "level": "고급"
+  },
+  {
+    "word": "relevant",
+    "type": "형용사",
+    "meaning": "관련된, 적절한",
+    "category": "R",
+    "level": "중급"
+  },
+  {
+    "word": "reliable",
+    "type": "형용사",
+    "meaning": "믿을 수 있는, 신뢰할 수 있는",
+    "category": "R",
+    "level": "중급"
+  },
+  {
+    "word": "resolve",
+    "type": "동사",
+    "meaning": "해결하다, 결심하다",
+    "category": "R",
+    "level": "중급"
+  },
+  {
+    "word": "respond",
+    "type": "동사",
+    "meaning": "응답하다, 반응하다",
+    "category": "R",
+    "level": "초급"
+  },
+  {
+    "word": "restrict",
+    "type": "동사",
+    "meaning": "제한하다, 규제하다",
+    "category": "R",
+    "level": "중급"
+  },
+  {
+    "word": "reveal",
+    "type": "동사",
+    "meaning": "드러내다, 밝히다",
+    "category": "R",
+    "level": "중급"
+  },
+  {
+    "word": "significant",
+    "type": "형용사",
+    "meaning": "중요한, 의미 있는",
+    "category": "S",
+    "level": "중급"
+  },
+  {
+    "word": "solve",
+    "type": "동사",
+    "meaning": "해결하다, 풀다",
+    "category": "S",
+    "level": "초급"
+  },
+  {
+    "word": "specify",
+    "type": "동사",
+    "meaning": "명시하다, 구체적으로 말하다",
+    "category": "S",
+    "level": "고급"
+  },
+  {
+    "word": "stimulate",
+    "type": "동사",
+    "meaning": "자극하다, 촉진하다",
+    "category": "S",
+    "level": "고급"
+  },
+  {
+    "word": "strategy",
+    "type": "명사",
+    "meaning": "전략, 계획",
+    "category": "S",
+    "level": "중급"
+  },
+  {
+    "word": "strengthen",
+    "type": "동사",
+    "meaning": "강화하다, 강하게 하다",
+    "category": "S",
+    "level": "중급"
+  },
+  {
+    "word": "structure",
+    "type": "명사",
+    "meaning": "구조, 체계",
+    "category": "S",
+    "level": "초급"
+  },
+  {
+    "word": "succeed",
+    "type": "동사",
+    "meaning": "성공하다, 이어받다",
+    "category": "S",
+    "level": "초급"
+  },
+  {
+    "word": "sufficient",
+    "type": "형용사",
+    "meaning": "충분한, 족한",
+    "category": "S",
+    "level": "중급"
+  },
+  {
+    "word": "suitable",
+    "type": "형용사",
+    "meaning": "적합한, 어울리는",
+    "category": "S",
+    "level": "중급"
+  },
+  {
+    "word": "support",
+    "type": "동사",
+    "meaning": "지원하다, 지지하다",
+    "category": "S",
+    "level": "초급"
+  },
+  {
+    "word": "sustain",
+    "type": "동사",
+    "meaning": "지속시키다, 유지하다",
+    "category": "S",
+    "level": "고급"
+  },
+  {
+    "word": "tackle",
+    "type": "동사",
+    "meaning": "다루다, 해결하다",
+    "category": "T",
+    "level": "중급"
+  },
+  {
+    "word": "tendency",
+    "type": "명사",
+    "meaning": "경향, 성향",
+    "category": "T",
+    "level": "중급"
+  },
+  {
+    "word": "transform",
+    "type": "동사",
+    "meaning": "변환하다, 바꾸다",
+    "category": "T",
+    "level": "중급"
+  },
+  {
+    "word": "transition",
+    "type": "명사",
+    "meaning": "전환, 변화",
+    "category": "T",
+    "level": "고급"
+  },
+  {
+    "word": "trigger",
+    "type": "동사",
+    "meaning": "유발하다, 촉발시키다",
+    "category": "T",
+    "level": "고급"
+  },
+  {
+    "word": "undermine",
+    "type": "동사",
+    "meaning": "약화시키다, 무너뜨리다",
+    "category": "U",
+    "level": "고급"
+  },
+  {
+    "word": "utilize",
+    "type": "동사",
+    "meaning": "활용하다, 이용하다",
+    "category": "U",
+    "level": "중급"
+  },
+  {
+    "word": "validate",
+    "type": "동사",
+    "meaning": "검증하다, 유효화하다",
+    "category": "V",
+    "level": "고급"
+  },
+  {
+    "word": "various",
+    "type": "형용사",
+    "meaning": "다양한, 여러 가지의",
+    "category": "V",
+    "level": "초급"
+  },
+  {
+    "word": "vital",
+    "type": "형용사",
+    "meaning": "중요한, 필수적인",
+    "category": "V",
+    "level": "중급"
+  },
+  {
+    "word": "vulnerable",
+    "type": "형용사",
+    "meaning": "취약한, 상처받기 쉬운",
+    "category": "V",
+    "level": "고급"
+  },
+  {
+    "word": "withdraw",
+    "type": "동사",
+    "meaning": "철수하다, 인출하다",
+    "category": "W",
+    "level": "중급"
+  },
+  {
+    "word": "worthwhile",
+    "type": "형용사",
+    "meaning": "가치 있는, 보람 있는",
+    "category": "W",
+    "level": "고급"
+  },
+  {
+    "word": "abolish",
+    "type": "동사",
+    "meaning": "폐지하다, 없애다",
+    "category": "A",
+    "level": "고급"
+  },
+  {
+    "word": "abstract",
+    "type": "형용사",
+    "meaning": "추상적인, 관념적인",
+    "category": "A",
+    "level": "고급"
+  },
+  {
+    "word": "accelerate",
+    "type": "동사",
+    "meaning": "가속하다, 빠르게 하다",
+    "category": "A",
+    "level": "고급"
+  },
+  {
+    "word": "accommodate",
+    "type": "동사",
+    "meaning": "수용하다, 적응하다",
+    "category": "A",
+    "level": "고급"
+  },
+  {
+    "word": "acknowledge",
+    "type": "동사",
+    "meaning": "인정하다, 감사하다",
+    "category": "A",
+    "level": "고급"
+  },
+  {
+    "word": "accumulate",
+    "type": "동사",
+    "meaning": "축적하다, 모으다",
+    "category": "A",
+    "level": "고급"
+  },
+  {
+    "word": "anticipate",
+    "type": "동사",
+    "meaning": "예상하다, 기대하다",
+    "category": "A",
+    "level": "고급"
+  },
+  {
+    "word": "appreciate",
+    "type": "동사",
+    "meaning": "감사하다, 가치를 알다",
+    "category": "A",
+    "level": "중급"
+  },
+  {
+    "word": "articulate",
+    "type": "동사",
+    "meaning": "명확히 표현하다",
+    "category": "A",
+    "level": "고급"
+  },
+  {
+    "word": "assert",
+    "type": "동사",
+    "meaning": "주장하다, 단언하다",
+    "category": "A",
+    "level": "고급"
+  },
+  {
+    "word": "allocate",
+    "type": "동사",
+    "meaning": "할당하다, 배분하다",
+    "category": "A",
+    "level": "고급"
+  },
+  {
+    "word": "alleviate",
+    "type": "동사",
+    "meaning": "완화하다, 경감하다",
+    "category": "A",
+    "level": "고급"
+  },
+  {
+    "word": "ambiguous",
+    "type": "형용사",
+    "meaning": "모호한, 불분명한",
+    "category": "A",
+    "level": "고급"
+  },
+  {
+    "word": "ambitious",
+    "type": "형용사",
+    "meaning": "야망 있는, 큰 뜻을 품은",
+    "category": "A",
+    "level": "중급"
+  },
+  {
+    "word": "benchmark",
+    "type": "명사",
+    "meaning": "기준, 벤치마크",
+    "category": "B",
+    "level": "고급"
+  },
+  {
+    "word": "bias",
+    "type": "명사",
+    "meaning": "편견, 편향",
+    "category": "B",
+    "level": "고급"
+  },
+  {
+    "word": "broad",
+    "type": "형용사",
+    "meaning": "넓은, 광범위한",
+    "category": "B",
+    "level": "초급"
+  },
+  {
+    "word": "budget",
+    "type": "명사",
+    "meaning": "예산, 예산안",
+    "category": "B",
+    "level": "초급"
+  },
+  {
+    "word": "bureaucracy",
+    "type": "명사",
+    "meaning": "관료제, 행정 절차",
+    "category": "B",
+    "level": "고급"
+  },
+  {
+    "word": "calculate",
+    "type": "동사",
+    "meaning": "계산하다, 추산하다",
+    "category": "C",
+    "level": "초급"
+  },
+  {
+    "word": "campaign",
+    "type": "명사",
+    "meaning": "캠페인, 운동",
+    "category": "C",
+    "level": "중급"
+  },
+  {
+    "word": "capacity",
+    "type": "명사",
+    "meaning": "수용력, 능력",
+    "category": "C",
+    "level": "중급"
+  },
+  {
+    "word": "circumstance",
+    "type": "명사",
+    "meaning": "상황, 환경",
+    "category": "C",
+    "level": "고급"
+  },
+  {
+    "word": "cognitive",
+    "type": "형용사",
+    "meaning": "인지의, 인식의",
+    "category": "C",
+    "level": "고급"
+  },
+  {
+    "word": "coherent",
+    "type": "형용사",
+    "meaning": "일관성 있는, 논리적인",
+    "category": "C",
+    "level": "고급"
+  },
+  {
+    "word": "comprehensive",
+    "type": "형용사",
+    "meaning": "포괄적인, 광범위한",
+    "category": "C",
+    "level": "고급"
+  },
+  {
+    "word": "compromise",
+    "type": "동사",
+    "meaning": "타협하다, 손상시키다",
+    "category": "C",
+    "level": "중급"
+  },
+  {
+    "word": "consequence",
+    "type": "명사",
+    "meaning": "결과, 영향",
+    "category": "C",
+    "level": "중급"
+  },
+  {
+    "word": "construct",
+    "type": "동사",
+    "meaning": "건설하다, 구성하다",
+    "category": "C",
+    "level": "중급"
+  },
+  {
+    "word": "context",
+    "type": "명사",
+    "meaning": "맥락, 상황",
+    "category": "C",
+    "level": "중급"
+  },
+  {
+    "word": "controversial",
+    "type": "형용사",
+    "meaning": "논란이 많은, 논쟁적인",
+    "category": "C",
+    "level": "고급"
+  },
+  {
+    "word": "convey",
+    "type": "동사",
+    "meaning": "전달하다, 나르다",
+    "category": "C",
+    "level": "고급"
+  },
+  {
+    "word": "coordinate",
+    "type": "동사",
+    "meaning": "조율하다, 조정하다",
+    "category": "C",
+    "level": "고급"
+  },
+  {
+    "word": "correlate",
+    "type": "동사",
+    "meaning": "상관관계가 있다",
+    "category": "C",
+    "level": "고급"
+  },
+  {
+    "word": "criteria",
+    "type": "명사",
+    "meaning": "기준, 척도",
+    "category": "C",
+    "level": "고급"
+  },
+  {
+    "word": "dedicate",
+    "type": "동사",
+    "meaning": "헌신하다, 전념하다",
+    "category": "D",
+    "level": "중급"
+  },
+  {
+    "word": "deliberate",
+    "type": "형용사",
+    "meaning": "의도적인, 신중한",
+    "category": "D",
+    "level": "고급"
+  },
+  {
+    "word": "differentiate",
+    "type": "동사",
+    "meaning": "구별하다, 차별화하다",
+    "category": "D",
+    "level": "고급"
+  },
+  {
+    "word": "dilemma",
+    "type": "명사",
+    "meaning": "딜레마, 진퇴양난",
+    "category": "D",
+    "level": "고급"
+  },
+  {
+    "word": "diminish",
+    "type": "동사",
+    "meaning": "줄어들다, 약화시키다",
+    "category": "D",
+    "level": "고급"
+  },
+  {
+    "word": "discipline",
+    "type": "명사",
+    "meaning": "규율, 훈련",
+    "category": "D",
+    "level": "중급"
+  },
+  {
+    "word": "disrupt",
+    "type": "동사",
+    "meaning": "방해하다, 혼란시키다",
+    "category": "D",
+    "level": "고급"
+  },
+  {
+    "word": "distribute",
+    "type": "동사",
+    "meaning": "배포하다, 분배하다",
+    "category": "D",
+    "level": "중급"
+  },
+  {
+    "word": "document",
+    "type": "동사",
+    "meaning": "기록하다, 문서화하다",
+    "category": "D",
+    "level": "초급"
+  },
+  {
+    "word": "dynamic",
+    "type": "형용사",
+    "meaning": "역동적인, 동적인",
+    "category": "D",
+    "level": "중급"
+  },
+  {
+    "word": "elaborate",
+    "type": "동사",
+    "meaning": "자세히 설명하다, 정교하게 하다",
+    "category": "E",
+    "level": "고급"
+  },
+  {
+    "word": "enable",
+    "type": "동사",
+    "meaning": "가능하게 하다, 활성화하다",
+    "category": "E",
+    "level": "초급"
+  },
+  {
+    "word": "enforce",
+    "type": "동사",
+    "meaning": "시행하다, 강요하다",
+    "category": "E",
+    "level": "고급"
+  },
+  {
+    "word": "ensure",
+    "type": "동사",
+    "meaning": "보장하다, 확실히 하다",
+    "category": "E",
+    "level": "중급"
+  },
+  {
+    "word": "environment",
+    "type": "명사",
+    "meaning": "환경",
+    "category": "E",
+    "level": "초급"
+  },
+  {
+    "word": "evident",
+    "type": "형용사",
+    "meaning": "분명한, 명백한",
+    "category": "E",
+    "level": "중급"
+  },
+  {
+    "word": "evolve",
+    "type": "동사",
+    "meaning": "진화하다, 발전하다",
+    "category": "E",
+    "level": "중급"
+  },
+  {
+    "word": "exceed",
+    "type": "동사",
+    "meaning": "초과하다, 능가하다",
+    "category": "E",
+    "level": "중급"
+  },
+  {
+    "word": "execute",
+    "type": "동사",
+    "meaning": "실행하다, 처형하다",
+    "category": "E",
+    "level": "중급"
+  },
+  {
+    "word": "explicit",
+    "type": "형용사",
+    "meaning": "명시적인, 분명한",
+    "category": "E",
+    "level": "고급"
+  },
+  {
+    "word": "familiar",
+    "type": "형용사",
+    "meaning": "친숙한, 잘 아는",
+    "category": "F",
+    "level": "초급"
+  },
+  {
+    "word": "feasible",
+    "type": "형용사",
+    "meaning": "실현 가능한, 실용적인",
+    "category": "F",
+    "level": "고급"
+  },
+  {
+    "word": "feedback",
+    "type": "명사",
+    "meaning": "피드백, 반응",
+    "category": "F",
+    "level": "초급"
+  },
+  {
+    "word": "foster",
+    "type": "동사",
+    "meaning": "육성하다, 촉진하다",
+    "category": "F",
+    "level": "고급"
+  },
+  {
+    "word": "fragile",
+    "type": "형용사",
+    "meaning": "취약한, 깨지기 쉬운",
+    "category": "F",
+    "level": "중급"
+  },
+  {
+    "word": "framework",
+    "type": "명사",
+    "meaning": "틀, 구조",
+    "category": "F",
+    "level": "중급"
+  },
+  {
+    "word": "function",
+    "type": "동사",
+    "meaning": "기능하다, 작동하다",
+    "category": "F",
+    "level": "초급"
+  },
+  {
+    "word": "gap",
+    "type": "명사",
+    "meaning": "차이, 격차",
+    "category": "G",
+    "level": "초급"
+  },
+  {
+    "word": "genuine",
+    "type": "형용사",
+    "meaning": "진짜의, 진심 어린",
+    "category": "G",
+    "level": "중급"
+  },
+  {
+    "word": "governance",
+    "type": "명사",
+    "meaning": "거버넌스, 통치",
+    "category": "G",
+    "level": "고급"
+  },
+  {
+    "word": "harmful",
+    "type": "형용사",
+    "meaning": "해로운, 유해한",
+    "category": "H",
+    "level": "초급"
+  },
+  {
+    "word": "hesitate",
+    "type": "동사",
+    "meaning": "망설이다, 주저하다",
+    "category": "H",
+    "level": "중급"
+  },
+  {
+    "word": "hierarchy",
+    "type": "명사",
+    "meaning": "계층, 위계질서",
+    "category": "H",
+    "level": "고급"
+  },
+  {
+    "word": "horizon",
+    "type": "명사",
+    "meaning": "지평선, 가능성의 범위",
+    "category": "H",
+    "level": "중급"
+  },
+  {
+    "word": "ideal",
+    "type": "형용사",
+    "meaning": "이상적인, 완벽한",
+    "category": "I",
+    "level": "초급"
+  },
+  {
+    "word": "illustrate",
+    "type": "동사",
+    "meaning": "설명하다, 보여주다",
+    "category": "I",
+    "level": "중급"
+  },
+  {
+    "word": "implicit",
+    "type": "형용사",
+    "meaning": "암묵적인, 내포된",
+    "category": "I",
+    "level": "고급"
+  },
+  {
+    "word": "impose",
+    "type": "동사",
+    "meaning": "부과하다, 강요하다",
+    "category": "I",
+    "level": "고급"
+  },
+  {
+    "word": "initial",
+    "type": "형용사",
+    "meaning": "초기의, 처음의",
+    "category": "I",
+    "level": "초급"
+  },
+  {
+    "word": "initiative",
+    "type": "명사",
+    "meaning": "주도권, 계획",
+    "category": "I",
+    "level": "고급"
+  },
+  {
+    "word": "insight",
+    "type": "명사",
+    "meaning": "통찰력, 깨달음",
+    "category": "I",
+    "level": "고급"
+  },
+  {
+    "word": "interact",
+    "type": "동사",
+    "meaning": "상호작용하다",
+    "category": "I",
+    "level": "중급"
+  },
+  {
+    "word": "involve",
+    "type": "동사",
+    "meaning": "포함하다, 관여시키다",
+    "category": "I",
+    "level": "초급"
+  },
+  {
+    "word": "label",
+    "type": "동사",
+    "meaning": "분류하다, 이름표를 붙이다",
+    "category": "L",
+    "level": "초급"
+  },
+  {
+    "word": "launch",
+    "type": "동사",
+    "meaning": "출시하다, 시작하다",
+    "category": "L",
+    "level": "중급"
+  },
+  {
+    "word": "leverage",
+    "type": "동사",
+    "meaning": "활용하다, 지렛대로 이용하다",
+    "category": "L",
+    "level": "고급"
+  },
+  {
+    "word": "logic",
+    "type": "명사",
+    "meaning": "논리, 이치",
+    "category": "L",
+    "level": "초급"
+  },
+  {
+    "word": "mechanism",
+    "type": "명사",
+    "meaning": "메커니즘, 방법",
+    "category": "M",
+    "level": "고급"
+  },
+  {
+    "word": "methodology",
+    "type": "명사",
+    "meaning": "방법론",
+    "category": "M",
+    "level": "고급"
+  },
+  {
+    "word": "mutual",
+    "type": "형용사",
+    "meaning": "상호의, 공통의",
+    "category": "M",
+    "level": "중급"
+  },
+  {
+    "word": "navigate",
+    "type": "동사",
+    "meaning": "항해하다, 탐색하다",
+    "category": "N",
+    "level": "중급"
+  },
+  {
+    "word": "norm",
+    "type": "명사",
+    "meaning": "표준, 규범",
+    "category": "N",
+    "level": "중급"
+  },
+  {
+    "word": "notion",
+    "type": "명사",
+    "meaning": "개념, 생각",
+    "category": "N",
+    "level": "고급"
+  },
+  {
+    "word": "objective",
+    "type": "명사",
+    "meaning": "목표, 목적",
+    "category": "O",
+    "level": "중급"
+  },
+  {
+    "word": "optimize",
+    "type": "동사",
+    "meaning": "최적화하다",
+    "category": "O",
+    "level": "고급"
+  },
+  {
+    "word": "outcome",
+    "type": "명사",
+    "meaning": "결과, 성과",
+    "category": "O",
+    "level": "중급"
+  },
+  {
+    "word": "paradigm",
+    "type": "명사",
+    "meaning": "패러다임, 방식",
+    "category": "P",
+    "level": "고급"
+  },
+  {
+    "word": "parameter",
+    "type": "명사",
+    "meaning": "매개변수, 기준",
+    "category": "P",
+    "level": "고급"
+  },
+  {
+    "word": "pattern",
+    "type": "명사",
+    "meaning": "패턴, 규칙",
+    "category": "P",
+    "level": "초급"
+  },
+  {
+    "word": "perspective",
+    "type": "명사",
+    "meaning": "관점, 시각",
+    "category": "P",
+    "level": "중급"
+  },
+  {
+    "word": "phenomenon",
+    "type": "명사",
+    "meaning": "현상",
+    "category": "P",
+    "level": "고급"
+  },
+  {
+    "word": "policy",
+    "type": "명사",
+    "meaning": "정책, 방침",
+    "category": "P",
+    "level": "중급"
+  },
+  {
+    "word": "precise",
+    "type": "형용사",
+    "meaning": "정확한, 명확한",
+    "category": "P",
+    "level": "중급"
+  },
+  {
+    "word": "preliminary",
+    "type": "형용사",
+    "meaning": "예비적인, 준비 단계의",
+    "category": "P",
+    "level": "고급"
+  },
+  {
+    "word": "principle",
+    "type": "명사",
+    "meaning": "원칙, 원리",
+    "category": "P",
+    "level": "중급"
+  },
+  {
+    "word": "proactive",
+    "type": "형용사",
+    "meaning": "적극적인, 선제적인",
+    "category": "P",
+    "level": "고급"
+  },
+  {
+    "word": "problem",
+    "type": "명사",
+    "meaning": "문제, 과제",
+    "category": "P",
+    "level": "초급"
+  },
+  {
+    "word": "proficient",
+    "type": "형용사",
+    "meaning": "능숙한, 숙달된",
+    "category": "P",
+    "level": "고급"
+  },
+  {
+    "word": "progress",
+    "type": "명사",
+    "meaning": "진전, 발전",
+    "category": "P",
+    "level": "초급"
+  },
+  {
+    "word": "qualitative",
+    "type": "형용사",
+    "meaning": "질적인, 정성적인",
+    "category": "Q",
+    "level": "고급"
+  },
+  {
+    "word": "quantify",
+    "type": "동사",
+    "meaning": "수량화하다, 측정하다",
+    "category": "Q",
+    "level": "고급"
+  },
+  {
+    "word": "rationale",
+    "type": "명사",
+    "meaning": "근거, 이유",
+    "category": "R",
+    "level": "고급"
+  },
+  {
+    "word": "refine",
+    "type": "동사",
+    "meaning": "정제하다, 다듬다",
+    "category": "R",
+    "level": "고급"
+  },
+  {
+    "word": "regulate",
+    "type": "동사",
+    "meaning": "규제하다, 조절하다",
+    "category": "R",
+    "level": "중급"
+  },
+  {
+    "word": "reinvent",
+    "type": "동사",
+    "meaning": "재발명하다, 완전히 바꾸다",
+    "category": "R",
+    "level": "고급"
+  },
+  {
+    "word": "replication",
+    "type": "명사",
+    "meaning": "복제, 반복",
+    "category": "R",
+    "level": "고급"
+  },
+  {
+    "word": "resilience",
+    "type": "명사",
+    "meaning": "회복력, 탄력성",
+    "category": "R",
+    "level": "고급"
+  },
+  {
+    "word": "resource",
+    "type": "명사",
+    "meaning": "자원, 재원",
+    "category": "R",
+    "level": "초급"
+  },
+  {
+    "word": "retain",
+    "type": "동사",
+    "meaning": "유지하다, 기억하다",
+    "category": "R",
+    "level": "중급"
+  },
+  {
+    "word": "robust",
+    "type": "형용사",
+    "meaning": "강건한, 견고한",
+    "category": "R",
+    "level": "고급"
+  },
+  {
+    "word": "scale",
+    "type": "동사",
+    "meaning": "확장하다, 규모를 조정하다",
+    "category": "S",
+    "level": "중급"
+  },
+  {
+    "word": "scenario",
+    "type": "명사",
+    "meaning": "시나리오, 상황",
+    "category": "S",
+    "level": "중급"
+  },
+  {
+    "word": "scope",
+    "type": "명사",
+    "meaning": "범위, 규모",
+    "category": "S",
+    "level": "중급"
+  },
+  {
+    "word": "scrutinize",
+    "type": "동사",
+    "meaning": "면밀히 조사하다",
+    "category": "S",
+    "level": "고급"
+  },
+  {
+    "word": "sequence",
+    "type": "명사",
+    "meaning": "순서, 연속",
+    "category": "S",
+    "level": "중급"
+  },
+  {
+    "word": "simulate",
+    "type": "동사",
+    "meaning": "시뮬레이션하다, 모방하다",
+    "category": "S",
+    "level": "고급"
+  },
+  {
+    "word": "skeptical",
+    "type": "형용사",
+    "meaning": "회의적인, 의심하는",
+    "category": "S",
+    "level": "고급"
+  },
+  {
+    "word": "sophisticated",
+    "type": "형용사",
+    "meaning": "정교한, 세련된",
+    "category": "S",
+    "level": "고급"
+  },
+  {
+    "word": "stabilize",
+    "type": "동사",
+    "meaning": "안정시키다",
+    "category": "S",
+    "level": "고급"
+  },
+  {
+    "word": "standard",
+    "type": "명사",
+    "meaning": "기준, 표준",
+    "category": "S",
+    "level": "초급"
+  },
+  {
+    "word": "subordinate",
+    "type": "형용사",
+    "meaning": "부하의, 종속적인",
+    "category": "S",
+    "level": "고급"
+  },
+  {
+    "word": "subtle",
+    "type": "형용사",
+    "meaning": "미묘한, 섬세한",
+    "category": "S",
+    "level": "고급"
+  },
+  {
+    "word": "systematic",
+    "type": "형용사",
+    "meaning": "체계적인, 조직적인",
+    "category": "S",
+    "level": "고급"
+  },
+  {
+    "word": "threshold",
+    "type": "명사",
+    "meaning": "임계값, 문턱",
+    "category": "T",
+    "level": "고급"
+  },
+  {
+    "word": "transparent",
+    "type": "형용사",
+    "meaning": "투명한, 명확한",
+    "category": "T",
+    "level": "중급"
+  },
+  {
+    "word": "trend",
+    "type": "명사",
+    "meaning": "추세, 유행",
+    "category": "T",
+    "level": "초급"
+  },
+  {
+    "word": "unify",
+    "type": "동사",
+    "meaning": "통일하다, 통합하다",
+    "category": "U",
+    "level": "중급"
+  },
+  {
+    "word": "unique",
+    "type": "형용사",
+    "meaning": "독특한, 유일한",
+    "category": "U",
+    "level": "초급"
+  },
+  {
+    "word": "update",
+    "type": "동사",
+    "meaning": "업데이트하다, 갱신하다",
+    "category": "U",
+    "level": "초급"
+  },
+  {
+    "word": "verify",
+    "type": "동사",
+    "meaning": "검증하다, 확인하다",
+    "category": "V",
+    "level": "중급"
+  },
+  {
+    "word": "visible",
+    "type": "형용사",
+    "meaning": "눈에 보이는, 가시적인",
+    "category": "V",
+    "level": "초급"
+  },
+  {
+    "word": "widespread",
+    "type": "형용사",
+    "meaning": "널리 퍼진, 광범위한",
+    "category": "W",
+    "level": "중급"
+  },
+  {
+    "word": "yield",
+    "type": "동사",
+    "meaning": "산출하다, 양보하다",
+    "category": "Y",
+    "level": "고급"
+  },
+  {
+    "word": "absolute",
+    "type": "형용사",
+    "meaning": "절대적인, 완전한",
+    "category": "A",
+    "level": "중급"
+  },
+  {
+    "word": "absorb",
+    "type": "동사",
+    "meaning": "흡수하다, 이해하다",
+    "category": "A",
+    "level": "중급"
+  },
+  {
+    "word": "alert",
+    "type": "형용사",
+    "meaning": "경계하는, 주의 깊은",
+    "category": "A",
+    "level": "초급"
+  },
+  {
+    "word": "align",
+    "type": "동사",
+    "meaning": "정렬하다, 일치시키다",
+    "category": "A",
+    "level": "중급"
+  },
+  {
+    "word": "alter",
+    "type": "동사",
+    "meaning": "변경하다, 바꾸다",
+    "category": "A",
+    "level": "중급"
+  },
+  {
+    "word": "amend",
+    "type": "동사",
+    "meaning": "수정하다, 개정하다",
+    "category": "A",
+    "level": "고급"
+  },
+  {
+    "word": "amplify",
+    "type": "동사",
+    "meaning": "증폭하다, 확대하다",
+    "category": "A",
+    "level": "고급"
+  },
+  {
+    "word": "apply",
+    "type": "동사",
+    "meaning": "적용하다, 지원하다",
+    "category": "A",
+    "level": "초급"
+  },
+  {
+    "word": "assess",
+    "type": "동사",
+    "meaning": "평가하다, 사정하다",
+    "category": "A",
+    "level": "중급"
+  },
+  {
+    "word": "attribute",
+    "type": "동사",
+    "meaning": "귀속시키다, 탓으로 돌리다",
+    "category": "A",
+    "level": "고급"
+  },
+  {
+    "word": "behave",
+    "type": "동사",
+    "meaning": "행동하다",
+    "category": "B",
+    "level": "초급"
+  },
+  {
+    "word": "believe",
+    "type": "동사",
+    "meaning": "믿다, 생각하다",
+    "category": "B",
+    "level": "초급"
+  },
+  {
+    "word": "blame",
+    "type": "동사",
+    "meaning": "비난하다, 탓하다",
+    "category": "B",
+    "level": "초급"
+  },
+  {
+    "word": "blend",
+    "type": "동사",
+    "meaning": "혼합하다, 섞다",
+    "category": "B",
+    "level": "초급"
+  },
+  {
+    "word": "block",
+    "type": "동사",
+    "meaning": "막다, 차단하다",
+    "category": "B",
+    "level": "초급"
+  },
+  {
+    "word": "build",
+    "type": "동사",
+    "meaning": "짓다, 형성하다",
+    "category": "B",
+    "level": "초급"
+  },
+  {
+    "word": "caution",
+    "type": "명사",
+    "meaning": "주의, 경고",
+    "category": "C",
+    "level": "중급"
+  },
+  {
+    "word": "center",
+    "type": "동사",
+    "meaning": "집중하다, 중심에 두다",
+    "category": "C",
+    "level": "초급"
+  },
+  {
+    "word": "certain",
+    "type": "형용사",
+    "meaning": "확실한, 특정한",
+    "category": "C",
+    "level": "초급"
+  },
+  {
+    "word": "change",
+    "type": "동사",
+    "meaning": "변하다, 바꾸다",
+    "category": "C",
+    "level": "초급"
+  },
+  {
+    "word": "charge",
+    "type": "동사",
+    "meaning": "부과하다, 청구하다",
+    "category": "C",
+    "level": "초급"
+  },
+  {
+    "word": "choose",
+    "type": "동사",
+    "meaning": "선택하다",
+    "category": "C",
+    "level": "초급"
+  },
+  {
+    "word": "cite",
+    "type": "동사",
+    "meaning": "인용하다, 언급하다",
+    "category": "C",
+    "level": "중급"
+  },
+  {
+    "word": "classify",
+    "type": "동사",
+    "meaning": "분류하다",
+    "category": "C",
+    "level": "중급"
+  },
+  {
+    "word": "clear",
+    "type": "형용사",
+    "meaning": "명확한, 맑은",
+    "category": "C",
+    "level": "초급"
+  },
+  {
+    "word": "collect",
+    "type": "동사",
+    "meaning": "수집하다, 모으다",
+    "category": "C",
+    "level": "초급"
+  },
+  {
+    "word": "combine",
+    "type": "동사",
+    "meaning": "결합하다, 합치다",
+    "category": "C",
+    "level": "초급"
+  },
+  {
+    "word": "communicate",
+    "type": "동사",
+    "meaning": "의사소통하다",
+    "category": "C",
+    "level": "초급"
+  },
+  {
+    "word": "complete",
+    "type": "동사",
+    "meaning": "완료하다, 완성하다",
+    "category": "C",
+    "level": "초급"
+  },
+  {
+    "word": "confirm",
+    "type": "동사",
+    "meaning": "확인하다, 확증하다",
+    "category": "C",
+    "level": "초급"
+  },
+  {
+    "word": "control",
+    "type": "동사",
+    "meaning": "통제하다, 조절하다",
+    "category": "C",
+    "level": "초급"
+  },
+  {
+    "word": "correct",
+    "type": "동사",
+    "meaning": "수정하다, 바로잡다",
+    "category": "C",
+    "level": "초급"
+  },
+  {
+    "word": "create",
+    "type": "동사",
+    "meaning": "창조하다, 만들다",
+    "category": "C",
+    "level": "초급"
+  },
+  {
+    "word": "criticize",
+    "type": "동사",
+    "meaning": "비판하다, 비평하다",
+    "category": "C",
+    "level": "중급"
+  },
+  {
+    "word": "customize",
+    "type": "동사",
+    "meaning": "맞춤화하다, 개인화하다",
+    "category": "C",
+    "level": "중급"
+  },
+  {
+    "word": "damage",
+    "type": "동사",
+    "meaning": "손상시키다, 해치다",
+    "category": "D",
+    "level": "초급"
+  },
+  {
+    "word": "deal",
+    "type": "동사",
+    "meaning": "다루다, 거래하다",
+    "category": "D",
+    "level": "초급"
+  },
+  {
+    "word": "decide",
+    "type": "동사",
+    "meaning": "결정하다",
+    "category": "D",
+    "level": "초급"
+  },
+  {
+    "word": "declare",
+    "type": "동사",
+    "meaning": "선언하다, 공표하다",
+    "category": "D",
+    "level": "중급"
+  },
+  {
+    "word": "deliver",
+    "type": "동사",
+    "meaning": "전달하다, 배달하다",
+    "category": "D",
+    "level": "초급"
+  },
+  {
+    "word": "demand",
+    "type": "동사",
+    "meaning": "요구하다, 수요",
+    "category": "D",
+    "level": "초급"
+  },
+  {
+    "word": "design",
+    "type": "동사",
+    "meaning": "설계하다, 디자인하다",
+    "category": "D",
+    "level": "초급"
+  },
+  {
+    "word": "detect",
+    "type": "동사",
+    "meaning": "감지하다, 발견하다",
+    "category": "D",
+    "level": "중급"
+  },
+  {
+    "word": "devise",
+    "type": "동사",
+    "meaning": "고안하다, 계획하다",
+    "category": "D",
+    "level": "고급"
+  },
+  {
+    "word": "direct",
+    "type": "동사",
+    "meaning": "지시하다, 이끌다",
+    "category": "D",
+    "level": "초급"
+  },
+  {
+    "word": "discover",
+    "type": "동사",
+    "meaning": "발견하다",
+    "category": "D",
+    "level": "초급"
+  },
+  {
+    "word": "discuss",
+    "type": "동사",
+    "meaning": "논의하다, 토론하다",
+    "category": "D",
+    "level": "초급"
+  },
+  {
+    "word": "distinct",
+    "type": "형용사",
+    "meaning": "뚜렷한, 별개의",
+    "category": "D",
+    "level": "중급"
+  },
+  {
+    "word": "diverse",
+    "type": "형용사",
+    "meaning": "다양한, 서로 다른",
+    "category": "D",
+    "level": "중급"
+  },
+  {
+    "word": "divide",
+    "type": "동사",
+    "meaning": "나누다, 분리하다",
+    "category": "D",
+    "level": "초급"
+  },
+  {
+    "word": "earn",
+    "type": "동사",
+    "meaning": "벌다, 획득하다",
+    "category": "E",
+    "level": "초급"
+  },
+  {
+    "word": "edit",
+    "type": "동사",
+    "meaning": "편집하다, 수정하다",
+    "category": "E",
+    "level": "초급"
+  },
+  {
+    "word": "educate",
+    "type": "동사",
+    "meaning": "교육하다, 가르치다",
+    "category": "E",
+    "level": "초급"
+  },
+  {
+    "word": "employ",
+    "type": "동사",
+    "meaning": "고용하다, 활용하다",
+    "category": "E",
+    "level": "중급"
+  },
+  {
+    "word": "engage",
+    "type": "동사",
+    "meaning": "참여하다, 종사하다",
+    "category": "E",
+    "level": "중급"
+  },
+  {
+    "word": "enrich",
+    "type": "동사",
+    "meaning": "풍요롭게 하다, 향상시키다",
+    "category": "E",
+    "level": "중급"
+  },
+  {
+    "word": "enter",
+    "type": "동사",
+    "meaning": "들어가다, 입력하다",
+    "category": "E",
+    "level": "초급"
+  },
+  {
+    "word": "equal",
+    "type": "형용사",
+    "meaning": "평등한, 같은",
+    "category": "E",
+    "level": "초급"
+  },
+  {
+    "word": "explain",
+    "type": "동사",
+    "meaning": "설명하다",
+    "category": "E",
+    "level": "초급"
+  },
+  {
+    "word": "express",
+    "type": "동사",
+    "meaning": "표현하다",
+    "category": "E",
+    "level": "초급"
+  },
+  {
+    "word": "extend",
+    "type": "동사",
+    "meaning": "연장하다, 확장하다",
+    "category": "E",
+    "level": "초급"
+  },
+  {
+    "word": "fail",
+    "type": "동사",
+    "meaning": "실패하다",
+    "category": "F",
+    "level": "초급"
+  },
+  {
+    "word": "figure",
+    "type": "동사",
+    "meaning": "생각하다, 계산하다",
+    "category": "F",
+    "level": "초급"
+  },
+  {
+    "word": "find",
+    "type": "동사",
+    "meaning": "찾다, 발견하다",
+    "category": "F",
+    "level": "초급"
+  },
+  {
+    "word": "follow",
+    "type": "동사",
+    "meaning": "따라가다, 따르다",
+    "category": "F",
+    "level": "초급"
+  },
+  {
+    "word": "frame",
+    "type": "동사",
+    "meaning": "틀을 짜다, 표현하다",
+    "category": "F",
+    "level": "중급"
+  },
+  {
+    "word": "free",
+    "type": "동사",
+    "meaning": "해방시키다, 자유롭게 하다",
+    "category": "F",
+    "level": "초급"
+  },
+  {
+    "word": "gain",
+    "type": "동사",
+    "meaning": "얻다, 증가하다",
+    "category": "G",
+    "level": "초급"
+  },
+  {
+    "word": "give",
+    "type": "동사",
+    "meaning": "주다, 제공하다",
+    "category": "G",
+    "level": "초급"
+  },
+  {
+    "word": "grow",
+    "type": "동사",
+    "meaning": "성장하다, 키우다",
+    "category": "G",
+    "level": "초급"
+  },
+  {
+    "word": "help",
+    "type": "동사",
+    "meaning": "돕다, 도움이 되다",
+    "category": "H",
+    "level": "초급"
+  },
+  {
+    "word": "hold",
+    "type": "동사",
+    "meaning": "잡다, 개최하다",
+    "category": "H",
+    "level": "초급"
+  },
+  {
+    "word": "increase",
+    "type": "동사",
+    "meaning": "증가하다, 늘리다",
+    "category": "I",
+    "level": "초급"
+  },
+  {
+    "word": "influence",
+    "type": "명사",
+    "meaning": "영향력",
+    "category": "I",
+    "level": "초급"
+  },
+  {
+    "word": "inform",
+    "type": "동사",
+    "meaning": "알리다, 통보하다",
+    "category": "I",
+    "level": "초급"
+  },
+  {
+    "word": "join",
+    "type": "동사",
+    "meaning": "합류하다, 가입하다",
+    "category": "J",
+    "level": "초급"
+  },
+  {
+    "word": "judge",
+    "type": "동사",
+    "meaning": "판단하다, 심판하다",
+    "category": "J",
+    "level": "초급"
+  },
+  {
+    "word": "keep",
+    "type": "동사",
+    "meaning": "유지하다, 계속하다",
+    "category": "K",
+    "level": "초급"
+  },
+  {
+    "word": "know",
+    "type": "동사",
+    "meaning": "알다, 알고 있다",
+    "category": "K",
+    "level": "초급"
+  },
+  {
+    "word": "lead",
+    "type": "동사",
+    "meaning": "이끌다, 선도하다",
+    "category": "L",
+    "level": "초급"
+  },
+  {
+    "word": "learn",
+    "type": "동사",
+    "meaning": "배우다, 습득하다",
+    "category": "L",
+    "level": "초급"
+  },
+  {
+    "word": "limit",
+    "type": "동사",
+    "meaning": "제한하다, 한정하다",
+    "category": "L",
+    "level": "초급"
+  },
+  {
+    "word": "link",
+    "type": "동사",
+    "meaning": "연결하다, 연관시키다",
+    "category": "L",
+    "level": "초급"
+  },
+  {
+    "word": "listen",
+    "type": "동사",
+    "meaning": "듣다, 귀를 기울이다",
+    "category": "L",
+    "level": "초급"
+  },
+  {
+    "word": "make",
+    "type": "동사",
+    "meaning": "만들다, 하다",
+    "category": "M",
+    "level": "초급"
+  },
+  {
+    "word": "measure",
+    "type": "동사",
+    "meaning": "측정하다, 재다",
+    "category": "M",
+    "level": "초급"
+  },
+  {
+    "word": "meet",
+    "type": "동사",
+    "meaning": "만나다, 충족하다",
+    "category": "M",
+    "level": "초급"
+  },
+  {
+    "word": "mention",
+    "type": "동사",
+    "meaning": "언급하다",
+    "category": "M",
+    "level": "초급"
+  },
+  {
+    "word": "model",
+    "type": "동사",
+    "meaning": "모델링하다, 본보기가 되다",
+    "category": "M",
+    "level": "초급"
+  },
+  {
+    "word": "modify",
+    "type": "동사",
+    "meaning": "수정하다, 변경하다",
+    "category": "M",
+    "level": "중급"
+  },
+  {
+    "word": "move",
+    "type": "동사",
+    "meaning": "이동하다, 감동시키다",
+    "category": "M",
+    "level": "초급"
+  },
+  {
+    "word": "need",
+    "type": "동사",
+    "meaning": "필요하다",
+    "category": "N",
+    "level": "초급"
+  },
+  {
+    "word": "note",
+    "type": "동사",
+    "meaning": "주목하다, 메모하다",
+    "category": "N",
+    "level": "초급"
+  },
+  {
+    "word": "open",
+    "type": "동사",
+    "meaning": "열다, 개방하다",
+    "category": "O",
+    "level": "초급"
+  },
+  {
+    "word": "organize",
+    "type": "동사",
+    "meaning": "정리하다, 조직하다",
+    "category": "O",
+    "level": "초급"
+  },
+  {
+    "word": "plan",
+    "type": "동사",
+    "meaning": "계획하다",
+    "category": "P",
+    "level": "초급"
+  },
+  {
+    "word": "point",
+    "type": "동사",
+    "meaning": "가리키다, 지적하다",
+    "category": "P",
+    "level": "초급"
+  },
+  {
+    "word": "prepare",
+    "type": "동사",
+    "meaning": "준비하다",
+    "category": "P",
+    "level": "초급"
+  },
+  {
+    "word": "present",
+    "type": "동사",
+    "meaning": "발표하다, 제시하다",
+    "category": "P",
+    "level": "초급"
+  },
+  {
+    "word": "produce",
+    "type": "동사",
+    "meaning": "생산하다, 만들다",
+    "category": "P",
+    "level": "초급"
+  },
+  {
+    "word": "prove",
+    "type": "동사",
+    "meaning": "증명하다, 입증하다",
+    "category": "P",
+    "level": "초급"
+  },
+  {
+    "word": "provide",
+    "type": "동사",
+    "meaning": "제공하다",
+    "category": "P",
+    "level": "초급"
+  },
+  {
+    "word": "push",
+    "type": "동사",
+    "meaning": "밀다, 추진하다",
+    "category": "P",
+    "level": "초급"
+  },
+  {
+    "word": "question",
+    "type": "동사",
+    "meaning": "질문하다, 의문을 제기하다",
+    "category": "Q",
+    "level": "초급"
+  },
+  {
+    "word": "raise",
+    "type": "동사",
+    "meaning": "올리다, 제기하다",
+    "category": "R",
+    "level": "초급"
+  },
+  {
+    "word": "reach",
+    "type": "동사",
+    "meaning": "도달하다, 닿다",
+    "category": "R",
+    "level": "초급"
+  },
+  {
+    "word": "read",
+    "type": "동사",
+    "meaning": "읽다, 해석하다",
+    "category": "R",
+    "level": "초급"
+  },
+  {
+    "word": "realize",
+    "type": "동사",
+    "meaning": "깨닫다, 실현하다",
+    "category": "R",
+    "level": "초급"
+  },
+  {
+    "word": "receive",
+    "type": "동사",
+    "meaning": "받다, 수신하다",
+    "category": "R",
+    "level": "초급"
+  },
+  {
+    "word": "recommend",
+    "type": "동사",
+    "meaning": "추천하다, 권고하다",
+    "category": "R",
+    "level": "초급"
+  },
+  {
+    "word": "record",
+    "type": "동사",
+    "meaning": "기록하다, 녹음하다",
+    "category": "R",
+    "level": "초급"
+  },
+  {
+    "word": "relate",
+    "type": "동사",
+    "meaning": "관련시키다, 이야기하다",
+    "category": "R",
+    "level": "초급"
+  },
+  {
+    "word": "remain",
+    "type": "동사",
+    "meaning": "남아있다, 유지하다",
+    "category": "R",
+    "level": "초급"
+  },
+  {
+    "word": "remove",
+    "type": "동사",
+    "meaning": "제거하다, 삭제하다",
+    "category": "R",
+    "level": "초급"
+  },
+  {
+    "word": "report",
+    "type": "동사",
+    "meaning": "보고하다, 알리다",
+    "category": "R",
+    "level": "초급"
+  },
+  {
+    "word": "require",
+    "type": "동사",
+    "meaning": "요구하다, 필요로 하다",
+    "category": "R",
+    "level": "초급"
+  },
+  {
+    "word": "research",
+    "type": "동사",
+    "meaning": "연구하다, 조사하다",
+    "category": "R",
+    "level": "초급"
+  },
+  {
+    "word": "result",
+    "type": "동사",
+    "meaning": "결과가 나타나다",
+    "category": "R",
+    "level": "초급"
+  },
+  {
+    "word": "review",
+    "type": "동사",
+    "meaning": "검토하다, 평가하다",
+    "category": "R",
+    "level": "초급"
+  },
+  {
+    "word": "run",
+    "type": "동사",
+    "meaning": "운영하다, 달리다",
+    "category": "R",
+    "level": "초급"
+  },
+  {
+    "word": "save",
+    "type": "동사",
+    "meaning": "저장하다, 구하다",
+    "category": "S",
+    "level": "초급"
+  },
+  {
+    "word": "say",
+    "type": "동사",
+    "meaning": "말하다",
+    "category": "S",
+    "level": "초급"
+  },
+  {
+    "word": "search",
+    "type": "동사",
+    "meaning": "검색하다, 찾다",
+    "category": "S",
+    "level": "초급"
+  },
+  {
+    "word": "select",
+    "type": "동사",
+    "meaning": "선택하다",
+    "category": "S",
+    "level": "초급"
+  },
+  {
+    "word": "send",
+    "type": "동사",
+    "meaning": "보내다, 전송하다",
+    "category": "S",
+    "level": "초급"
+  },
+  {
+    "word": "set",
+    "type": "동사",
+    "meaning": "설정하다, 놓다",
+    "category": "S",
+    "level": "초급"
+  },
+  {
+    "word": "share",
+    "type": "동사",
+    "meaning": "공유하다, 나누다",
+    "category": "S",
+    "level": "초급"
+  },
+  {
+    "word": "show",
+    "type": "동사",
+    "meaning": "보여주다, 나타내다",
+    "category": "S",
+    "level": "초급"
+  },
+  {
+    "word": "start",
+    "type": "동사",
+    "meaning": "시작하다",
+    "category": "S",
+    "level": "초급"
+  },
+  {
+    "word": "state",
+    "type": "동사",
+    "meaning": "진술하다, 말하다",
+    "category": "S",
+    "level": "초급"
+  },
+  {
+    "word": "study",
+    "type": "동사",
+    "meaning": "공부하다, 연구하다",
+    "category": "S",
+    "level": "초급"
+  },
+  {
+    "word": "submit",
+    "type": "동사",
+    "meaning": "제출하다, 따르다",
+    "category": "S",
+    "level": "초급"
+  },
+  {
+    "word": "suggest",
+    "type": "동사",
+    "meaning": "제안하다, 암시하다",
+    "category": "S",
+    "level": "초급"
+  },
+  {
+    "word": "summarize",
+    "type": "동사",
+    "meaning": "요약하다",
+    "category": "S",
+    "level": "초급"
+  },
+  {
+    "word": "take",
+    "type": "동사",
+    "meaning": "취하다, 가져가다",
+    "category": "T",
+    "level": "초급"
+  },
+  {
+    "word": "teach",
+    "type": "동사",
+    "meaning": "가르치다",
+    "category": "T",
+    "level": "초급"
+  },
+  {
+    "word": "test",
+    "type": "동사",
+    "meaning": "시험하다, 검사하다",
+    "category": "T",
+    "level": "초급"
+  },
+  {
+    "word": "think",
+    "type": "동사",
+    "meaning": "생각하다",
+    "category": "T",
+    "level": "초급"
+  },
+  {
+    "word": "track",
+    "type": "동사",
+    "meaning": "추적하다, 기록하다",
+    "category": "T",
+    "level": "초급"
+  },
+  {
+    "word": "try",
+    "type": "동사",
+    "meaning": "시도하다, 노력하다",
+    "category": "T",
+    "level": "초급"
+  },
+  {
+    "word": "turn",
+    "type": "동사",
+    "meaning": "돌다, 전환하다",
+    "category": "T",
+    "level": "초급"
+  },
+  {
+    "word": "understand",
+    "type": "동사",
+    "meaning": "이해하다",
+    "category": "U",
+    "level": "초급"
+  },
+  {
+    "word": "use",
+    "type": "동사",
+    "meaning": "사용하다, 이용하다",
+    "category": "U",
+    "level": "초급"
+  },
+  {
+    "word": "value",
+    "type": "동사",
+    "meaning": "가치를 두다, 평가하다",
+    "category": "V",
+    "level": "초급"
+  },
+  {
+    "word": "want",
+    "type": "동사",
+    "meaning": "원하다, 필요로 하다",
+    "category": "W",
+    "level": "초급"
+  },
+  {
+    "word": "work",
+    "type": "동사",
+    "meaning": "일하다, 작동하다",
+    "category": "W",
+    "level": "초급"
+  },
+  {
+    "word": "write",
+    "type": "동사",
+    "meaning": "쓰다, 작성하다",
+    "category": "W",
+    "level": "초급"
+  },
+  {
+    "word": "abnormal",
+    "type": "형용사",
+    "meaning": "비정상적인",
+    "category": "A",
+    "level": "중급"
+  },
+  {
+    "word": "absence",
+    "type": "명사",
+    "meaning": "부재, 결석",
+    "category": "A",
+    "level": "중급"
+  },
+  {
+    "word": "accessible",
+    "type": "형용사",
+    "meaning": "접근 가능한",
+    "category": "A",
+    "level": "중급"
+  },
+  {
+    "word": "accountable",
+    "type": "형용사",
+    "meaning": "책임이 있는",
+    "category": "A",
+    "level": "고급"
+  },
+  {
+    "word": "achievement",
+    "type": "명사",
+    "meaning": "성취, 업적",
+    "category": "A",
+    "level": "중급"
+  },
+  {
+    "word": "activation",
+    "type": "명사",
+    "meaning": "활성화",
+    "category": "A",
+    "level": "고급"
+  },
+  {
+    "word": "adamant",
+    "type": "형용사",
+    "meaning": "완고한, 단호한",
+    "category": "A",
+    "level": "고급"
+  },
+  {
+    "word": "adjacent",
+    "type": "형용사",
+    "meaning": "인접한, 가까운",
+    "category": "A",
+    "level": "고급"
+  },
+  {
+    "word": "advocate",
+    "type": "동사",
+    "meaning": "지지하다, 옹호하다",
+    "category": "A",
+    "level": "고급"
+  },
+  {
+    "word": "aesthetic",
+    "type": "형용사",
+    "meaning": "미적인, 심미적인",
+    "category": "A",
+    "level": "고급"
+  },
+  {
+    "word": "aggregate",
+    "type": "동사",
+    "meaning": "집계하다, 모으다",
+    "category": "A",
+    "level": "고급"
+  },
+  {
+    "word": "agile",
+    "type": "형용사",
+    "meaning": "민첩한, 기민한",
+    "category": "A",
+    "level": "고급"
+  },
+  {
+    "word": "anomaly",
+    "type": "명사",
+    "meaning": "이상, 예외",
+    "category": "A",
+    "level": "고급"
+  },
+  {
+    "word": "apparatus",
+    "type": "명사",
+    "meaning": "기구, 장치",
+    "category": "A",
+    "level": "고급"
+  },
+  {
+    "word": "arbitrary",
+    "type": "형용사",
+    "meaning": "임의적인, 독단적인",
+    "category": "A",
+    "level": "고급"
+  },
+  {
+    "word": "archive",
+    "type": "동사",
+    "meaning": "보관하다, 기록하다",
+    "category": "A",
+    "level": "중급"
+  },
+  {
+    "word": "arouse",
+    "type": "동사",
+    "meaning": "불러일으키다, 자극하다",
+    "category": "A",
+    "level": "고급"
+  },
+  {
+    "word": "artificial",
+    "type": "형용사",
+    "meaning": "인공적인, 인위적인",
+    "category": "A",
+    "level": "중급"
+  },
+  {
+    "word": "aspire",
+    "type": "동사",
+    "meaning": "열망하다, 갈망하다",
+    "category": "A",
+    "level": "고급"
+  },
+  {
+    "word": "authentic",
+    "type": "형용사",
+    "meaning": "진정한, 진짜의",
+    "category": "A",
+    "level": "고급"
+  },
+  {
+    "word": "automate",
+    "type": "동사",
+    "meaning": "자동화하다",
+    "category": "A",
+    "level": "중급"
+  },
+  {
+    "word": "baseline",
+    "type": "명사",
+    "meaning": "기준선, 기초",
+    "category": "B",
+    "level": "고급"
+  },
+  {
+    "word": "boundary",
+    "type": "명사",
+    "meaning": "경계, 한계",
+    "category": "B",
+    "level": "중급"
+  },
+  {
+    "word": "breakthrough",
+    "type": "명사",
+    "meaning": "돌파구, 획기적 진전",
+    "category": "B",
+    "level": "고급"
+  },
+  {
+    "word": "category",
+    "type": "명사",
+    "meaning": "범주, 종류",
+    "category": "C",
+    "level": "초급"
+  },
+  {
+    "word": "coherence",
+    "type": "명사",
+    "meaning": "일관성, 논리적 연결",
+    "category": "C",
+    "level": "고급"
+  },
+  {
+    "word": "collaboration",
+    "type": "명사",
+    "meaning": "협력, 공동 작업",
+    "category": "C",
+    "level": "중급"
+  },
+  {
+    "word": "community",
+    "type": "명사",
+    "meaning": "공동체, 지역사회",
+    "category": "C",
+    "level": "초급"
+  },
+  {
+    "word": "compatible",
+    "type": "형용사",
+    "meaning": "호환되는, 양립 가능한",
+    "category": "C",
+    "level": "고급"
+  },
+  {
+    "word": "competent",
+    "type": "형용사",
+    "meaning": "유능한, 능력 있는",
+    "category": "C",
+    "level": "중급"
+  },
+  {
+    "word": "competitive",
+    "type": "형용사",
+    "meaning": "경쟁적인",
+    "category": "C",
+    "level": "중급"
+  },
+  {
+    "word": "complementary",
+    "type": "형용사",
+    "meaning": "보완적인",
+    "category": "C",
+    "level": "고급"
+  },
+  {
+    "word": "concrete",
+    "type": "형용사",
+    "meaning": "구체적인, 실질적인",
+    "category": "C",
+    "level": "중급"
+  },
+  {
+    "word": "conditional",
+    "type": "형용사",
+    "meaning": "조건부의",
+    "category": "C",
+    "level": "고급"
+  },
+  {
+    "word": "configuration",
+    "type": "명사",
+    "meaning": "구성, 설정",
+    "category": "C",
+    "level": "고급"
+  },
+  {
+    "word": "consensus",
+    "type": "명사",
+    "meaning": "합의, 의견 일치",
+    "category": "C",
+    "level": "고급"
+  },
+  {
+    "word": "constant",
+    "type": "형용사",
+    "meaning": "일정한, 변함없는",
+    "category": "C",
+    "level": "초급"
+  },
+  {
+    "word": "constraint",
+    "type": "명사",
+    "meaning": "제약, 한계",
+    "category": "C",
+    "level": "고급"
+  },
+  {
+    "word": "continuity",
+    "type": "명사",
+    "meaning": "연속성, 지속성",
+    "category": "C",
+    "level": "고급"
+  },
+  {
+    "word": "data",
+    "type": "명사",
+    "meaning": "데이터, 자료",
+    "category": "D",
+    "level": "초급"
+  },
+  {
+    "word": "decisive",
+    "type": "형용사",
+    "meaning": "결단력 있는, 결정적인",
+    "category": "D",
+    "level": "중급"
+  },
+  {
+    "word": "default",
+    "type": "명사",
+    "meaning": "기본값, 채무 불이행",
+    "category": "D",
+    "level": "중급"
+  },
+  {
+    "word": "dependent",
+    "type": "형용사",
+    "meaning": "의존하는, 종속적인",
+    "category": "D",
+    "level": "중급"
+  },
+  {
+    "word": "depict",
+    "type": "동사",
+    "meaning": "묘사하다, 그리다",
+    "category": "D",
+    "level": "고급"
+  },
+  {
+    "word": "derive",
+    "type": "동사",
+    "meaning": "도출하다, 파생하다",
+    "category": "D",
+    "level": "고급"
+  },
+  {
+    "word": "desirable",
+    "type": "형용사",
+    "meaning": "바람직한",
+    "category": "D",
+    "level": "중급"
+  },
+  {
+    "word": "deviation",
+    "type": "명사",
+    "meaning": "편차, 일탈",
+    "category": "D",
+    "level": "고급"
+  },
+  {
+    "word": "digital",
+    "type": "형용사",
+    "meaning": "디지털의",
+    "category": "D",
+    "level": "초급"
+  },
+  {
+    "word": "dimension",
+    "type": "명사",
+    "meaning": "차원, 측면",
+    "category": "D",
+    "level": "중급"
+  },
+  {
+    "word": "disproportionate",
+    "type": "형용사",
+    "meaning": "불균형한",
+    "category": "D",
+    "level": "고급"
+  },
+  {
+    "word": "efficiency",
+    "type": "명사",
+    "meaning": "효율, 능률",
+    "category": "E",
+    "level": "중급"
+  },
+  {
+    "word": "empirical",
+    "type": "형용사",
+    "meaning": "경험적인, 실증적인",
+    "category": "E",
+    "level": "고급"
+  },
+  {
+    "word": "entity",
+    "type": "명사",
+    "meaning": "실체, 개체",
+    "category": "E",
+    "level": "고급"
+  },
+  {
+    "word": "ethical",
+    "type": "형용사",
+    "meaning": "윤리적인",
+    "category": "E",
+    "level": "고급"
+  },
+  {
+    "word": "exceptional",
+    "type": "형용사",
+    "meaning": "예외적인, 탁월한",
+    "category": "E",
+    "level": "중급"
+  },
+  {
+    "word": "exclusive",
+    "type": "형용사",
+    "meaning": "독점적인, 배타적인",
+    "category": "E",
+    "level": "중급"
+  },
+  {
+    "word": "finite",
+    "type": "형용사",
+    "meaning": "유한한, 한정된",
+    "category": "F",
+    "level": "고급"
+  },
+  {
+    "word": "formal",
+    "type": "형용사",
+    "meaning": "공식적인, 형식적인",
+    "category": "F",
+    "level": "중급"
+  },
+  {
+    "word": "formula",
+    "type": "명사",
+    "meaning": "공식, 방법",
+    "category": "F",
+    "level": "중급"
+  },
+  {
+    "word": "hierarchical",
+    "type": "형용사",
+    "meaning": "계층적인",
+    "category": "H",
+    "level": "고급"
+  },
+  {
+    "word": "hypothesis",
+    "type": "명사",
+    "meaning": "가설, 가정",
+    "category": "H",
+    "level": "고급"
+  },
+  {
+    "word": "implication",
+    "type": "명사",
+    "meaning": "함의, 영향",
+    "category": "I",
+    "level": "고급"
+  },
+  {
+    "word": "incentive",
+    "type": "명사",
+    "meaning": "동기, 인센티브",
+    "category": "I",
+    "level": "고급"
+  },
+  {
+    "word": "inconsistency",
+    "type": "명사",
+    "meaning": "불일치, 모순",
+    "category": "I",
+    "level": "고급"
+  },
+  {
+    "word": "independent",
+    "type": "형용사",
+    "meaning": "독립적인",
+    "category": "I",
+    "level": "초급"
+  },
+  {
+    "word": "indispensable",
+    "type": "형용사",
+    "meaning": "필수적인, 없어서는 안 될",
+    "category": "I",
+    "level": "고급"
+  },
+  {
+    "word": "infer",
+    "type": "동사",
+    "meaning": "추론하다, 유추하다",
+    "category": "I",
+    "level": "고급"
+  },
+  {
+    "word": "inherent",
+    "type": "형용사",
+    "meaning": "본래의, 고유한",
+    "category": "I",
+    "level": "고급"
+  },
+  {
+    "word": "instinct",
+    "type": "명사",
+    "meaning": "본능, 직감",
+    "category": "I",
+    "level": "중급"
+  },
+  {
+    "word": "insufficient",
+    "type": "형용사",
+    "meaning": "불충분한",
+    "category": "I",
+    "level": "중급"
+  },
+  {
+    "word": "integrity",
+    "type": "명사",
+    "meaning": "완전성, 무결성",
+    "category": "I",
+    "level": "고급"
+  },
+  {
+    "word": "interactive",
+    "type": "형용사",
+    "meaning": "대화형의, 상호작용의",
+    "category": "I",
+    "level": "중급"
+  },
+  {
+    "word": "knowledge",
+    "type": "명사",
+    "meaning": "지식, 앎",
+    "category": "K",
+    "level": "초급"
+  },
+  {
+    "word": "latent",
+    "type": "형용사",
+    "meaning": "잠재적인, 숨어있는",
+    "category": "L",
+    "level": "고급"
+  },
+  {
+    "word": "linear",
+    "type": "형용사",
+    "meaning": "선형의, 직선의",
+    "category": "L",
+    "level": "고급"
+  },
+  {
+    "word": "literal",
+    "type": "형용사",
+    "meaning": "문자 그대로의",
+    "category": "L",
+    "level": "중급"
+  },
+  {
+    "word": "marginal",
+    "type": "형용사",
+    "meaning": "한계의, 주변적인",
+    "category": "M",
+    "level": "고급"
+  },
+  {
+    "word": "metric",
+    "type": "명사",
+    "meaning": "측정 기준, 지표",
+    "category": "M",
+    "level": "고급"
+  },
+  {
+    "word": "milestone",
+    "type": "명사",
+    "meaning": "이정표, 중요한 사건",
+    "category": "M",
+    "level": "중급"
+  },
+  {
+    "word": "negligible",
+    "type": "형용사",
+    "meaning": "무시할 수 있는",
+    "category": "N",
+    "level": "고급"
+  },
+  {
+    "word": "network",
+    "type": "명사",
+    "meaning": "네트워크, 연결망",
+    "category": "N",
+    "level": "초급"
+  },
+  {
+    "word": "operational",
+    "type": "형용사",
+    "meaning": "운영의, 작동의",
+    "category": "O",
+    "level": "고급"
+  },
+  {
+    "word": "output",
+    "type": "명사",
+    "meaning": "출력, 결과물",
+    "category": "O",
+    "level": "초급"
+  },
+  {
+    "word": "parallel",
+    "type": "형용사",
+    "meaning": "평행한, 동시의",
+    "category": "P",
+    "level": "중급"
+  },
+  {
+    "word": "perception",
+    "type": "명사",
+    "meaning": "인식, 지각",
+    "category": "P",
+    "level": "고급"
+  },
+  {
+    "word": "persistent",
+    "type": "형용사",
+    "meaning": "지속적인, 끈질긴",
+    "category": "P",
+    "level": "고급"
+  },
+  {
+    "word": "phase",
+    "type": "명사",
+    "meaning": "단계, 국면",
+    "category": "P",
+    "level": "중급"
+  },
+  {
+    "word": "practical",
+    "type": "형용사",
+    "meaning": "실용적인, 실제적인",
+    "category": "P",
+    "level": "초급"
+  },
+  {
+    "word": "precision",
+    "type": "명사",
+    "meaning": "정밀도, 정확성",
+    "category": "P",
+    "level": "고급"
+  },
+  {
+    "word": "primary",
+    "type": "형용사",
+    "meaning": "주요한, 기본적인",
+    "category": "P",
+    "level": "초급"
+  },
+  {
+    "word": "priority",
+    "type": "명사",
+    "meaning": "우선순위",
+    "category": "P",
+    "level": "중급"
+  },
+  {
+    "word": "productive",
+    "type": "형용사",
+    "meaning": "생산적인",
+    "category": "P",
+    "level": "중급"
+  },
+  {
+    "word": "profound",
+    "type": "형용사",
+    "meaning": "심오한, 깊은",
+    "category": "P",
+    "level": "고급"
+  },
+  {
+    "word": "prominent",
+    "type": "형용사",
+    "meaning": "두드러진, 저명한",
+    "category": "P",
+    "level": "고급"
+  },
+  {
+    "word": "proportion",
+    "type": "명사",
+    "meaning": "비율, 균형",
+    "category": "P",
+    "level": "중급"
+  },
+  {
+    "word": "ratio",
+    "type": "명사",
+    "meaning": "비율",
+    "category": "R",
+    "level": "중급"
+  },
+  {
+    "word": "realistic",
+    "type": "형용사",
+    "meaning": "현실적인",
+    "category": "R",
+    "level": "중급"
+  },
+  {
+    "word": "recursive",
+    "type": "형용사",
+    "meaning": "재귀적인",
+    "category": "R",
+    "level": "고급"
+  },
+  {
+    "word": "redundant",
+    "type": "형용사",
+    "meaning": "중복된, 불필요한",
+    "category": "R",
+    "level": "고급"
+  },
+  {
+    "word": "reference",
+    "type": "명사",
+    "meaning": "참조, 참고",
+    "category": "R",
+    "level": "초급"
+  },
+  {
+    "word": "requirement",
+    "type": "명사",
+    "meaning": "요구사항, 필요조건",
+    "category": "R",
+    "level": "중급"
+  },
+  {
+    "word": "rigorous",
+    "type": "형용사",
+    "meaning": "엄격한, 철저한",
+    "category": "R",
+    "level": "고급"
+  },
+  {
+    "word": "scalable",
+    "type": "형용사",
+    "meaning": "확장 가능한",
+    "category": "S",
+    "level": "고급"
+  },
+  {
+    "word": "sensitive",
+    "type": "형용사",
+    "meaning": "민감한",
+    "category": "S",
+    "level": "초급"
+  },
+  {
+    "word": "sequential",
+    "type": "형용사",
+    "meaning": "순차적인",
+    "category": "S",
+    "level": "고급"
+  },
+  {
+    "word": "stable",
+    "type": "형용사",
+    "meaning": "안정적인",
+    "category": "S",
+    "level": "초급"
+  },
+  {
+    "word": "static",
+    "type": "형용사",
+    "meaning": "정적인, 변화 없는",
+    "category": "S",
+    "level": "중급"
+  },
+  {
+    "word": "structured",
+    "type": "형용사",
+    "meaning": "구조화된",
+    "category": "S",
+    "level": "중급"
+  },
+  {
+    "word": "tangible",
+    "type": "형용사",
+    "meaning": "유형의, 실질적인",
+    "category": "T",
+    "level": "고급"
+  },
+  {
+    "word": "technical",
+    "type": "형용사",
+    "meaning": "기술적인",
+    "category": "T",
+    "level": "초급"
+  },
+  {
+    "word": "temporal",
+    "type": "형용사",
+    "meaning": "시간적인, 일시적인",
+    "category": "T",
+    "level": "고급"
+  },
+  {
+    "word": "terminate",
+    "type": "동사",
+    "meaning": "종료하다, 끝내다",
+    "category": "T",
+    "level": "중급"
+  },
+  {
+    "word": "theoretical",
+    "type": "형용사",
+    "meaning": "이론적인",
+    "category": "T",
+    "level": "고급"
+  },
+  {
+    "word": "tolerance",
+    "type": "명사",
+    "meaning": "관용, 허용 범위",
+    "category": "T",
+    "level": "고급"
+  },
+  {
+    "word": "uncertainty",
+    "type": "명사",
+    "meaning": "불확실성",
+    "category": "U",
+    "level": "중급"
+  },
+  {
+    "word": "uniform",
+    "type": "형용사",
+    "meaning": "균일한, 통일된",
+    "category": "U",
+    "level": "중급"
+  },
+  {
+    "word": "universal",
+    "type": "형용사",
+    "meaning": "보편적인, 일반적인",
+    "category": "U",
+    "level": "중급"
+  },
+  {
+    "word": "unstable",
+    "type": "형용사",
+    "meaning": "불안정한",
+    "category": "U",
+    "level": "중급"
+  },
+  {
+    "word": "variable",
+    "type": "명사",
+    "meaning": "변수, 변량",
+    "category": "V",
+    "level": "중급"
+  },
+  {
+    "word": "version",
+    "type": "명사",
+    "meaning": "버전, 판",
+    "category": "V",
+    "level": "초급"
+  },
+  {
+    "word": "weakness",
+    "type": "명사",
+    "meaning": "약점, 단점",
+    "category": "W",
+    "level": "초급"
+  },
+  {
+    "word": "workflow",
+    "type": "명사",
+    "meaning": "작업 흐름, 워크플로우",
+    "category": "W",
+    "level": "중급"
+  },
+  {
+    "word": "zone",
+    "type": "명사",
+    "meaning": "구역, 영역",
+    "category": "Z",
+    "level": "초급"
+  },
+  {
+    "word": "psychiatry",
+    "type": "명사",
+    "meaning": "정신의학, 정신과학",
+    "category": "정신의학",
+    "level": "초급"
+  },
+  {
+    "word": "psychopathology",
+    "type": "명사",
+    "meaning": "정신병리학 (비정상적 정신 기능 연구)",
+    "category": "정신의학",
+    "level": "중급"
+  },
+  {
+    "word": "mental disorder",
+    "type": "명사",
+    "meaning": "정신장애 (심리적 기능 이상)",
+    "category": "정신의학",
+    "level": "초급"
+  },
+  {
+    "word": "psychosis",
+    "type": "명사",
+    "meaning": "정신병 (현실 판단 장애를 동반한 심한 정신질환)",
+    "category": "정신의학",
+    "level": "중급"
+  },
+  {
+    "word": "neurosis",
+    "type": "명사",
+    "meaning": "신경증 (불안 중심의 비정신병적 정신장애)",
+    "category": "정신의학",
+    "level": "중급"
+  },
+  {
+    "word": "etiology",
+    "type": "명사",
+    "meaning": "병인론, 원인론 (질병 원인 연구)",
+    "category": "정신의학",
+    "level": "중급"
+  },
+  {
+    "word": "prognosis",
+    "type": "명사",
+    "meaning": "예후 (질병의 경과 예측)",
+    "category": "정신의학",
+    "level": "중급"
+  },
+  {
+    "word": "comorbidity",
+    "type": "명사",
+    "meaning": "공존질환, 동반이환 (두 가지 이상 질환 공존)",
+    "category": "정신의학",
+    "level": "고급"
+  },
+  {
+    "word": "prevalence",
+    "type": "명사",
+    "meaning": "유병률 (특정 시점 질병 보유 비율)",
+    "category": "정신의학",
+    "level": "중급"
+  },
+  {
+    "word": "incidence",
+    "type": "명사",
+    "meaning": "발병률 (일정 기간 새로 발생한 환자 비율)",
+    "category": "정신의학",
+    "level": "고급"
+  },
+  {
+    "word": "hallucination",
+    "type": "명사",
+    "meaning": "환각 (외부 자극 없이 지각하는 감각 경험)",
+    "category": "정신의학",
+    "level": "초급"
+  },
+  {
+    "word": "auditory hallucination",
+    "type": "명사",
+    "meaning": "환청 (소리가 들리는 환각)",
+    "category": "정신의학",
+    "level": "초급"
+  },
+  {
+    "word": "visual hallucination",
+    "type": "명사",
+    "meaning": "환시 (보이는 환각)",
+    "category": "정신의학",
+    "level": "초급"
+  },
+  {
+    "word": "olfactory hallucination",
+    "type": "명사",
+    "meaning": "환후 (냄새 환각)",
+    "category": "정신의학",
+    "level": "중급"
+  },
+  {
+    "word": "tactile hallucination",
+    "type": "명사",
+    "meaning": "환촉 (피부 감각 환각)",
+    "category": "정신의학",
+    "level": "중급"
+  },
+  {
+    "word": "illusion",
+    "type": "명사",
+    "meaning": "착각 (실제 자극을 잘못 지각)",
+    "category": "정신의학",
+    "level": "초급"
+  },
+  {
+    "word": "depersonalization",
+    "type": "명사",
+    "meaning": "이인증 (자신이 낯설고 비현실적으로 느껴짐)",
+    "category": "정신의학",
+    "level": "고급"
+  },
+  {
+    "word": "derealization",
+    "type": "명사",
+    "meaning": "현실감상실 (주변 환경이 비현실적으로 느껴짐)",
+    "category": "정신의학",
+    "level": "고급"
+  },
+  {
+    "word": "delusion",
+    "type": "명사",
+    "meaning": "망상 (수정 불가능한 잘못된 고정 신념)",
+    "category": "정신의학",
+    "level": "초급"
+  },
+  {
+    "word": "persecutory delusion",
+    "type": "명사",
+    "meaning": "피해망상 (누군가 자신을 해치려 한다는 망상)",
+    "category": "정신의학",
+    "level": "초급"
+  },
+  {
+    "word": "grandiose delusion",
+    "type": "명사",
+    "meaning": "과대망상 (자신이 특별한 능력이나 지위를 가졌다는 망상)",
+    "category": "정신의학",
+    "level": "중급"
+  },
+  {
+    "word": "ideas of reference",
+    "type": "명사",
+    "meaning": "관계사고 (무관한 사건이 자신과 관련된다는 생각)",
+    "category": "정신의학",
+    "level": "중급"
+  },
+  {
+    "word": "thought insertion",
+    "type": "명사",
+    "meaning": "사고삽입 (타인이 자신의 생각을 집어넣는다는 경험)",
+    "category": "정신의학",
+    "level": "고급"
+  },
+  {
+    "word": "thought broadcasting",
+    "type": "명사",
+    "meaning": "사고전파 (자신의 생각이 외부로 퍼진다는 경험)",
+    "category": "정신의학",
+    "level": "고급"
+  },
+  {
+    "word": "thought withdrawal",
+    "type": "명사",
+    "meaning": "사고탈취 (자신의 생각이 빼앗긴다는 경험)",
+    "category": "정신의학",
+    "level": "고급"
+  },
+  {
+    "word": "flight of ideas",
+    "type": "명사",
+    "meaning": "사고의 비약 (연관성 없이 빠르게 달리는 생각)",
+    "category": "정신의학",
+    "level": "중급"
+  },
+  {
+    "word": "loose associations",
+    "type": "명사",
+    "meaning": "연상 이완 (생각들 간의 연결이 느슨함)",
+    "category": "정신의학",
+    "level": "고급"
+  },
+  {
+    "word": "circumstantiality",
+    "type": "명사",
+    "meaning": "우원증 (목표에 늦게 도달하는 간접적 사고)",
+    "category": "정신의학",
+    "level": "고급"
+  },
+  {
+    "word": "tangentiality",
+    "type": "명사",
+    "meaning": "접선사고 (주제를 벗어나 엉뚱한 방향으로 답함)",
+    "category": "정신의학",
+    "level": "고급"
+  },
+  {
+    "word": "perseveration",
+    "type": "명사",
+    "meaning": "보속증 (동일한 언어·행동의 지속적 반복)",
+    "category": "정신의학",
+    "level": "고급"
+  },
+  {
+    "word": "thought blocking",
+    "type": "명사",
+    "meaning": "사고차단 (갑자기 생각의 흐름이 끊김)",
+    "category": "정신의학",
+    "level": "고급"
+  },
+  {
+    "word": "neologism",
+    "type": "명사",
+    "meaning": "신어증 (새로운 단어를 만들어 사용)",
+    "category": "정신의학",
+    "level": "고급"
+  },
+  {
+    "word": "poverty of thought",
+    "type": "명사",
+    "meaning": "사고빈곤 (생각의 양과 다양성이 감소)",
+    "category": "정신의학",
+    "level": "고급"
+  },
+  {
+    "word": "affect",
+    "type": "명사",
+    "meaning": "정동 (관찰 가능한 감정 표현)",
+    "category": "정신의학",
+    "level": "초급"
+  },
+  {
+    "word": "mood",
+    "type": "명사",
+    "meaning": "기분 (주관적으로 느끼는 감정 상태)",
+    "category": "정신의학",
+    "level": "초급"
+  },
+  {
+    "word": "euphoria",
+    "type": "명사",
+    "meaning": "들뜸, 도취감 (비정상적으로 고양된 기분)",
+    "category": "정신의학",
+    "level": "중급"
+  },
+  {
+    "word": "dysphoria",
+    "type": "명사",
+    "meaning": "불쾌감 (불유쾌하고 불편한 기분 상태)",
+    "category": "정신의학",
+    "level": "중급"
+  },
+  {
+    "word": "anhedonia",
+    "type": "명사",
+    "meaning": "무쾌감증 (즐거움을 느끼는 능력의 상실)",
+    "category": "정신의학",
+    "level": "고급"
+  },
+  {
+    "word": "lability",
+    "type": "명사",
+    "meaning": "정동의 불안정성 (기분의 급격한 변동)",
+    "category": "정신의학",
+    "level": "고급"
+  },
+  {
+    "word": "flat affect",
+    "type": "명사",
+    "meaning": "둔마된 정동 (감정 표현의 심한 감소)",
+    "category": "정신의학",
+    "level": "중급"
+  },
+  {
+    "word": "blunted affect",
+    "type": "명사",
+    "meaning": "무감동 (감정 반응의 뚜렷한 감소)",
+    "category": "정신의학",
+    "level": "중급"
+  },
+  {
+    "word": "alexithymia",
+    "type": "명사",
+    "meaning": "감정표현불능증 (감정을 인식·표현하는 능력의 결핍)",
+    "category": "정신의학",
+    "level": "고급"
+  },
+  {
+    "word": "consciousness",
+    "type": "명사",
+    "meaning": "의식 (외부 환경과 자신을 인지하는 상태)",
+    "category": "정신의학",
+    "level": "초급"
+  },
+  {
+    "word": "orientation",
+    "type": "명사",
+    "meaning": "지남력 (시간·장소·사람에 대한 인식 능력)",
+    "category": "정신의학",
+    "level": "초급"
+  },
+  {
+    "word": "amnesia",
+    "type": "명사",
+    "meaning": "기억상실증 (과거 기억 회상 불능)",
+    "category": "정신의학",
+    "level": "초급"
+  },
+  {
+    "word": "anterograde amnesia",
+    "type": "명사",
+    "meaning": "전향성 기억상실 (손상 이후 새 기억 형성 불능)",
+    "category": "정신의학",
+    "level": "고급"
+  },
+  {
+    "word": "retrograde amnesia",
+    "type": "명사",
+    "meaning": "역향성 기억상실 (손상 이전 기억 회상 불능)",
+    "category": "정신의학",
+    "level": "고급"
+  },
+  {
+    "word": "confabulation",
+    "type": "명사",
+    "meaning": "작화증 (기억 공백을 무의식적으로 꾸며 채움)",
+    "category": "정신의학",
+    "level": "고급"
+  },
+  {
+    "word": "dementia",
+    "type": "명사",
+    "meaning": "치매 (전반적 인지기능 저하)",
+    "category": "정신의학",
+    "level": "초급"
+  },
+  {
+    "word": "delirium",
+    "type": "명사",
+    "meaning": "섬망 (의식 혼탁과 주의력 장애를 동반한 급성 증후군)",
+    "category": "정신의학",
+    "level": "중급"
+  },
+  {
+    "word": "cognitive impairment",
+    "type": "명사",
+    "meaning": "인지장애 (기억·언어·판단 등 인지 기능 손상)",
+    "category": "정신의학",
+    "level": "중급"
+  },
+  {
+    "word": "agitation",
+    "type": "명사",
+    "meaning": "초조 (과도한 운동 불안 및 안절부절 못함)",
+    "category": "정신의학",
+    "level": "중급"
+  },
+  {
+    "word": "psychomotor retardation",
+    "type": "명사",
+    "meaning": "정신운동 지체 (사고·행동의 전반적 느려짐)",
+    "category": "정신의학",
+    "level": "고급"
+  },
+  {
+    "word": "compulsion",
+    "type": "명사",
+    "meaning": "강박행동 (불안 감소를 위한 반복적 행동)",
+    "category": "정신의학",
+    "level": "중급"
+  },
+  {
+    "word": "obsession",
+    "type": "명사",
+    "meaning": "강박사고 (반복적으로 침입하는 원치 않는 생각)",
+    "category": "정신의학",
+    "level": "중급"
+  },
+  {
+    "word": "tics",
+    "type": "명사",
+    "meaning": "틱 (급작스러운 반복적 비자발적 운동 또는 발성)",
+    "category": "정신의학",
+    "level": "중급"
+  },
+  {
+    "word": "catatonia",
+    "type": "명사",
+    "meaning": "긴장증 (운동·자세·반응성의 비정상 이상 상태)",
+    "category": "정신의학",
+    "level": "고급"
+  },
+  {
+    "word": "negativism",
+    "type": "명사",
+    "meaning": "거부증 (요청이나 지시에 반대로 행동)",
+    "category": "정신의학",
+    "level": "고급"
+  },
+  {
+    "word": "echolalia",
+    "type": "명사",
+    "meaning": "반향언어 (타인의 말을 그대로 따라 반복)",
+    "category": "정신의학",
+    "level": "고급"
+  },
+  {
+    "word": "echopraxia",
+    "type": "명사",
+    "meaning": "반향행동 (타인의 행동을 그대로 따라 반복)",
+    "category": "정신의학",
+    "level": "고급"
+  },
+  {
+    "word": "suicidal ideation",
+    "type": "명사",
+    "meaning": "자살사고 (자살에 대한 생각이나 계획)",
+    "category": "정신의학",
+    "level": "초급"
+  },
+  {
+    "word": "schizophrenia",
+    "type": "명사",
+    "meaning": "조현병 (망상·환각·와해된 언어 등을 특징으로 하는 만성 정신병)",
+    "category": "정신의학",
+    "level": "초급"
+  },
+  {
+    "word": "schizoaffective disorder",
+    "type": "명사",
+    "meaning": "조현정동장애 (정신병 증상과 기분 삽화 공존)",
+    "category": "정신의학",
+    "level": "중급"
+  },
+  {
+    "word": "brief psychotic disorder",
+    "type": "명사",
+    "meaning": "단기 정신병적 장애 (1개월 미만의 정신병 삽화)",
+    "category": "정신의학",
+    "level": "중급"
+  },
+  {
+    "word": "delusional disorder",
+    "type": "명사",
+    "meaning": "망상장애 (체계적 망상이 주 증상인 정신장애)",
+    "category": "정신의학",
+    "level": "중급"
+  },
+  {
+    "word": "major depressive disorder",
+    "type": "명사",
+    "meaning": "주요 우울장애 (2주 이상 지속되는 우울 삽화)",
+    "category": "정신의학",
+    "level": "초급"
+  },
+  {
+    "word": "bipolar disorder",
+    "type": "명사",
+    "meaning": "양극성 장애 (조증과 우울 삽화가 번갈아 나타남)",
+    "category": "정신의학",
+    "level": "초급"
+  },
+  {
+    "word": "manic episode",
+    "type": "명사",
+    "meaning": "조증 삽화 (고양된 기분·과대감·활동 증가의 삽화)",
+    "category": "정신의학",
+    "level": "중급"
+  },
+  {
+    "word": "hypomanic episode",
+    "type": "명사",
+    "meaning": "경조증 삽화 (조증보다 경미하고 기능 장애가 적은 삽화)",
+    "category": "정신의학",
+    "level": "고급"
+  },
+  {
+    "word": "dysthymia",
+    "type": "명사",
+    "meaning": "기분저하증 (만성적인 경한 우울 상태, 2년 이상)",
+    "category": "정신의학",
+    "level": "중급"
+  },
+  {
+    "word": "panic disorder",
+    "type": "명사",
+    "meaning": "공황장애 (반복적인 예상치 못한 공황발작)",
+    "category": "정신의학",
+    "level": "초급"
+  },
+  {
+    "word": "panic attack",
+    "type": "명사",
+    "meaning": "공황발작 (갑작스런 극심한 공포와 신체 증상)",
+    "category": "정신의학",
+    "level": "초급"
+  },
+  {
+    "word": "generalized anxiety disorder",
+    "type": "명사",
+    "meaning": "범불안장애 (다양한 사건·활동에 대한 과도하고 통제 어려운 걱정)",
+    "category": "정신의학",
+    "level": "중급"
+  },
+  {
+    "word": "social anxiety disorder",
+    "type": "명사",
+    "meaning": "사회불안장애 (사회적 상황에 대한 심한 공포와 회피)",
+    "category": "정신의학",
+    "level": "초급"
+  },
+  {
+    "word": "specific phobia",
+    "type": "명사",
+    "meaning": "특정공포증 (특정 대상·상황에 대한 지속적 공포)",
+    "category": "정신의학",
+    "level": "초급"
+  },
+  {
+    "word": "agoraphobia",
+    "type": "명사",
+    "meaning": "광장공포증 (도망치기 어려운 장소·상황에 대한 공포)",
+    "category": "정신의학",
+    "level": "중급"
+  },
+  {
+    "word": "OCD",
+    "type": "명사",
+    "meaning": "강박장애 (강박사고와 강박행동을 특징으로 하는 장애)",
+    "category": "정신의학",
+    "level": "초급"
+  },
+  {
+    "word": "PTSD",
+    "type": "명사",
+    "meaning": "외상후 스트레스 장애 (심각한 외상 후 재경험·회피·과각성 증상)",
+    "category": "정신의학",
+    "level": "초급"
+  },
+  {
+    "word": "acute stress disorder",
+    "type": "명사",
+    "meaning": "급성 스트레스 장애 (외상 후 3일~4주 내 증상)",
+    "category": "정신의학",
+    "level": "중급"
+  },
+  {
+    "word": "adjustment disorder",
+    "type": "명사",
+    "meaning": "적응장애 (스트레스원에 대한 과도한 반응)",
+    "category": "정신의학",
+    "level": "중급"
+  },
+  {
+    "word": "dissociative disorder",
+    "type": "명사",
+    "meaning": "해리장애 (의식·기억·정체성 등의 통합 장애)",
+    "category": "정신의학",
+    "level": "고급"
+  },
+  {
+    "word": "conversion disorder",
+    "type": "명사",
+    "meaning": "전환장애 (신경학적 원인 없는 운동·감각 증상)",
+    "category": "정신의학",
+    "level": "고급"
+  },
+  {
+    "word": "somatic symptom disorder",
+    "type": "명사",
+    "meaning": "신체증상장애 (신체 증상에 대한 과도한 집착)",
+    "category": "정신의학",
+    "level": "고급"
+  },
+  {
+    "word": "anorexia nervosa",
+    "type": "명사",
+    "meaning": "신경성 식욕부진증 (체중증가 공포와 심한 체중 제한)",
+    "category": "정신의학",
+    "level": "중급"
+  },
+  {
+    "word": "bulimia nervosa",
+    "type": "명사",
+    "meaning": "신경성 폭식증 (반복적 폭식과 보상행동)",
+    "category": "정신의학",
+    "level": "중급"
+  },
+  {
+    "word": "ADHD",
+    "type": "명사",
+    "meaning": "주의력결핍 과잉행동장애 (부주의·과잉행동·충동성)",
+    "category": "정신의학",
+    "level": "초급"
+  },
+  {
+    "word": "autism spectrum disorder",
+    "type": "명사",
+    "meaning": "자폐스펙트럼장애 (사회적 의사소통 결핍과 반복행동)",
+    "category": "정신의학",
+    "level": "초급"
+  },
+  {
+    "word": "intellectual disability",
+    "type": "명사",
+    "meaning": "지적장애 (지적 기능과 적응행동의 의미 있는 제한)",
+    "category": "정신의학",
+    "level": "초급"
+  },
+  {
+    "word": "borderline personality disorder",
+    "type": "명사",
+    "meaning": "경계성 인격장애 (불안정한 대인관계·자아상·정동)",
+    "category": "정신의학",
+    "level": "중급"
+  },
+  {
+    "word": "narcissistic personality disorder",
+    "type": "명사",
+    "meaning": "자기애성 인격장애 (과대감·공감 결여·특권의식)",
+    "category": "정신의학",
+    "level": "중급"
+  },
+  {
+    "word": "antisocial personality disorder",
+    "type": "명사",
+    "meaning": "반사회성 인격장애 (타인의 권리 무시와 위반)",
+    "category": "정신의학",
+    "level": "중급"
+  },
+  {
+    "word": "substance use disorder",
+    "type": "명사",
+    "meaning": "물질사용장애 (물질 남용·의존으로 인한 장애)",
+    "category": "정신의학",
+    "level": "초급"
+  },
+  {
+    "word": "alcohol use disorder",
+    "type": "명사",
+    "meaning": "알코올사용장애 (알코올 남용과 의존)",
+    "category": "정신의학",
+    "level": "초급"
+  },
+  {
+    "word": "insomnia disorder",
+    "type": "명사",
+    "meaning": "불면장애 (수면 시작·유지의 어려움)",
+    "category": "정신의학",
+    "level": "초급"
+  },
+  {
+    "word": "defense mechanism",
+    "type": "명사",
+    "meaning": "방어기제 (불안으로부터 자아를 보호하는 무의식적 심리 전략)",
+    "category": "정신의학",
+    "level": "중급"
+  },
+  {
+    "word": "repression",
+    "type": "명사",
+    "meaning": "억압 (불안을 일으키는 생각·감정을 무의식으로 밀어냄)",
+    "category": "정신의학",
+    "level": "중급"
+  },
+  {
+    "word": "denial",
+    "type": "명사",
+    "meaning": "부정 (고통스러운 현실을 인정하지 않음)",
+    "category": "정신의학",
+    "level": "초급"
+  },
+  {
+    "word": "projection",
+    "type": "명사",
+    "meaning": "투사 (자신의 받아들이기 힘든 감정을 타인의 것으로 귀인)",
+    "category": "정신의학",
+    "level": "중급"
+  },
+  {
+    "word": "rationalization",
+    "type": "명사",
+    "meaning": "합리화 (실제 동기를 숨기고 그럴듯한 이유를 댐)",
+    "category": "정신의학",
+    "level": "중급"
+  },
+  {
+    "word": "reaction formation",
+    "type": "명사",
+    "meaning": "반동형성 (받아들이기 어려운 충동과 반대로 행동)",
+    "category": "정신의학",
+    "level": "고급"
+  },
+  {
+    "word": "displacement",
+    "type": "명사",
+    "meaning": "전치 (감정을 원래 대상에서 다른 대상으로 옮김)",
+    "category": "정신의학",
+    "level": "중급"
+  },
+  {
+    "word": "sublimation",
+    "type": "명사",
+    "meaning": "승화 (용납 안 되는 충동을 사회적으로 수용 가능한 방식으로 표현)",
+    "category": "정신의학",
+    "level": "중급"
+  },
+  {
+    "word": "regression",
+    "type": "명사",
+    "meaning": "퇴행 (스트레스 시 이전 발달 단계로 되돌아감)",
+    "category": "정신의학",
+    "level": "중급"
+  },
+  {
+    "word": "intellectualization",
+    "type": "명사",
+    "meaning": "지성화 (감정을 분리하고 지적 분석으로 대처)",
+    "category": "정신의학",
+    "level": "고급"
+  },
+  {
+    "word": "isolation",
+    "type": "명사",
+    "meaning": "격리 (생각과 관련된 감정을 분리시킴)",
+    "category": "정신의학",
+    "level": "고급"
+  },
+  {
+    "word": "splitting",
+    "type": "명사",
+    "meaning": "분열 (대상을 완전히 좋거나 나쁜 것으로만 봄)",
+    "category": "정신의학",
+    "level": "고급"
+  },
+  {
+    "word": "undoing",
+    "type": "명사",
+    "meaning": "취소 (불안을 유발한 행동을 상징적으로 되돌림)",
+    "category": "정신의학",
+    "level": "고급"
+  },
+  {
+    "word": "psychotherapy",
+    "type": "명사",
+    "meaning": "정신치료, 심리치료 (심리적 방법으로 정신장애 치료)",
+    "category": "정신의학",
+    "level": "초급"
+  },
+  {
+    "word": "cognitive behavioral therapy",
+    "type": "명사",
+    "meaning": "인지행동치료 (CBT; 역기능적 사고·행동 패턴 교정)",
+    "category": "정신의학",
+    "level": "중급"
+  },
+  {
+    "word": "psychoanalysis",
+    "type": "명사",
+    "meaning": "정신분석 (무의식 탐구를 통한 치료)",
+    "category": "정신의학",
+    "level": "중급"
+  },
+  {
+    "word": "pharmacotherapy",
+    "type": "명사",
+    "meaning": "약물치료 (약물로 정신장애 증상 조절)",
+    "category": "정신의학",
+    "level": "중급"
+  },
+  {
+    "word": "antidepressant",
+    "type": "명사",
+    "meaning": "항우울제 (우울증 치료 약물)",
+    "category": "정신의학",
+    "level": "초급"
+  },
+  {
+    "word": "antipsychotic",
+    "type": "명사",
+    "meaning": "항정신병약 (정신병 증상 조절 약물)",
+    "category": "정신의학",
+    "level": "초급"
+  },
+  {
+    "word": "anxiolytic",
+    "type": "명사",
+    "meaning": "항불안제 (불안 완화 약물)",
+    "category": "정신의학",
+    "level": "중급"
+  },
+  {
+    "word": "mood stabilizer",
+    "type": "명사",
+    "meaning": "기분안정제 (양극성 장애의 기분 삽화 예방·치료 약물)",
+    "category": "정신의학",
+    "level": "중급"
+  },
+  {
+    "word": "electroconvulsive therapy",
+    "type": "명사",
+    "meaning": "전기경련치료 (ECT; 뇌에 전기 자극을 주는 치료)",
+    "category": "정신의학",
+    "level": "고급"
+  },
+  {
+    "word": "therapeutic alliance",
+    "type": "명사",
+    "meaning": "치료적 동맹 (치료자-환자 간 협력 관계)",
+    "category": "정신의학",
+    "level": "고급"
+  },
+  {
+    "word": "transference",
+    "type": "명사",
+    "meaning": "전이 (과거 중요 인물에 대한 감정을 치료자에게 투사)",
+    "category": "정신의학",
+    "level": "고급"
+  },
+  {
+    "word": "countertransference",
+    "type": "명사",
+    "meaning": "역전이 (치료자가 환자에게 갖는 감정 반응)",
+    "category": "정신의학",
+    "level": "고급"
+  },
+  {
+    "word": "psychoeducation",
+    "type": "명사",
+    "meaning": "정신건강교육 (환자·가족에게 질환 정보 제공)",
+    "category": "정신의학",
+    "level": "중급"
+  },
+  {
+    "word": "ego",
+    "type": "명사",
+    "meaning": "자아 (Freud의 3구조 중 현실 원칙에 따라 작동하는 부분)",
+    "category": "정신의학",
+    "level": "초급"
+  },
+  {
+    "word": "id",
+    "type": "명사",
+    "meaning": "원초아 (본능적 욕구와 충동을 담은 무의식적 부분)",
+    "category": "정신의학",
+    "level": "초급"
+  },
+  {
+    "word": "superego",
+    "type": "명사",
+    "meaning": "초자아 (양심·도덕 기준을 내재화한 부분)",
+    "category": "정신의학",
+    "level": "초급"
+  },
+  {
+    "word": "unconscious",
+    "type": "명사",
+    "meaning": "무의식 (의식 밖에 존재하는 심리 과정)",
+    "category": "정신의학",
+    "level": "초급"
+  },
+  {
+    "word": "libido",
+    "type": "명사",
+    "meaning": "리비도 (성적 에너지 또는 생명 에너지)",
+    "category": "정신의학",
+    "level": "중급"
+  },
+  {
+    "word": "attachment",
+    "type": "명사",
+    "meaning": "애착 (양육자와 형성하는 정서적 유대)",
+    "category": "정신의학",
+    "level": "초급"
+  },
+  {
+    "word": "resilience",
+    "type": "명사",
+    "meaning": "회복탄력성 (역경 후 적응적으로 회복하는 능력)",
+    "category": "정신의학",
+    "level": "중급"
+  },
+  {
+    "word": "stigma",
+    "type": "명사",
+    "meaning": "낙인 (정신질환자에 대한 사회적 부정적 편견)",
+    "category": "정신의학",
+    "level": "중급"
+  },
+  {
+    "word": "insight",
+    "type": "명사",
+    "meaning": "병식 (자신의 증상이 질병임을 아는 능력)",
+    "category": "정신의학",
+    "level": "초급"
+  },
+  {
+    "word": "judgment",
+    "type": "명사",
+    "meaning": "판단력 (상황에 적절한 결정을 내리는 능력)",
+    "category": "정신의학",
+    "level": "초급"
+  },
+  {
+    "word": "serotonin",
+    "type": "명사",
+    "meaning": "세로토닌 (기분·수면·식욕 조절 신경전달물질)",
+    "category": "정신의학",
+    "level": "중급"
+  },
+  {
+    "word": "dopamine",
+    "type": "명사",
+    "meaning": "도파민 (보상·동기·쾌락 관련 신경전달물질)",
+    "category": "정신의학",
+    "level": "중급"
+  },
+  {
+    "word": "norepinephrine",
+    "type": "명사",
+    "meaning": "노르에피네프린 (각성·스트레스 반응 관련 신경전달물질)",
+    "category": "정신의학",
+    "level": "고급"
+  },
+  {
+    "word": "GABA",
+    "type": "명사",
+    "meaning": "감마아미노부티르산 (중추신경 억제성 신경전달물질)",
+    "category": "정신의학",
+    "level": "고급"
+  },
+  {
+    "word": "trauma",
+    "type": "명사",
+    "meaning": "정신적 외상 (심리적 상처를 남기는 충격적 경험)",
+    "category": "정신의학",
+    "level": "초급"
+  },
+  {
+    "word": "stress",
+    "type": "명사",
+    "meaning": "스트레스 (적응 요구를 초과하는 내외 자극)",
+    "category": "정신의학",
+    "level": "초급"
+  },
+  {
+    "word": "coping",
+    "type": "명사",
+    "meaning": "대처 (스트레스에 대한 인지적·행동적 노력)",
+    "category": "정신의학",
+    "level": "초급"
+  },
+  {
+    "word": "vulnerability",
+    "type": "명사",
+    "meaning": "취약성 (정신장애 발생에 대한 소질과 민감성)",
+    "category": "정신의학",
+    "level": "중급"
+  }
 ]
