@@ -97,15 +97,7 @@ class FlashcardApp {
             });
         });
 
-        // 시작 화면 – 전체 카테고리 버튼
-        document.querySelector('.cat-btn[data-cat="all"]')
-            .addEventListener('click', (e) => {
-                document.querySelectorAll('.cat-btn, .cat-letter-btn')
-                    .forEach(b => b.classList.remove('active'));
-                e.currentTarget.classList.add('active');
-                this.selectedCategory = 'all';
-                this._applyFilter();
-            });
+        // 카테고리 버튼 – 동적 생성 후 이벤트는 _buildCategoryButtons()에서 위임
 
         // 단어 수 슬라이더
         this.el.wordCountSlider.addEventListener('input', () => {
@@ -155,22 +147,44 @@ class FlashcardApp {
     }
 
     _buildCategoryButtons() {
-        const cats = [...new Set(this.words.map(w => w.category))].sort();
+        // 카테고리 목록: 알파벳 먼저(A-Z), 그 다음 한국어 카테고리
+        const allCats = [...new Set(this.words.map(w => w.category))];
+        // 알파벳 단일 문자와 나머지 구분
+        const alphaCats = allCats.filter(c => /^[A-Z]$/.test(c)).sort();
+        const otherCats = allCats.filter(c => !/^[A-Z]$/.test(c)).sort();
+        const cats = [...alphaCats, ...otherCats];
+
         const grid = this.el.categoryGrid;
         grid.innerHTML = '';
+
+        // '전체' 버튼
+        const allBtn = document.createElement('button');
+        allBtn.className = 'cat-tag-btn active';
+        allBtn.dataset.cat = 'all';
+        allBtn.textContent = '전체';
+        grid.appendChild(allBtn);
+
+        // 각 카테고리 버튼
         cats.forEach(cat => {
+            const count = this.words.filter(w => w.category === cat).length;
             const btn = document.createElement('button');
-            btn.className = 'cat-letter-btn';
+            btn.className = 'cat-tag-btn';
             btn.dataset.cat = cat;
-            btn.textContent = cat;
-            btn.addEventListener('click', () => {
-                document.querySelectorAll('.cat-btn, .cat-letter-btn')
-                    .forEach(b => b.classList.remove('active'));
-                btn.classList.add('active');
-                this.selectedCategory = cat;
-                this._applyFilter();
-            });
+
+            // 알파벳 단일 문자는 'A단어' 형식으로 표시, 나머지는 원래 이름
+            const label = /^[A-Z]$/.test(cat) ? `${cat}단어` : cat;
+            btn.innerHTML = `${label} <span class="cat-count">${count}</span>`;
             grid.appendChild(btn);
+        });
+
+        // 이벤트 위임
+        grid.addEventListener('click', (e) => {
+            const btn = e.target.closest('.cat-tag-btn');
+            if (!btn) return;
+            grid.querySelectorAll('.cat-tag-btn').forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+            this.selectedCategory = btn.dataset.cat;
+            this._applyFilter();
         });
     }
 
@@ -235,9 +249,14 @@ class FlashcardApp {
 
     _startWrongReview() {
         if (!this.wrongWords.length) return;
-        this.isWrongReview = true;
-        this._startSession(this.wrongWords);
-        this.isWrongReview = false;
+        // 틀린 단어 전체를 개수 제한 없이 재학습
+        const wrongPool = [...this.wrongWords];
+        // wordCount를 틀린 단어 전체로 임시 변경 후 세션 시작
+        const savedCount = this.wordCount;
+        this.wordCount = wrongPool.length;
+        this._startSession(wrongPool);
+        // wordCount는 세션 시작 후 복원 (세션 내 사용 완료 후에도 올바른 값 유지)
+        this.wordCount = savedCount;
     }
 
     _reviewSession() {
